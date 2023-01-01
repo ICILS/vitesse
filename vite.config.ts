@@ -1,4 +1,5 @@
 import path from 'path'
+import { URL, fileURLToPath } from 'url'
 import { defineConfig } from 'vite'
 import Preview from 'vite-plugin-vue-component-preview'
 import Vue from '@vitejs/plugin-vue'
@@ -16,11 +17,14 @@ import LinkAttributes from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
 import Shiki from 'markdown-it-shiki'
 import VueMacros from 'unplugin-vue-macros/vite'
+import vuetify from 'vite-plugin-vuetify'
 
 export default defineConfig({
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
+      // Resolve `@` to `src` directory from materialpro project
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
 
@@ -58,6 +62,7 @@ export default defineConfig({
       dirs: [
         'src/composables',
         'src/stores',
+        'src/assets', // Added
       ],
       vueTemplate: true,
     }),
@@ -143,6 +148,9 @@ export default defineConfig({
     Inspector({
       toggleButtonVisibility: 'never',
     }),
+    vuetify({
+      autoImport: true,
+    }),
   ],
 
   // https://github.com/vitest-dev/vitest
@@ -164,5 +172,19 @@ export default defineConfig({
   ssr: {
     // TODO: workaround until they support native ESM
     noExternal: ['workbox-window', /vue-i18n/],
+  },
+  // Added from materialpro
+  css: {
+    preprocessorOptions: {
+      scss: { charset: false },
+      css: { charset: false },
+    },
+  },
+  // Added from materialpro. Makes pages with vuetify components load faster.
+  optimizeDeps: {
+    exclude: ['vuetify'],
+    entries: [
+      './src/**/*.vue',
+    ],
   },
 })

@@ -3,13 +3,13 @@
 // you can use this to manipulate the document head in any components,
 // they will be rendered correctly in the html results with vite-ssg
 useHead({
-  title: 'Vitesse',
+  title: 'Showcase UI | ICILS 2077',
   meta: [
-    { name: 'description', content: 'Opinionated Vite Starter Template' },
-    {
-      name: 'theme-color',
-      content: computed(() => isDark.value ? '#00aba9' : '#ffffff'),
-    },
+    { name: 'description', content: 'Showcase app for the ICILS 2077 design system and component library.' },
+    // {
+    //   name: 'theme-color',
+    //   // content: computed(() => isDark.value ? '#00aba9' : '#ffffff'),
+    // },
   ],
   link: [
     {

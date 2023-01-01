@@ -6,8 +6,10 @@ import type { UserModule } from './types'
 import generatedRoutes from '~pages'
 
 import '@unocss/reset/tailwind.css'
-import './styles/main.css'
 import 'uno.css'
+import '@mdi/font/css/materialdesignicons.css'
+import './styles/main.css'
+import './scss/style.scss'
 
 const routes = setupLayouts(generatedRoutes)
 

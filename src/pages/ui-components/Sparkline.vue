@@ -1,0 +1,64 @@
+<script>
+export default {
+  name: 'Sparkline',
+  components: {
+    SparklineFill: () =>
+      import('~/components/vuetifyComponents/sparkline/SparklineFill'),
+    SparklineTakeBreak: () =>
+      import('~/components/vuetifyComponents/sparkline/SparklineTakeBreak'),
+    SparklineDashboardCard: () =>
+      import('~/components/vuetifyComponents/sparkline/SparklineDashboardCard'),
+    SparklineCustomLabels: () =>
+      import('~/components/vuetifyComponents/sparkline/SparklineCustomLabels'),
+  },
+
+  data: () => ({
+    page: {
+      title: 'Sparkline',
+    },
+    breadcrumbs: [
+      {
+        text: 'UI Components',
+        disabled: false,
+        href: '#',
+      },
+      {
+        text: 'Sparkline',
+        disabled: true,
+        href: '#',
+      },
+    ],
+  }),
+}
+</script>
+
+<template>
+  <v-container fluid class="down-top-padding">
+    <BaseBreadcrumb :title="page.title" :icon="page.icon" :breadcrumbs="breadcrumbs" />
+    <v-row>
+      <v-col cols="12" sm="12">
+        <BaseCard heading="Sparkline - Fill">
+          <SparklineFill />
+        </BaseCard>
+      </v-col>
+
+      <v-col cols="12" sm="12">
+        <BaseCard heading="Sparkline - Take a break">
+          <SparklineTakeBreak />
+        </BaseCard>
+      </v-col>
+
+      <v-col cols="12" sm="12">
+        <BaseCard heading="Sparkline - Dashboard card">
+          <SparklineDashboardCard />
+        </BaseCard>
+      </v-col>
+
+      <v-col cols="12" sm="12">
+        <BaseCard heading="Sparkline - Custom labels">
+          <SparklineCustomLabels />
+        </BaseCard>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>

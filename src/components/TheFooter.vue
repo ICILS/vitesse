@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useCustomizerStore } from '~/stores/customizer'
+
+const customizer = useCustomizerStore()
 const { t, availableLocales, locale } = useI18n()
 
 const toggleLocales = () => {
@@ -14,7 +17,7 @@ const toggleLocales = () => {
       <div i-carbon-campsite />
     </RouterLink>
 
-    <button class="icon-btn mx-2 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
+    <button class="icon-btn mx-2 !outline-none" :title="t('button.toggle_dark')" @click="customizer.TOGGLE_DARK_THEME">
       <div i="carbon-sun dark:carbon-moon" />
     </button>
 

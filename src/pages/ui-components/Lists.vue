@@ -1,0 +1,132 @@
+<script>
+export default {
+  name: 'Lists',
+  components: {
+    ListsDisabled: () =>
+      import('~/components/vuetifyComponents/lists/ListsDisabled'),
+    ListsShaped: () =>
+      import('~/components/vuetifyComponents/lists/ListsShaped'),
+    ListsDence: () => import('~/components/vuetifyComponents/lists/ListsDence'),
+    ListsFlat: () => import('~/components/vuetifyComponents/lists/ListsFlat'),
+    ListsRounded: () =>
+      import('~/components/vuetifyComponents/lists/ListsRounded'),
+    ListsAvatarTitleAction: () =>
+      import('~/components/vuetifyComponents/lists/ListsAvatarTitleAction'),
+    ListsIcon2lineAction: () =>
+      import('~/components/vuetifyComponents/lists/ListsIcon2lineAction'),
+    ListsAvatar3Lines: () =>
+      import('~/components/vuetifyComponents/lists/ListsAvatar3Lines'),
+    ListsAvatarwithTitleAction: () =>
+      import('~/components/vuetifyComponents/lists/ListsAvatarwithTitleAction'),
+    ListsNested: () =>
+      import('~/components/vuetifyComponents/lists/ListsNested'),
+    ListsSubheadingsDividers: () =>
+      import('~/components/vuetifyComponents/lists/ListsSubheadingsDividers'),
+    ListsImagewithToolbar: () =>
+      import('~/components/vuetifyComponents/lists/ListsImagewithToolbar'),
+    ListsTitlewithSubtitleActiontext: () =>
+      import(
+        '~/components/vuetifyComponents/lists/ListsTitlewithSubtitleActiontext'
+      ),
+    ListsActionwithTitleSubtitle: () =>
+      import(
+        '~/components/vuetifyComponents/lists/ListsActionwithTitleSubtitle'
+      ),
+    ListsExpansion: () =>
+      import('~/components/vuetifyComponents/lists/ListsExpansion'),
+    ListsNavigation: () =>
+      import('~/components/vuetifyComponents/lists/ListsNavigation'),
+  },
+
+  data: () => ({
+    page: {
+      title: 'Lists',
+    },
+    breadcrumbs: [
+      {
+        text: 'Widgets',
+        disabled: false,
+        href: '#',
+      },
+      {
+        text: 'Lists',
+        disabled: true,
+        href: '#',
+      },
+    ],
+  }),
+}
+</script>
+
+<template>
+  <v-container fluid class="down-top-padding">
+    <BaseBreadcrumb :title="page.title" :icon="page.icon" :breadcrumbs="breadcrumbs" />
+    <v-row>
+      <v-col cols="12" sm="12">
+        <BaseCard heading="Lists - Disabled lists">
+          <ListsDisabled />
+        </BaseCard>
+
+        <BaseCard heading="Lists - Shaped lists">
+          <ListsShaped />
+        </BaseCard>
+
+        <BaseCard heading="Lists - Dense">
+          <ListsDence />
+        </BaseCard>
+
+        <BaseCard heading="Lists - Flat">
+          <ListsFlat />
+        </BaseCard>
+
+        <BaseCard heading="Lists - Rounded">
+          <ListsRounded />
+        </BaseCard>
+
+        <BaseCard heading="Lists - Avatar with title and action">
+          <ListsAvatarTitleAction />
+        </BaseCard>
+
+        <BaseCard heading="Lists - Icon with 2 lines and action">
+          <ListsIcon2lineAction />
+        </BaseCard>
+
+        <BaseCard heading="Lists - Avatar with 3 lines">
+          <ListsAvatar3Lines />
+        </BaseCard>
+
+        <BaseCard heading="Lists - Avatar with title and action">
+          <ListsAvatarwithTitleAction />
+        </BaseCard>
+
+        <BaseCard heading="Lists - Nested lists">
+          <ListsNested />
+        </BaseCard>
+
+        <BaseCard heading="Lists - Subheadings and dividers">
+          <ListsSubheadingsDividers />
+        </BaseCard>
+
+        <BaseCard heading="Lists - Card image with toolbar and list">
+          <ListsImagewithToolbar />
+        </BaseCard>
+
+        <BaseCard heading="Lists - Title with sub-title, actions and action-text">
+          <ListsTitlewithSubtitleActiontext />
+        </BaseCard>
+
+        <BaseCard heading="Lists - Action with title and sub-title">
+          <ListsActionwithTitleSubtitle />
+        </BaseCard>
+
+        <BaseCard heading="Lists - Expansion Lists">
+          <ListsExpansion />
+        </BaseCard>
+
+        <BaseCard heading="Lists - Navigation lists">
+          <ListsNavigation />
+        </BaseCard>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
