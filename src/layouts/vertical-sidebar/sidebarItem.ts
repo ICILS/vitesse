@@ -137,14 +137,14 @@ export default [
         to: '/ui-components/chip-groups',
       },
       {
-        title: 'Item Group',
+        title: 'Item Groups',
         icon: 'i-feather-disc',
-        to: '/ui-components/item-group',
+        to: '/ui-components/item-groups',
       },
       {
-        title: 'Slide Group',
+        title: 'Slide Groups',
         icon: 'i-feather-disc',
-        to: '/ui-components/slide-group',
+        to: '/ui-components/slide-groups',
       },
       {
         title: 'Images',
@@ -331,7 +331,7 @@ export default [
   {
     title: 'Editable Table',
     icon: 'i-feather-edit',
-    to: '/editable-table',
+    to: '/tables/editable-table',
   },
   { header: 'Authentication' },
   {
@@ -357,7 +357,7 @@ export default [
   {
     title: 'Error',
     icon: 'i-feather-alert-triangle',
-    to: '/authentication/error',
+    to: '/error',
   },
   { header: 'Icons' },
   /* {

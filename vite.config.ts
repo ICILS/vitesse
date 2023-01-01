@@ -185,6 +185,7 @@ export default defineConfig({
     exclude: ['vuetify'],
     entries: [
       './src/**/*.vue',
+      './src/pages/**/*.vue',
     ],
   },
 })

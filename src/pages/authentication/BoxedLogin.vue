@@ -114,7 +114,7 @@ const emailRules = ref([
                       <v-icon>i-mdi-twitter</v-icon>
                     </v-btn>
                     <v-btn icon color="error">
-                      <v-icon>i-mdi-github</v-icon>
+                      <v-icon icon="i-mdi-github" />
                     </v-btn>
                   </div>
                 </div>

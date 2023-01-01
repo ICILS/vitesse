@@ -7,9 +7,8 @@
   <v-row justify="center">
     <v-col v-for="n in 25" :key="n" cols="auto">
       <v-card
-        height="100" width="100" class="d-flex justify-center align-center bg-secondary" :class="[
-          `elevation-${n}`,
-        ]"
+        height="100" width="100" class="d-flex justify-center align-center bg-secondary"
+        :elevation="n - 1"
       >
         <div>{{ n - 1 }}</div>
       </v-card>
