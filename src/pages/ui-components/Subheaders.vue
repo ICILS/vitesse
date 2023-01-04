@@ -1,40 +1,32 @@
-<script>
-export default {
-  name: 'Subheaders',
-  components: {
-    SubheadersInset: () =>
-      import('~/components/vuetifyComponents/subheaders/SubheadersInset'),
-    SubheadersGrid: () =>
-      import('~/components/vuetifyComponents/subheaders/SubheadersGrid'),
-    SubheadersMenu: () =>
-      import('~/components/vuetifyComponents/subheaders/SubheadersMenu'),
-    SubheadersSocialMedia: () =>
-      import('~/components/vuetifyComponents/subheaders/SubheadersSocialMedia'),
-  },
+<script setup lang="ts">
+import BaseBreadcrumb from '~/components/base/BaseBreadcrumb.vue'
+import BaseCard from '~/components/base/BaseCard.vue'
+import SubheadersInset from '~/components/vuetifyComponents/subheaders/SubheadersInset.vue'
+import SubheadersGrid from '~/components/vuetifyComponents/subheaders/SubheadersGrid.vue'
+import SubheadersMenu from '~/components/vuetifyComponents/subheaders/SubheadersMenu.vue'
+import SubheadersSocialMedia from '~/components/vuetifyComponents/subheaders/SubheadersSocialMedia.vue'
 
-  data: () => ({
-    page: {
-      title: 'Subheaders',
-    },
-    breadcrumbs: [
-      {
-        text: 'UI Components',
-        disabled: false,
-        href: '#',
-      },
-      {
-        text: 'Subheaders',
-        disabled: true,
-        href: '#',
-      },
-    ],
-  }),
+const page = {
+  title: 'Subheaders',
 }
+
+const breadcrumbs = [
+  {
+    text: 'UI Components',
+    disabled: false,
+    href: '#',
+  },
+  {
+    text: 'Subheaders',
+    disabled: true,
+    href: '#',
+  },
+]
 </script>
 
 <template>
   <v-container fluid class="down-top-padding">
-    <BaseBreadcrumb :title="page.title" :icon="page.icon" :breadcrumbs="breadcrumbs" />
+    <BaseBreadcrumb :title="page.title" :breadcrumbs="breadcrumbs" />
     <v-row>
       <v-col cols="12" sm="12">
         <BaseCard heading="Subheaders - Inset subheaders">

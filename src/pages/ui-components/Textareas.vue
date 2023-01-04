@@ -1,21 +1,13 @@
-<script>
-export default {
-  name: 'Textareas',
-  components: {
-    TextareasIcon: () => import('~/components/vuetifyComponents/textareas/TextareasIcon'),
-    TextareasAutoGrow: () => import('~/components/vuetifyComponents/textareas/TextareasAutoGrow'),
-    TextareasBackgroundColor: () => import('~/components/vuetifyComponents/textareas/TextareasBackgroundColor'),
-    TextareasBrowserAutocomplete: () => import('~/components/vuetifyComponents/textareas/TextareasBrowserAutocomplete'),
-    TextareasClearable: () => import('~/components/vuetifyComponents/textareas/TextareasClearable'),
-    TextareasCounter: () => import('~/components/vuetifyComponents/textareas/TextareasCounter'),
-    TextareasNoresize: () => import('~/components/vuetifyComponents/textareas/TextareasNoresize'),
-    TextareasRows: () => import('~/components/vuetifyComponents/textareas/TextareasRows'),
-    TextareasBeautifulForms: () => import('~/components/vuetifyComponents/textareas/TextareasBeautifulForms'),
-  },
-
-  data: () => ({
-  }),
-}
+<script setup lang="ts">
+import TextareasIcon from '~/components/vuetifyComponents/textareas/TextareasIcon.vue'
+import TextareasAutoGrow from '~/components/vuetifyComponents/textareas/TextareasAutoGrow.vue'
+import TextareasBackgroundColor from '~/components/vuetifyComponents/textareas/TextareasBackgroundColor.vue'
+import TextareasBrowserAutocomplete from '~/components/vuetifyComponents/textareas/TextareasBrowserAutocomplete.vue'
+import TextareasClearable from '~/components/vuetifyComponents/textareas/TextareasClearable.vue'
+import TextareasCounter from '~/components/vuetifyComponents/textareas/TextareasCounter.vue'
+import TextareasNoresize from '~/components/vuetifyComponents/textareas/TextareasNoresize.vue'
+import TextareasRows from '~/components/vuetifyComponents/textareas/TextareasRows.vue'
+import TextareasBeautifulForms from '~/components/vuetifyComponents/textareas/TextareasBeautifulForms.vue'
 </script>
 
 <template>

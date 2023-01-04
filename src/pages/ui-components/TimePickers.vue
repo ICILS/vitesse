@@ -1,68 +1,40 @@
-<script>
-export default {
-  name: 'TimePickers',
-  components: {
-    TimePickerColors: () =>
-      import('~/components/vuetifyComponents/time-pickers/TimePickerColors'),
-    TimePickerDisabled: () =>
-      import('~/components/vuetifyComponents/time-pickers/TimePickerDisabled'),
-    TimePickerReadonly: () =>
-      import('~/components/vuetifyComponents/time-pickers/TimePickerReadonly'),
-    TimePicker24hFormat: () =>
-      import('~/components/vuetifyComponents/time-pickers/TimePicker24hFormat'),
-    TimePickerAllowedTimes: () =>
-      import(
-        '~/components/vuetifyComponents/time-pickers/TimePickerAllowedTimes'
-      ),
-    TimePickerSettingPickerWidth: () =>
-      import(
-        '~/components/vuetifyComponents/time-pickers/TimePickerSettingPickerWidth'
-      ),
-    TimePickerAmPmSwitchinTitle: () =>
-      import(
-        '~/components/vuetifyComponents/time-pickers/TimePickerAmPmSwitchinTitle'
-      ),
-    TimePickerNoTitle: () =>
-      import('~/components/vuetifyComponents/time-pickers/TimePickerNoTitle'),
-    TimePickerWithSeconds: () =>
-      import(
-        '~/components/vuetifyComponents/time-pickers/TimePickerWithSeconds'
-      ),
-    TimePickerScrollable: () =>
-      import(
-        '~/components/vuetifyComponents/time-pickers/TimePickerScrollable'
-      ),
-    TimePickerInDialogMenu: () =>
-      import(
-        '~/components/vuetifyComponents/time-pickers/TimePickerInDialogMenu'
-      ),
-    TimePickerInRange: () =>
-      import('~/components/vuetifyComponents/time-pickers/TimePickerInRange'),
-  },
+<script setup lang="ts">
+import BaseBreadcrumb from '~/components/base/BaseBreadcrumb.vue'
+import BaseCard from '~/components/base/BaseCard.vue'
+import TimePickerColors from '~/components/vuetifyComponents/time-pickers/TimePickerColors.vue'
+import TimePickerDisabled from '~/components/vuetifyComponents/time-pickers/TimePickerDisabled.vue'
+import TimePickerReadonly from '~/components/vuetifyComponents/time-pickers/TimePickerReadonly.vue'
+import TimePicker24hFormat from '~/components/vuetifyComponents/time-pickers/TimePicker24hFormat.vue'
+import TimePickerAllowedTimes from '~/components/vuetifyComponents/time-pickers/TimePickerAllowedTimes.vue'
+import TimePickerSettingPickerWidth from '~/components/vuetifyComponents/time-pickers/TimePickerSettingPickerWidth.vue'
+import TimePickerAmPmSwitchinTitle from '~/components/vuetifyComponents/time-pickers/TimePickerAmPmSwitchinTitle.vue'
+import TimePickerNoTitle from '~/components/vuetifyComponents/time-pickers/TimePickerNoTitle.vue'
+import TimePickerWithSeconds from '~/components/vuetifyComponents/time-pickers/TimePickerWithSeconds.vue'
+import TimePickerScrollable from '~/components/vuetifyComponents/time-pickers/TimePickerScrollable.vue'
+import TimePickerInDialogMenu from '~/components/vuetifyComponents/time-pickers/TimePickerInDialogMenu.vue'
+import TimePickerInRange from '~/components/vuetifyComponents/time-pickers/TimePickerInRange.vue'
 
-  data: () => ({
-    page: {
-      title: 'TimePickers',
-    },
-    breadcrumbs: [
-      {
-        text: 'UI Components',
-        disabled: false,
-        href: '#',
-      },
-      {
-        text: 'TimePickers',
-        disabled: true,
-        href: '#',
-      },
-    ],
-  }),
+const page = {
+  title: 'TimePickers',
 }
+
+const breadcrumbs = [
+  {
+    text: 'UI Components',
+    disabled: false,
+    href: '#',
+  },
+  {
+    text: 'TimePickers',
+    disabled: true,
+    href: '#',
+  },
+]
 </script>
 
 <template>
   <v-container fluid class="down-top-padding">
-    <BaseBreadcrumb :title="page.title" :icon="page.icon" :breadcrumbs="breadcrumbs" />
+    <BaseBreadcrumb :title="page.title" :breadcrumbs="breadcrumbs" />
     <v-row>
       <v-col cols="12" sm="12">
         <BaseCard heading="Time Pickers - Colors">

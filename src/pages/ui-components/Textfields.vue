@@ -1,35 +1,28 @@
-<script>
-export default {
-  name: 'Textfields',
-  components: {
-    TextfieldSingleline: () => import('~/components/vuetifyComponents/textfields/TextfieldSingleline'),
-    TextfieldShaped: () => import('~/components/vuetifyComponents/textfields/TextfieldShaped'),
-    TextfieldDisabledReadonly: () => import('~/components/vuetifyComponents/textfields/TextfieldDisabledReadonly'),
-    TextfieldDense: () => import('~/components/vuetifyComponents/textfields/TextfieldDense'),
-    TextfieldIcons: () => import('~/components/vuetifyComponents/textfields/TextfieldIcons'),
-    TextfieldPasswordInput: () => import('~/components/vuetifyComponents/textfields/TextfieldPasswordInput'),
-    TextfieldClearable: () => import('~/components/vuetifyComponents/textfields/TextfieldClearable'),
-    TextfieldCharacterCounter: () => import('~/components/vuetifyComponents/textfields/TextfieldCharacterCounter'),
-    TextfieldAutohideDetails: () => import('~/components/vuetifyComponents/textfields/TextfieldAutohideDetails'),
-    TextfieldBoxStyle: () => import('~/components/vuetifyComponents/textfields/TextfieldBoxStyle'),
-    TextfieldSoloStyle: () => import('~/components/vuetifyComponents/textfields/TextfieldSoloStyle'),
-    TextfieldOutlineStyle: () => import('~/components/vuetifyComponents/textfields/TextfieldOutlineStyle'),
-    TextfieldCustomColors: () => import('~/components/vuetifyComponents/textfields/TextfieldCustomColors'),
-    TextfieldMask: () => import('~/components/vuetifyComponents/textfields/TextfieldMask'),
-    TextfieldHintText: () => import('~/components/vuetifyComponents/textfields/TextfieldHintText'),
-    TextfieldPrefixesSuffixes: () => import('~/components/vuetifyComponents/textfields/TextfieldPrefixesSuffixes'),
-    TextfieldIconEvents: () => import('~/components/vuetifyComponents/textfields/TextfieldIconEvents'),
-    TextfieldIconSlots: () => import('~/components/vuetifyComponents/textfields/TextfieldIconSlots'),
-    TextfieldLabelSlots: () => import('~/components/vuetifyComponents/textfields/TextfieldLabelSlots'),
-    TextfieldValidation: () => import('~/components/vuetifyComponents/textfields/TextfieldValidation'),
-    TextfieldFullwidthCharahterCounter: () => import('~/components/vuetifyComponents/textfields/TextfieldFullwidthCharahterCounter'),
-    TextfieldProgressbar: () => import('~/components/vuetifyComponents/textfields/TextfieldProgressbar'),
-    TextfieldCustomValidation: () => import('~/components/vuetifyComponents/textfields/TextfieldCustomValidation'),
-  },
-
-  data: () => ({
-  }),
-}
+<script setup lang="ts">
+import BaseCard from '~/components/BaseCard.vue'
+import TextfieldSingleline from '~/components/vuetifyComponents/textfields/TextfieldSingleline.vue'
+import TextfieldShaped from '~/components/vuetifyComponents/textfields/TextfieldShaped.vue'
+import TextfieldDisabledReadonly from '~/components/vuetifyComponents/textfields/TextfieldDisabledReadonly.vue'
+import TextfieldDense from '~/components/vuetifyComponents/textfields/TextfieldDense.vue'
+import TextfieldIcons from '~/components/vuetifyComponents/textfields/TextfieldIcons.vue'
+import TextfieldPasswordInput from '~/components/vuetifyComponents/textfields/TextfieldPasswordInput.vue'
+import TextfieldClearable from '~/components/vuetifyComponents/textfields/TextfieldClearable.vue'
+import TextfieldCharacterCounter from '~/components/vuetifyComponents/textfields/TextfieldCharacterCounter.vue'
+import TextfieldAutohideDetails from '~/components/vuetifyComponents/textfields/TextfieldAutohideDetails.vue'
+import TextfieldBoxStyle from '~/components/vuetifyComponents/textfields/TextfieldBoxStyle.vue'
+import TextfieldSoloStyle from '~/components/vuetifyComponents/textfields/TextfieldSoloStyle.vue'
+import TextfieldOutlineStyle from '~/components/vuetifyComponents/textfields/TextfieldOutlineStyle.vue'
+import TextfieldCustomColors from '~/components/vuetifyComponents/textfields/TextfieldCustomColors.vue'
+import TextfieldMask from '~/components/vuetifyComponents/textfields/TextfieldMask.vue'
+import TextfieldHintText from '~/components/vuetifyComponents/textfields/TextfieldHintText.vue'
+import TextfieldPrefixesSuffixes from '~/components/vuetifyComponents/textfields/TextfieldPrefixesSuffixes.vue'
+import TextfieldIconEvents from '~/components/vuetifyComponents/textfields/TextfieldIconEvents.vue'
+import TextfieldIconSlots from '~/components/vuetifyComponents/textfields/TextfieldIconSlots.vue'
+import TextfieldLabelSlots from '~/components/vuetifyComponents/textfields/TextfieldLabelSlots.vue'
+import TextfieldValidation from '~/components/vuetifyComponents/textfields/TextfieldValidation.vue'
+import TextfieldFullwidthCharahterCounter from '~/components/vuetifyComponents/textfields/TextfieldFullwidthCharahterCounter.vue'
+import TextfieldProgressbar from '~/components/vuetifyComponents/textfields/TextfieldProgressbar.vue'
+import TextfieldCustomValidation from '~/components/vuetifyComponents/textfields/TextfieldCustomValidation.vue'
 </script>
 
 <template>

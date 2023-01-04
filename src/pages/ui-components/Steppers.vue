@@ -1,57 +1,36 @@
-<script>
-export default {
-  name: 'Steppers',
-  components: {
-    SteppersEditable: () =>
-      import('~/components/vuetifyComponents/steppers/SteppersEditable'),
-    SteppersNonEditable: () =>
-      import('~/components/vuetifyComponents/steppers/SteppersNonEditable'),
-    SteppersOptional: () =>
-      import('~/components/vuetifyComponents/steppers/SteppersOptional'),
-    SteppersHorizontal: () =>
-      import('~/components/vuetifyComponents/steppers/SteppersHorizontal'),
-    SteppersVertical: () =>
-      import('~/components/vuetifyComponents/steppers/SteppersVertical'),
-    SteppersLinear: () =>
-      import('~/components/vuetifyComponents/steppers/SteppersLinear'),
-    SteppersNonLinear: () =>
-      import('~/components/vuetifyComponents/steppers/SteppersNonLinear'),
-    SteppersAlternateLabels: () =>
-      import('~/components/vuetifyComponents/steppers/SteppersAlternateLabels'),
-    SteppersMultilineErrorState: () =>
-      import(
-        '~/components/vuetifyComponents/steppers/SteppersMultilineErrorState'
-      ),
-    SteppersAlternateLabelsMultilineErrorState: () =>
-      import(
-        '~/components/vuetifyComponents/steppers/SteppersAlternateLabelsMultilineErrorState'
-      ),
-    SteppersVerticalMultilineErrorState: () =>
-      import(
-        '~/components/vuetifyComponents/steppers/SteppersVerticalMultilineErrorState'
-      ),
-    SteppersDynamic: () =>
-      import('~/components/vuetifyComponents/steppers/SteppersDynamic'),
-  },
+<script setup lang="ts">
+import BaseBreadcrumb from '~/components/base/BaseBreadcrumb.vue'
+import BaseCard from '~/components/base/BaseCard.vue'
+import SteppersEditable from '~/components/vuetifyComponents/steppers/SteppersEditable.vue'
+import SteppersNonEditable from '~/components/vuetifyComponents/steppers/SteppersNonEditable.vue'
+import SteppersOptional from '~/components/vuetifyComponents/steppers/SteppersOptional.vue'
+import SteppersHorizontal from '~/components/vuetifyComponents/steppers/SteppersHorizontal.vue'
+import SteppersVertical from '~/components/vuetifyComponents/steppers/SteppersVertical.vue'
+import SteppersLinear from '~/components/vuetifyComponents/steppers/SteppersLinear.vue'
+import SteppersNonLinear from '~/components/vuetifyComponents/steppers/SteppersNonLinear.vue'
+import SteppersAlternateLabels from '~/components/vuetifyComponents/steppers/SteppersAlternateLabels.vue'
+import SteppersMultilineErrorState from '~/components/vuetifyComponents/steppers/SteppersMultilineErrorState.vue'
+import SteppersAlternateLabelsMultilineErrorState from '~/components/vuetifyComponents/steppers/SteppersAlternateLabelsMultilineErrorState.vue'
+import SteppersVerticalMultilineErrorState from '~/components/vuetifyComponents/steppers/SteppersVerticalMultilineErrorState.vue'
+import SteppersDynamic from '~/components/vuetifyComponents/steppers/SteppersDynamic.vue'
 
-  data: () => ({
-    page: {
-      title: 'Steppers',
-    },
-    breadcrumbs: [
-      {
-        text: 'UI Components',
-        disabled: false,
-        href: '#',
-      },
-      {
-        text: 'Steppers',
-        disabled: true,
-        href: '#',
-      },
-    ],
-  }),
+const page = {
+  title: 'Steppers',
+  icon: 'mdi-chart-bubble',
 }
+
+const breadcrumbs = [
+  {
+    text: 'UI Components',
+    disabled: false,
+    href: '#',
+  },
+  {
+    text: 'Steppers',
+    disabled: true,
+    href: '#',
+  },
+]
 </script>
 
 <template>

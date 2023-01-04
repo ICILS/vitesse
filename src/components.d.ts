@@ -371,9 +371,5 @@ declare module '@vue/runtime-core' {
     TooltipsVisibility: typeof import('./components/vuetifyComponents/tooltips/TooltipsVisibility.vue')['default']
     Transform: typeof import('./components/vuetifyStyleComponents/typography/Transform.vue')['default']
     Typography: typeof import('./components/vuetifyStyleComponents/typography/Typography.vue')['default']
-    WindowsAccountCreation: typeof import('./components/vuetifyComponents/windows/WindowsAccountCreation.vue')['default']
-    WindowsOnboarding: typeof import('./components/vuetifyComponents/windows/WindowsOnboarding.vue')['default']
-    WindowsReverse: typeof import('./components/vuetifyComponents/windows/WindowsReverse.vue')['default']
-    WindowsVertical: typeof import('./components/vuetifyComponents/windows/WindowsVertical.vue')['default']
   }
 }
