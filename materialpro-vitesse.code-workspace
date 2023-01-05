@@ -8,5 +8,10 @@
 		"files.associations": {
 			"*.css": "postcss"
 		}
+	},
+	"extensions": {
+		"recommendations": [
+			"coder911th.vuetify-camelcase-snippets"
+		]
 	}
 }
