@@ -1,40 +1,27 @@
-<script>
-export default {
-  name: 'Sparkline',
-  components: {
-    SparklineFill: () =>
-      import('~/components/vuetifyComponents/sparkline/SparklineFill'),
-    SparklineTakeBreak: () =>
-      import('~/components/vuetifyComponents/sparkline/SparklineTakeBreak'),
-    SparklineDashboardCard: () =>
-      import('~/components/vuetifyComponents/sparkline/SparklineDashboardCard'),
-    SparklineCustomLabels: () =>
-      import('~/components/vuetifyComponents/sparkline/SparklineCustomLabels'),
-  },
+<script setup lang="ts">
+import SparklineFill from '~/components/vuetifyComponents/sparkline/SparklineFill.vue'
+import SparklineTakeBreak from '~/components/vuetifyComponents/sparkline/SparklineTakeBreak.vue'
+import SparklineDashboardCard from '~/components/vuetifyComponents/sparkline/SparklineDashboardCard.vue'
+import SparklineCustomLabels from '~/components/vuetifyComponents/sparkline/SparklineCustomLabels.vue'
 
-  data: () => ({
-    page: {
-      title: 'Sparkline',
-    },
-    breadcrumbs: [
-      {
-        text: 'UI Components',
-        disabled: false,
-        href: '#',
-      },
-      {
-        text: 'Sparkline',
-        disabled: true,
-        href: '#',
-      },
-    ],
-  }),
-}
+const page = ref({ title: 'Sparkline' })
+const breadcrumbs = ref([
+  {
+    text: 'UI Components',
+    disabled: false,
+    href: '#',
+  },
+  {
+    text: 'Sparkline',
+    disabled: true,
+    href: '#',
+  },
+])
 </script>
 
 <template>
   <v-container fluid class="down-top-padding">
-    <BaseBreadcrumb :title="page.title" :icon="page.icon" :breadcrumbs="breadcrumbs" />
+    <BaseBreadcrumb :title="page.title" :breadcrumbs="breadcrumbs" />
     <v-row>
       <v-col cols="12" sm="12">
         <BaseCard heading="Sparkline - Fill">

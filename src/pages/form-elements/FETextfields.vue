@@ -2,7 +2,6 @@
 import { ref } from 'vue'
 import BaseBreadcrumb from '~/components/BaseBreadcrumb.vue'
 import BaseCard from '~/components/BaseCard.vue'
-import TextfieldSingleline from '~/components/vuetifyComponents/textfields/TextfieldSingleline.vue'
 import TextfieldShaped from '~/components/vuetifyComponents/textfields/TextfieldShaped.vue'
 import TextfieldDisabledReadonly from '~/components/vuetifyComponents/textfields/TextfieldDisabledReadonly.vue'
 
@@ -19,7 +18,7 @@ import TextfieldBoxStyle from '~/components/vuetifyComponents/textfields/Textfie
 import TextfieldSoloStyle from '~/components/vuetifyComponents/textfields/TextfieldSoloStyle.vue'
 import TextfieldOutlineStyle from '~/components/vuetifyComponents/textfields/TextfieldOutlineStyle.vue'
 import TextfieldCustomColors from '~/components/vuetifyComponents/textfields/TextfieldCustomColors.vue'
-import TextfieldMask from '~/components/vuetifyComponents/textfields/TextfieldMask.vue'
+// import TextfieldMask from '~/components/vuetifyComponents/textfields/TextfieldMask.vue'
 import TextfieldHintText from '~/components/vuetifyComponents/textfields/TextfieldHintText.vue'
 import TextfieldPrefixesSuffixes from '~/components/vuetifyComponents/textfields/TextfieldPrefixesSuffixes.vue'
 
@@ -30,6 +29,8 @@ import TextfieldValidation from '~/components/vuetifyComponents/textfields/Textf
 import TextfieldFullwidthCharahterCounter from '~/components/vuetifyComponents/textfields/TextfieldFullwidthCharahterCounter.vue'
 
 import TextfieldProgressbar from '~/components/vuetifyComponents/textfields/TextfieldProgressbar.vue'
+import TextfieldForm from '~/components/vuetifyComponents/textfields/TextfieldForm.vue'
+import TextfieldVariant from '~/components/vuetifyComponents/textfields/TextfieldVariant.vue'
 
 const page = ref({ title: 'TextFields' })
 const breadcrumbs = ref([
@@ -52,8 +53,8 @@ const breadcrumbs = ref([
   />
   <v-row>
     <v-col cols="12" sm="12">
-      <BaseCard heading="Textfields - Single line">
-        <TextfieldSingleline />
+      <BaseCard heading="Textfields - Variant">
+        <TextfieldVariant />
       </BaseCard>
     </v-col>
     <v-col cols="12" sm="12">
@@ -67,7 +68,7 @@ const breadcrumbs = ref([
       </BaseCard>
     </v-col>
     <v-col cols="12" sm="12">
-      <BaseCard heading="Textfields - Dense">
+      <BaseCard heading="Textfields - Density">
         <TextfieldDense />
       </BaseCard>
     </v-col>
@@ -94,21 +95,6 @@ const breadcrumbs = ref([
     <v-col cols="12" sm="12">
       <BaseCard heading="Textfields - Password input">
         <TextfieldPasswordInput />
-      </BaseCard>
-    </v-col>
-    <v-col cols="12" sm="12">
-      <BaseCard heading="Textfields - Box style">
-        <TextfieldBoxStyle />
-      </BaseCard>
-    </v-col>
-    <v-col cols="12" sm="12">
-      <BaseCard heading="Textfields - Solo style">
-        <TextfieldSoloStyle />
-      </BaseCard>
-    </v-col>
-    <v-col cols="12" sm="12">
-      <BaseCard heading="Textfields - Outlined style">
-        <TextfieldOutlineStyle />
       </BaseCard>
     </v-col>
     <v-col cols="12" sm="12">

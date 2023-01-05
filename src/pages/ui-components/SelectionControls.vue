@@ -1,71 +1,20 @@
-<script>
-export default {
-  name: 'SelectionControls',
-  components: {
-    SelectionControlsChkBoolean: () =>
-      import(
-        '~/components/vuetifyComponents/selection-controls/SelectionControlsChkBoolean'
-      ),
-    SelectionControlsChkArray: () =>
-      import(
-        '~/components/vuetifyComponents/selection-controls/SelectionControlsChkArray'
-      ),
-    SelectionControlsChkStates: () =>
-      import(
-        '~/components/vuetifyComponents/selection-controls/SelectionControlsChkStates'
-      ),
-    SelectionControlsChkColors: () =>
-      import(
-        '~/components/vuetifyComponents/selection-controls/SelectionControlsChkColors'
-      ),
-    SelectionControlsChkInlinetextfield: () =>
-      import(
-        '~/components/vuetifyComponents/selection-controls/SelectionControlsChkInlinetextfield'
-      ),
-    SelectionControlsRadioDefault: () =>
-      import(
-        '~/components/vuetifyComponents/selection-controls/SelectionControlsRadioDefault'
-      ),
-    SelectionControlsRadioDirection: () =>
-      import(
-        '~/components/vuetifyComponents/selection-controls/SelectionControlsRadioDirection'
-      ),
-    SelectionControlsRadioColors: () =>
-      import(
-        '~/components/vuetifyComponents/selection-controls/SelectionControlsRadioColors'
-      ),
-    SelectionControlsSwitchBoolean: () =>
-      import(
-        '~/components/vuetifyComponents/selection-controls/SelectionControlsSwitchBoolean'
-      ),
-    SelectionControlsSwitchArray: () =>
-      import(
-        '~/components/vuetifyComponents/selection-controls/SelectionControlsSwitchArray'
-      ),
-    SelectionControlsSwitchStates: () =>
-      import(
-        '~/components/vuetifyComponents/selection-controls/SelectionControlsSwitchStates'
-      ),
-    SelectionControlsSwitchColors: () =>
-      import(
-        '~/components/vuetifyComponents/selection-controls/SelectionControlsSwitchColors'
-      ),
-    SelectionControlsSwitchFlat: () =>
-      import(
-        '~/components/vuetifyComponents/selection-controls/SelectionControlsSwitchFlat'
-      ),
-    SelectionControlsSwitchInset: () =>
-      import(
-        '~/components/vuetifyComponents/selection-controls/SelectionControlsSwitchInset'
-      ),
-    SelectionControlsLblSlot: () =>
-      import(
-        '~/components/vuetifyComponents/selection-controls/SelectionControlsLblSlot'
-      ),
-  },
-
-  data: () => ({}),
-}
+<script setup lang="ts">
+import BaseCard from '~/components/BaseCard.vue'
+import SelectionControlsChkBoolean from '~/components/vuetifyComponents/selection-controls/SelectionControlsChkBoolean.vue'
+import SelectionControlsChkArray from '~/components/vuetifyComponents/selection-controls/SelectionControlsChkArray.vue'
+import SelectionControlsChkStates from '~/components/vuetifyComponents/selection-controls/SelectionControlsChkStates.vue'
+import SelectionControlsChkColors from '~/components/vuetifyComponents/selection-controls/SelectionControlsChkColors.vue'
+import SelectionControlsChkInlinetextfield from '~/components/vuetifyComponents/selection-controls/SelectionControlsChkInlinetextfield.vue'
+import SelectionControlsRadioDefault from '~/components/vuetifyComponents/selection-controls/SelectionControlsRadioDefault.vue'
+import SelectionControlsRadioDirection from '~/components/vuetifyComponents/selection-controls/SelectionControlsRadioDirection.vue'
+import SelectionControlsRadioColors from '~/components/vuetifyComponents/selection-controls/SelectionControlsRadioColors.vue'
+import SelectionControlsSwitchBoolean from '~/components/vuetifyComponents/selection-controls/SelectionControlsSwitchBoolean.vue'
+import SelectionControlsSwitchArray from '~/components/vuetifyComponents/selection-controls/SelectionControlsSwitchArray.vue'
+import SelectionControlsSwitchStates from '~/components/vuetifyComponents/selection-controls/SelectionControlsSwitchStates.vue'
+import SelectionControlsSwitchColors from '~/components/vuetifyComponents/selection-controls/SelectionControlsSwitchColors.vue'
+import SelectionControlsSwitchFlat from '~/components/vuetifyComponents/selection-controls/SelectionControlsSwitchFlat.vue'
+import SelectionControlsSwitchInset from '~/components/vuetifyComponents/selection-controls/SelectionControlsSwitchInset.vue'
+import SelectionControlsLblSlot from '~/components/vuetifyComponents/selection-controls/SelectionControlsLblSlot.vue'
 </script>
 
 <template>

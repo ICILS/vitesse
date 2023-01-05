@@ -1,50 +1,40 @@
-<script>
-export default {
-  name: 'Sheet',
-  components: {
-    SheetelEvation: () =>
-      import('~/components/vuetifyComponents/sheet/SheetelEvation'),
-    SheetelTile: () =>
-      import('~/components/vuetifyComponents/sheet/SheetelTile'),
-    SheetelColorSize: () =>
-      import('~/components/vuetifyComponents/sheet/SheetelColorSize'),
-  },
+<script setup lang="ts">
+import BaseBreadcrumb from '~/components/BaseBreadcrumb.vue'
+import BaseCard from '~/components/BaseCard.vue'
+import SheetElevation from '~/components/vuetifyComponents/sheet/SheetElevation.vue'
+import SheetRounded from '~/components/vuetifyComponents/sheet/SheetRounded.vue'
+import SheetColorSize from '~/components/vuetifyComponents/sheet/SheetColorSize.vue'
 
-  data: () => ({
-    page: {
-      title: 'Sheet',
-    },
-    breadcrumbs: [
-      {
-        text: 'UI Components',
-        disabled: false,
-        href: '#',
-      },
-      {
-        text: 'Sheet',
-        disabled: true,
-        href: '#',
-      },
-    ],
-  }),
-}
+const page = ref({ title: 'Sheet' })
+const breadcrumbs = ref([
+  {
+    text: 'UI Components',
+    disabled: false,
+    href: '#',
+  },
+  {
+    text: 'Sheet',
+    disabled: true,
+    href: '#',
+  },
+])
 </script>
 
 <template>
   <v-container fluid class="down-top-padding">
-    <BaseBreadcrumb :title="page.title" :icon="page.icon" :breadcrumbs="breadcrumbs" />
+    <BaseBreadcrumb :title="page.title" :breadcrumbs="breadcrumbs" />
     <v-row>
       <v-col cols="12" sm="12">
         <BaseCard heading="Sheet - Using elevation">
-          <SheetelEvation />
+          <SheetElevation />
         </BaseCard>
 
-        <BaseCard heading="Sheet - Tile">
-          <SheetelTile />
+        <BaseCard heading="Sheet - Rounded">
+          <SheetRounded />
         </BaseCard>
 
         <BaseCard heading="Sheet - Colors & sizes">
-          <SheetelColorSize />
+          <SheetColorSize />
         </BaseCard>
       </v-col>
     </v-row>

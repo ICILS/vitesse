@@ -1,38 +1,26 @@
-<script>
-export default {
-  name: 'Snackbar',
-  components: {
-    SnackbarMultiline: () =>
-      import('~/components/vuetifyComponents/snackbar/SnackbarMultiline'),
-    SnackbarTimeout: () =>
-      import('~/components/vuetifyComponents/snackbar/SnackbarTimeout'),
-    SnackbarVertical: () =>
-      import('~/components/vuetifyComponents/snackbar/SnackbarVertical'),
-  },
+<script setup lang="ts">
+import SnackbarMultiline from '~/components/vuetifyComponents/snackbar/SnackbarMultiline.vue'
+import SnackbarTimeout from '~/components/vuetifyComponents/snackbar/SnackbarTimeout.vue'
+import SnackbarVertical from '~/components/vuetifyComponents/snackbar/SnackbarVertical.vue'
 
-  data: () => ({
-    page: {
-      title: 'Snackbar',
-    },
-    breadcrumbs: [
-      {
-        text: 'UI Components',
-        disabled: false,
-        href: '#',
-      },
-      {
-        text: 'Snackbar',
-        disabled: true,
-        href: '#',
-      },
-    ],
-  }),
-}
+const page = ref({ title: 'Snackbar' })
+const breadcrumbs = ref([
+  {
+    text: 'UI Components',
+    disabled: false,
+    href: '#',
+  },
+  {
+    text: 'Snackbar',
+    disabled: true,
+    href: '#',
+  },
+])
 </script>
 
 <template>
   <v-container fluid class="down-top-padding">
-    <BaseBreadcrumb :title="page.title" :icon="page.icon" :breadcrumbs="breadcrumbs" />
+    <BaseBreadcrumb :title="page.title" :breadcrumbs="breadcrumbs" />
     <v-row>
       <v-col cols="12" sm="12" lg="6">
         <BaseCard heading="Snackbar - Multi Line">

@@ -1,41 +1,33 @@
-<script>
-export default {
-  name: 'Selects',
-  components: {
-    SelectsDisabled: () =>
-      import('~/components/vuetifyComponents/selects/SelectsDisabled'),
-    SelectsReadonly: () =>
-      import('~/components/vuetifyComponents/selects/SelectsReadonly'),
-    SelectsLightTheme: () =>
-      import('~/components/vuetifyComponents/selects/SelectsLightTheme'),
-    SelectsIcons: () =>
-      import('~/components/vuetifyComponents/selects/SelectsIcons'),
-    SelectsMultiple: () =>
-      import('~/components/vuetifyComponents/selects/SelectsMultiple'),
-    SelectsDence: () =>
-      import('~/components/vuetifyComponents/selects/SelectsDence'),
-    SelectsCustomizedTextValue: () =>
-      import(
-        '~/components/vuetifyComponents/selects/SelectsCustomizedTextValue'
-      ),
-    SelectsCustomMenuprops: () =>
-      import('~/components/vuetifyComponents/selects/SelectsCustomMenuprops'),
-    SelectsPrependAppendSlots: () =>
-      import(
-        '~/components/vuetifyComponents/selects/SelectsPrependAppendSlots'
-      ),
-    SelectsSelectionAppearance: () =>
-      import(
-        '~/components/vuetifyComponents/selects/SelectsSelectionAppearance'
-      ),
-  },
+<script setup lang="ts">
+import SelectsDisabled from '~/components/vuetifyComponents/selects/SelectsDisabled.vue'
+import SelectsReadonly from '~/components/vuetifyComponents/selects/SelectsReadonly.vue'
+import SelectsLightTheme from '~/components/vuetifyComponents/selects/SelectsLightTheme.vue'
+import SelectsIcons from '~/components/vuetifyComponents/selects/SelectsIcons.vue'
+import SelectsMultiple from '~/components/vuetifyComponents/selects/SelectsMultiple.vue'
+import SelectsDence from '~/components/vuetifyComponents/selects/SelectsDence.vue'
+import SelectsCustomizedTextValue from '~/components/vuetifyComponents/selects/SelectsCustomizedTextValue.vue'
+import SelectsCustomMenuprops from '~/components/vuetifyComponents/selects/SelectsCustomMenuprops.vue'
+import SelectsPrependAppendSlots from '~/components/vuetifyComponents/selects/SelectsPrependAppendSlots.vue'
+import SelectsSelectionAppearance from '~/components/vuetifyComponents/selects/SelectsSelectionAppearance.vue'
 
-  data: () => ({}),
-}
+const page = ref({ title: 'Selects' })
+const breadcrumbs = ref([
+  {
+    text: 'UI Components',
+    disabled: false,
+    href: '#',
+  },
+  {
+    text: 'Selects',
+    disabled: true,
+    href: '#',
+  },
+])
 </script>
 
 <template>
   <v-container fluid class="down-top-padding">
+    <BaseBreadcrumb :title="page.title" :breadcrumbs="breadcrumbs" />
     <v-row>
       <v-col cols="12" sm="12">
         <BaseCard heading="Selects - Disabled">

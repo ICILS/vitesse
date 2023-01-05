@@ -1,25 +1,18 @@
-<script>
-export default {
-  name: 'Sliders',
-  components: {
-    SlidersMinMax: () => import('~/components/vuetifyComponents/sliders/SlidersMinMax'),
-    SlidersDisabled: () => import('~/components/vuetifyComponents/sliders/SlidersDisabled'),
-    SlidersReadonly: () => import('~/components/vuetifyComponents/sliders/SlidersReadonly'),
-    SlidersIcons: () => import('~/components/vuetifyComponents/sliders/SlidersIcons'),
-    SlidersVertical: () => import('~/components/vuetifyComponents/sliders/SlidersVertical'),
-    SlidersThumb: () => import('~/components/vuetifyComponents/sliders/SlidersThumb'),
-    SlidersInverseLabel: () => import('~/components/vuetifyComponents/sliders/SlidersInverseLabel'),
-    SlidersCustomRange: () => import('~/components/vuetifyComponents/sliders/SlidersCustomRange'),
-    SlidersTicks: () => import('~/components/vuetifyComponents/sliders/SlidersTicks'),
-    SlidersCustomcolors: () => import('~/components/vuetifyComponents/sliders/SlidersCustomcolors'),
-    SlidersRange: () => import('~/components/vuetifyComponents/sliders/SlidersRange'),
-    SlidersValidation: () => import('~/components/vuetifyComponents/sliders/SlidersValidation'),
-    SlidersSlots: () => import('~/components/vuetifyComponents/sliders/SlidersSlots'),
-  },
-
-  data: () => ({
-  }),
-}
+<script setup lang="ts">
+import BaseCard from '~/components/base/BaseCard.vue'
+import SlidersMinMax from '~/components/vuetifyComponents/sliders/SlidersMinMax.vue'
+import SlidersDisabled from '~/components/vuetifyComponents/sliders/SlidersDisabled.vue'
+import SlidersReadonly from '~/components/vuetifyComponents/sliders/SlidersReadonly.vue'
+import SlidersIcons from '~/components/vuetifyComponents/sliders/SlidersIcons.vue'
+import SlidersVertical from '~/components/vuetifyComponents/sliders/SlidersVertical.vue'
+import SlidersThumb from '~/components/vuetifyComponents/sliders/SlidersThumb.vue'
+import SlidersInverseLabel from '~/components/vuetifyComponents/sliders/SlidersInverseLabel.vue'
+import SlidersCustomRange from '~/components/vuetifyComponents/sliders/SlidersCustomRange.vue'
+import SlidersTicks from '~/components/vuetifyComponents/sliders/SlidersTicks.vue'
+import SlidersCustomcolors from '~/components/vuetifyComponents/sliders/SlidersCustomcolors.vue'
+import SlidersRange from '~/components/vuetifyComponents/sliders/SlidersRange.vue'
+import SlidersValidation from '~/components/vuetifyComponents/sliders/SlidersValidation.vue'
+import SlidersSlots from '~/components/vuetifyComponents/sliders/SlidersSlots.vue'
 </script>
 
 <template>
