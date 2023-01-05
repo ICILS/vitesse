@@ -1,0 +1,78 @@
+<template>
+  <v-form>
+    <v-container>
+      <v-row>
+        <v-col
+          cols="12"
+          sm="6"
+          md="4"
+        >
+          <v-text-field
+            label="Regular"
+            placeholder="Placeholder"
+          />
+        </v-col>
+
+        <v-col
+          cols="12"
+          sm="6"
+          md="4"
+        >
+          <v-text-field
+            label="Solo"
+            variant="solo"
+            placeholder="Placeholder"
+          />
+        </v-col>
+
+        <v-col
+          cols="12"
+          sm="6"
+          md="4"
+        >
+          <v-text-field
+            label="Filled"
+            placeholder="Placeholder"
+            variant="filled"
+          />
+        </v-col>
+
+        <v-col
+          cols="12"
+          sm="6"
+          md="4"
+        >
+          <v-text-field
+            label="Outlined"
+            placeholder="Placeholder"
+            variant="outlined"
+          />
+        </v-col>
+
+        <v-col
+          cols="12"
+          sm="6"
+          md="4"
+        >
+          <v-text-field
+            label="Plain"
+            placeholder="Placeholder"
+            variant="plain"
+          />
+        </v-col>
+
+        <v-col
+          cols="12"
+          sm="6"
+          md="4"
+        >
+          <v-text-field
+            label="Underlined"
+            placeholder="Placeholder"
+            variant="underlined"
+          />
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-form>
+</template>
