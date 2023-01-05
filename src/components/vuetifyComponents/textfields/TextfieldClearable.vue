@@ -31,7 +31,7 @@ const message4 = ref('Hey!')
             <v-col cols="12" sm="6">
               <v-text-field
                 v-model="message2"
-                solo
+                variant="solo"
                 label="Solo"
                 clearable
               />
@@ -40,7 +40,7 @@ const message4 = ref('Hey!')
             <v-col cols="12" sm="6">
               <v-text-field
                 v-model="message3"
-                filled
+                variant="filled"
                 label="Filled"
                 clearable
               />
@@ -50,7 +50,7 @@ const message4 = ref('Hey!')
               <v-text-field
                 v-model="message4"
                 label="Outlined"
-                outlined
+                variant="outlined"
                 clearable
               />
             </v-col>

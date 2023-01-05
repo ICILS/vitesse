@@ -1,143 +1,136 @@
-<script setup lang="ts">
-import { computed, ref } from 'vue'
-const fruits = ref([
-  'Apples',
-  'Apricots',
-  'Avocado',
-  'Bananas',
-  'Blueberries',
-  'Blackberries',
-  'Boysenberries',
-  'Bread fruit',
-  'Cantaloupes (cantalope)',
-  'Cherries',
-  'Cranberries',
-  'Cucumbers',
-  'Currants',
-  'Dates',
-  'Eggplant',
-  'Figs',
-  'Grapes',
-  'Grapefruit',
-  'Guava',
-  'Honeydew melons',
-  'Huckleberries',
-  'Kiwis',
-  'Kumquat',
-  'Lemons',
-  'Limes',
-  'Mangos',
-  'Mulberries',
-  'Muskmelon',
-  'Nectarines',
-  'Olives',
-  'Oranges',
-  'Papaya',
-  'Peaches',
-  'Pears',
-  'Persimmon',
-  'Pineapple',
-  'Plums',
-  'Pomegranate',
-  'Raspberries',
-  'Rose Apple',
-  'Starfruit',
-  'Strawberries',
-  'Tangerines',
-  'Tomatoes',
-  'Watermelons',
-  'Zucchini',
-])
+<script>
+export default {
+  data: () => ({
+    fruits: [
+      'Apples',
+      'Apricots',
+      'Avocado',
+      'Bananas',
+      'Blueberries',
+      'Blackberries',
+      'Boysenberries',
+      'Bread fruit',
+      'Cantaloupes (cantalope)',
+      'Cherries',
+      'Cranberries',
+      'Cucumbers',
+      'Currants',
+      'Dates',
+      'Eggplant',
+      'Figs',
+      'Grapes',
+      'Grapefruit',
+      'Guava',
+      'Honeydew melons',
+      'Huckleberries',
+      'Kiwis',
+      'Kumquat',
+      'Lemons',
+      'Limes',
+      'Mangos',
+      'Mulberries',
+      'Muskmelon',
+      'Nectarines',
+      'Olives',
+      'Oranges',
+      'Papaya',
+      'Peaches',
+      'Pears',
+      'Persimmon',
+      'Pineapple',
+      'Plums',
+      'Pomegranate',
+      'Raspberries',
+      'Rose Apple',
+      'Starfruit',
+      'Strawberries',
+      'Tangerines',
+      'Tomatoes',
+      'Watermelons',
+      'Zucchini',
+    ],
+    selectedFruits: [],
+  }),
 
-const selectedFruits = ref()
-const likesAllFruit = computed(() => {
-  return selectedFruits.value.length === fruits.value.length
-})
-const likesSomeFruit = computed(() => {
-  return selectedFruits.value.length > 0 && !likesAllFruit.value
-})
-const icon = computed(() => {
-  if (likesAllFruit.value)
-    return 'mdi-close-box'
-  if (likesSomeFruit.value)
-    return 'mdi-minus-box'
-  return 'mdi-checkbox'
-})
-function toggle() {
-  setTimeout(() => {
-    if (likesAllFruit.value)
-      selectedFruits.value = []
-    else
-      selectedFruits.value = fruits.value.slice()
-  }, 0)
+  computed: {
+    likesAllFruit() {
+      return this.selectedFruits.length === this.fruits.length
+    },
+    likesSomeFruit() {
+      return this.selectedFruits.length > 0
+    },
+    title() {
+      if (this.likesAllFruit)
+        return 'Holy smokes, someone call the fruit police!'
+
+      if (this.likesSomeFruit)
+        return 'Fruit Count'
+
+      return 'How could you not like fruit?'
+    },
+    subtitle() {
+      if (this.likesAllFruit)
+        return undefined
+
+      if (this.likesSomeFruit)
+        return this.selectedFruits.length
+
+      return 'Go ahead, make a selection above!'
+    },
+  },
+
+  methods: {
+    toggle() {
+      if (this.likesAllFruit)
+        this.selectedFruits = []
+
+      else
+        this.selectedFruits = this.fruits.slice()
+    },
+  },
 }
 </script>
 
 <template>
-  <!-- ----------------------------------------------------------------------------- -->
-  <!-- error -->
-  <!-- ----------------------------------------------------------------------------- -->
-  <div>
-    <p class="text-subtitle-1 text-grey-darken-1">
-      The <code>v-select</code> components can be optionally expanded with
-      prepended and appended items. This is perfect for customized select-all
-      functionality.
-    </p>
-    <div class="mt-4">
-      <v-select
-        v-model="selectedFruits"
-        :items="fruits"
-        label="Favorite Fruits"
-        multiple
-      >
-        <template #prepend-item>
-          <v-list-item ripple @click="toggle">
-            <v-list-item-action>
-              <v-icon
-                :color="selectedFruits.length > 0 ? 'indigo darken-4' : ''"
-              >
-                {{ icon }}
-              </v-icon>
-            </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title>Select All</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-          <v-divider class="mt-2" />
-        </template>
-        <template #append-item>
-          <v-divider class="mb-2" />
-          <v-list-item disabled>
-            <v-list-item-avatar color="grey lighten-3">
-              <v-icon>i-mdi-food-apple</v-icon>
-            </v-list-item-avatar>
+  <v-container fluid>
+    <v-select
+      v-model="selectedFruits"
+      :items="fruits"
+      label="Favorite Fruits"
+      multiple
+    >
+      <template #prepend-item>
+        <v-list-item
+          title="Select All"
+          @click="toggle"
+        >
+          <template #prepend>
+            <v-checkbox-btn
+              :color="likesSomeFruit ? 'indigo-darken-4' : undefined"
+              :indeterminate="likesSomeFruit && !likesAllFruit"
+              :model-value="likesSomeFruit"
+            />
+          </template>
+        </v-list-item>
 
-            <v-list-item-content v-if="likesAllFruit">
-              <v-list-item-title>
-                Holy smokes, someone call the fruit police!
-              </v-list-item-title>
-            </v-list-item-content>
+        <v-divider class="mt-2" />
+      </template>
 
-            <v-list-item-content v-else-if="likesSomeFruit">
-              <v-list-item-title>Fruit Count</v-list-item-title>
-              <v-list-item-subtitle>
-                {{
-                  selectedFruits.length
-                }}
-              </v-list-item-subtitle>
-            </v-list-item-content>
+      <template #append-item>
+        <v-divider class="mb-2" />
 
-            <v-list-item-content v-else>
-              <v-list-item-title>
-                How could you not like fruit?
-              </v-list-item-title>
-              <v-list-item-subtitle>
-                Go ahead, make a selection above!
-              </v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-        </template>
-      </v-select>
-    </div>
-  </div>
+        <v-list-item
+          :subtitle="subtitle"
+          :title="title"
+          disabled
+        >
+          <template #prepend>
+            <v-avatar icon="mdi-food-apple" color="primary">
+              mdi-food-apple
+            </v-avatar>
+          </template>
+        </v-list-item>
+      </template>
+    </v-select>
+  </v-container>
 </template>

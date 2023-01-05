@@ -1,4 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const loading = ref(false)
+
+const onClick = () => {
+  loading.value = true
+
+  setTimeout(() => {
+    loading.value = false
+  }, 2000)
+}
+</script>
 
 <template>
   <!-- ----------------------------------------------------------------------------- -->
@@ -6,67 +18,31 @@
   <!-- ----------------------------------------------------------------------------- -->
   <div>
     <p class="text-subtitle-1 text-grey-darken-1">
-      You can reduces the text field height with <code>dense</code> prop.
+      The <code>density</code> prop decreases the height of the text field based upon
+      1 of 3 levels of density; <code>default</code>, <code>comfortable</code>, and <code>compact</code>.
+
+      When <code>clearable</code>, you can customize the clear icon with
+      <code>clear-icon</code>.
     </p>
     <div class="mt-4">
-      <v-form>
-        <v-container>
-          <v-row>
-            <v-col cols="12" sm="6" md="4">
-              <v-text-field
-                label="Regular"
-                placeholder="Placeholder"
-                density="compact"
-              />
-            </v-col>
-
-            <v-col cols="12" sm="6" md="4">
-              <v-text-field
-                label="Solo"
-                variant="solo"
-                placeholder="Placeholder"
-                density="compact"
-              />
-            </v-col>
-
-            <v-col cols="12" sm="6" md="4">
-              <v-text-field
-                label="Filled"
-                placeholder="Placeholder"
-                variant="filled"
-                density="compact"
-              />
-            </v-col>
-
-            <v-col cols="12" sm="6" md="4">
-              <v-text-field
-                label="Outlined"
-                placeholder="Placeholder"
-                variant="outlined"
-                density="compact"
-              />
-            </v-col>
-
-            <v-col cols="12" sm="6" md="4">
-              <v-text-field
-                label="Plain"
-                placeholder="Placeholder"
-                variant="plain"
-                density="compact"
-              />
-            </v-col>
-
-            <v-col cols="12" sm="6" md="4">
-              <v-text-field
-                label="Underlined"
-                placeholder="Placeholder"
-                variant="underlined"
-                density="compact"
-              />
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-form>
+      <v-card
+        class="mx-auto"
+        color="grey-lighten-3"
+        max-width="400"
+      >
+        <v-card-text>
+          <v-text-field
+            :loading="loading"
+            density="compact"
+            variant="solo"
+            label="Search templates"
+            append-inner-icon="mdi-magnify"
+            single-line
+            hide-details
+            @click:append-inner="onClick"
+          />
+        </v-card-text>
+      </v-card>
     </div>
   </div>
 </template>

@@ -9,9 +9,6 @@ import TextfieldPasswordInput from '~/components/vuetifyComponents/textfields/Te
 import TextfieldClearable from '~/components/vuetifyComponents/textfields/TextfieldClearable.vue'
 import TextfieldCharacterCounter from '~/components/vuetifyComponents/textfields/TextfieldCharacterCounter.vue'
 import TextfieldAutohideDetails from '~/components/vuetifyComponents/textfields/TextfieldAutohideDetails.vue'
-import TextfieldBoxStyle from '~/components/vuetifyComponents/textfields/TextfieldBoxStyle.vue'
-import TextfieldSoloStyle from '~/components/vuetifyComponents/textfields/TextfieldSoloStyle.vue'
-import TextfieldOutlineStyle from '~/components/vuetifyComponents/textfields/TextfieldOutlineStyle.vue'
 import TextfieldCustomColors from '~/components/vuetifyComponents/textfields/TextfieldCustomColors.vue'
 import TextfieldMask from '~/components/vuetifyComponents/textfields/TextfieldMask.vue'
 import TextfieldHintText from '~/components/vuetifyComponents/textfields/TextfieldHintText.vue'
@@ -23,6 +20,7 @@ import TextfieldValidation from '~/components/vuetifyComponents/textfields/Textf
 import TextfieldFullwidthCharahterCounter from '~/components/vuetifyComponents/textfields/TextfieldFullwidthCharahterCounter.vue'
 import TextfieldProgressbar from '~/components/vuetifyComponents/textfields/TextfieldProgressbar.vue'
 import TextfieldCustomValidation from '~/components/vuetifyComponents/textfields/TextfieldCustomValidation.vue'
+import TextfieldVariant from '~/components/vuetifyComponents/textfields/TextfieldVariant.vue'
 </script>
 
 <template>
@@ -65,16 +63,8 @@ import TextfieldCustomValidation from '~/components/vuetifyComponents/textfields
           <TextfieldPasswordInput />
         </BaseCard>
 
-        <BaseCard heading="Textfields - Box style">
-          <TextfieldBoxStyle />
-        </BaseCard>
-
-        <BaseCard heading="Textfields - Solo style">
-          <TextfieldSoloStyle />
-        </BaseCard>
-
-        <BaseCard heading="Textfields - Outlined style">
-          <TextfieldOutlineStyle />
+        <BaseCard heading="Textfields - Variant">
+          <TextfieldVariant />
         </BaseCard>
 
         <BaseCard heading="Textfields - Custom colors">
