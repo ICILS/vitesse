@@ -60,8 +60,7 @@ export const install: UserModule = ({ app }) => {
         letterSpacing: '0',
       },
       VCard: {
-        flat: true,
-        elevation: 0,
+        elevation: 2,
       },
       VCheckbox: {
         color: 'primary',

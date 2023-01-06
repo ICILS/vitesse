@@ -1,62 +1,45 @@
-<script>
-export default {
-  name: 'Overlay',
-  components: {
-    OverlayAbsolute: () =>
-      import('~/components/vuetifyComponents/overlay/OverlayAbsolute'),
-    OverlayOpacity: () =>
-      import('~/components/vuetifyComponents/overlay/OverlayOpacity'),
-    OverlayZindex: () =>
-      import('~/components/vuetifyComponents/overlay/OverlayZindex'),
-    OverlayLoader: () =>
-      import('~/components/vuetifyComponents/overlay/OverlayLoader'),
-    OverlayAdvanced: () =>
-      import('~/components/vuetifyComponents/overlay/OverlayAdvanced'),
-  },
+<script setup lang="ts">
+import BaseBreadcrumb from '~/components/BaseBreadcrumb.vue'
+import BaseCard from '~/components/BaseCard.vue'
+import OverlayBasic from '~/components/vuetifyComponents/overlay/OverlayBasic.vue'
+import OverlayContained from '~/components/vuetifyComponents/overlay/OverlayContained.vue'
+import OverlayAdvanced from '~/components/vuetifyComponents/overlay/OverlayAdvanced.vue'
+import OverlayLoader from '~/components/vuetifyComponents/overlay/OverlayLoader.vue'
 
-  data: () => ({
-    page: {
-      title: 'Overlay',
-    },
-    breadcrumbs: [
-      {
-        text: 'UI Components',
-        disabled: false,
-        href: '#',
-      },
-      {
-        text: 'Overlay',
-        disabled: true,
-        href: '#',
-      },
-    ],
-  }),
-}
+const page = ref({ title: 'Overlay', icon: 'mdi-image-filter-center-focus-weak' })
+const breadcrumbs = ref([
+  {
+    text: 'UI Components',
+    disabled: false,
+    href: '#',
+  },
+  {
+    text: 'Overlay',
+    disabled: true,
+    href: '#',
+  },
+])
 </script>
 
 <template>
   <v-container fluid class="down-top-padding">
-    <BaseBreadcrumb :title="page.title" :icon="page.icon" :breadcrumbs="breadcrumbs" />
+    <BaseBreadcrumb :title="page.title" :breadcrumbs="breadcrumbs" />
     <v-row>
       <v-col cols="12" sm="12">
-        <BaseCard heading="Overlay - Absolute">
-          <OverlayAbsolute />
+        <BaseCard heading="Overlay - Basic">
+          <OverlayBasic />
         </BaseCard>
 
-        <BaseCard heading="Overlay - Opacity">
-          <OverlayOpacity />
-        </BaseCard>
-
-        <BaseCard heading="Overlay - ZIndex">
-          <OverlayZindex />
-        </BaseCard>
-
-        <BaseCard heading="Overlay - Loader">
-          <OverlayLoader />
+        <BaseCard heading="Overlay - Contained">
+          <OverlayContained />
         </BaseCard>
 
         <BaseCard heading="Overlay - Advanced">
           <OverlayAdvanced />
+        </BaseCard>
+
+        <BaseCard heading="Overlay - Loader">
+          <OverlayLoader />
         </BaseCard>
       </v-col>
     </v-row>

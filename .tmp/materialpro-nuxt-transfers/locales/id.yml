@@ -1,0 +1,106 @@
+---
+banners:
+  welcome: halo, selamat datang di %{app_name}!
+button_labels:
+  continue: Continue
+  go_back: Go back
+  next: Next
+  sign_in:
+    sign_in: null
+components:
+  language_switcher:
+    change_language: ganti bahasa
+  theme_switcher:
+    change_theme: ganti tema
+    theme: tema
+dashboard:
+  index:
+    nav: rumah
+    title: rumah
+  nav: dasbor
+  title: dasbor
+dialogs:
+  task_confirmation:
+    a_yes: 'Yes'
+    b_no: 'No'
+    click_go_back: Click go back
+    click_next: Click next
+    have_you_finished_the_task: Have you finished the task?
+modules:
+  floppy_disks_vs_hard_drives: Floppy disks vs hard drives
+others:
+  copy: salinan
+  disabled: dengan disabilitas
+  enabled: diaktifkan
+  learn_more: belajarlah lagi
+pages:
+  '404':
+    title: halaman tidak ditemukan
+  blank:
+    description: ini adalah halaman kosong
+    just_blank_page_with_title: hanya halaman kosong dengan judul
+    nav: kosong
+    title: halaman kosong
+  getting-started:
+    description: ini adalah halaman memulai
+    nav: mulai
+    title: mulai
+  index:
+    title: nuxt 3[]luar biasa[]pemula
+  post:
+    description: ini adalah halaman posting
+    nav: pos
+    title: pos
+  setting:
+    description: ini adalah halaman pengaturan
+    nav: pengaturan
+    sections:
+      advanced_dir_listing:
+        description: jika tidak ada file indeks dalam direktori, isi direktori akan ditampilkan.
+        title: daftar direktori
+      advanced_enable_advanced:
+        description: anda dapat mengaktifkan pengaturan lanjutan untuk mengubah pengaturan
+        title: aktifkan pengaturan lanjutan
+      bot_id:
+        description: ini adalah id bot anda.
+        footer: digunakan saat berinteraksi dengan bot.
+        title: id bot
+      protection_spam:
+        description: alihkan aktifkan untuk menghapus batas merah
+        footer: jika memungkinkan kami akan mengamankan komentar anda dari spam
+        title: proteksi spam
+      validate_username:
+        description: ketik nama pengguna github anda dan klik tombol untuk memvalidasi.
+        footer: belajar lebih tentang
+        footer_button: mengesahkan
+        footer_link: pengguna github api
+        title: validasi profil github
+    title: pengaturan
+  test:
+    counter: menangkal
+    decrement: pengurangan
+    description: ini adalah halaman percobaan
+    full_name: nama lengkap
+    identity: identitas
+    increment: kenaikan
+    nav: uji
+    reset: mengatur ulang
+    title: pengujian
+sidenav:
+  headers:
+    large_task: Large task
+    small_tasks: Small tasks
+    test_pages: Test pages
+  titles:
+    demo_video: Demo video
+    introduction: Introduction
+    modal_test: Modal test
+    supabase_nuxt_demo: Supabase Nuxt demo
+    task: Task
+    task_1: Task 1
+    task_2: Task 2
+    task_3: Task 3
+    task_4: Task 4
+    task_5: Task 5
+    task_details: Task details
+    test: Test

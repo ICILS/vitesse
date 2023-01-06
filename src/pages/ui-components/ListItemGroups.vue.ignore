@@ -1,0 +1,55 @@
+<script setup lang="ts">
+import BaseBreadcrumb from '~/components/BaseBreadcrumb.vue'
+import BaseCard from '~/components/BaseCard.vue'
+import GrpListItemDeemphasizedSelections from '~/components/vuetifyComponents/listitem-group/GrpListItemDeemphasizedSelections.vue'
+import GrpListItemSelectMultiple from '~/components/vuetifyComponents/listitem-group/GrpListItemSelectMultiple.vue'
+import GrpListItemMandatory from '~/components/vuetifyComponents/listitem-group/GrpListItemMandatory.vue'
+import GrpListItemCustomActiveClass from '~/components/vuetifyComponents/listitem-group/GrpListItemCustomActiveClass.vue'
+import GrpListItemSelectionControls from '~/components/vuetifyComponents/listitem-group/GrpListItemSelectionControls.vue'
+
+const page = ref({ title: 'List Item Groups', icon: 'mdi-image-filter-center-focus-weak' })
+const breadcrumbs = ref([
+  {
+    text: 'UI Components',
+    disabled: false,
+    href: '#',
+  },
+  {
+    text: 'List Item Groups',
+    disabled: true,
+    href: '#',
+  },
+])
+</script>
+
+<template>
+  <v-container fluid class="down-top-padding">
+    <BaseBreadcrumb :title="page.title" :breadcrumbs="breadcrumbs" />
+    <v-row>
+      <v-col cols="12" sm="12">
+        <BaseCard heading="List Item Groups - De-emphasized selections">
+          <GrpListItemDeemphasizedSelections />
+        </BaseCard>
+      </v-col>
+      <v-col cols="12" sm="12" lg="6">
+        <BaseCard heading="List Item Groups - Select multiple items">
+          <GrpListItemSelectMultiple />
+        </BaseCard>
+      </v-col>
+      <v-col cols="12" sm="12" lg="6">
+        <BaseCard heading="List Item Groups - Mandatory">
+          <GrpListItemMandatory />
+        </BaseCard>
+      </v-col>
+      <v-col cols="12" sm="12">
+        <BaseCard heading="List Item Groups - Custom active class">
+          <GrpListItemCustomActiveClass />
+        </BaseCard>
+
+        <BaseCard heading="List Item Groups - Selection controls">
+          <GrpListItemSelectionControls />
+        </BaseCard>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>

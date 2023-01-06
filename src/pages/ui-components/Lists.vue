@@ -1,78 +1,53 @@
-<script>
-export default {
-  name: 'Lists',
-  components: {
-    ListsDisabled: () =>
-      import('~/components/vuetifyComponents/lists/ListsDisabled'),
-    ListsShaped: () =>
-      import('~/components/vuetifyComponents/lists/ListsShaped'),
-    ListsDence: () => import('~/components/vuetifyComponents/lists/ListsDence'),
-    ListsFlat: () => import('~/components/vuetifyComponents/lists/ListsFlat'),
-    ListsRounded: () =>
-      import('~/components/vuetifyComponents/lists/ListsRounded'),
-    ListsAvatarTitleAction: () =>
-      import('~/components/vuetifyComponents/lists/ListsAvatarTitleAction'),
-    ListsIcon2lineAction: () =>
-      import('~/components/vuetifyComponents/lists/ListsIcon2lineAction'),
-    ListsAvatar3Lines: () =>
-      import('~/components/vuetifyComponents/lists/ListsAvatar3Lines'),
-    ListsAvatarwithTitleAction: () =>
-      import('~/components/vuetifyComponents/lists/ListsAvatarwithTitleAction'),
-    ListsNested: () =>
-      import('~/components/vuetifyComponents/lists/ListsNested'),
-    ListsSubheadingsDividers: () =>
-      import('~/components/vuetifyComponents/lists/ListsSubheadingsDividers'),
-    ListsImagewithToolbar: () =>
-      import('~/components/vuetifyComponents/lists/ListsImagewithToolbar'),
-    ListsTitlewithSubtitleActiontext: () =>
-      import(
-        '~/components/vuetifyComponents/lists/ListsTitlewithSubtitleActiontext'
-      ),
-    ListsActionwithTitleSubtitle: () =>
-      import(
-        '~/components/vuetifyComponents/lists/ListsActionwithTitleSubtitle'
-      ),
-    ListsExpansion: () =>
-      import('~/components/vuetifyComponents/lists/ListsExpansion'),
-    ListsNavigation: () =>
-      import('~/components/vuetifyComponents/lists/ListsNavigation'),
-  },
+<script setup lang="ts">
+import BaseBreadcrumb from '~/components/BaseBreadcrumb.vue'
+import BaseCard from '~/components/BaseCard.vue'
+import ListsDisabled from '~/components/vuetifyComponents/lists/ListsDisabled.vue'
+// import ListsShaped from '~/components/vuetifyComponents/lists/ListsShaped.vue'
+import ListsDensity from '~/components/vuetifyComponents/lists/ListsDensity.vue'
+// import ListsFlat from '~/components/vuetifyComponents/lists/ListsFlat.vue'
+// import ListsRounded from '~/components/vuetifyComponents/lists/ListsRounded.vue'
+// import ListsAvatarTitleAction from '~/components/vuetifyComponents/lists/ListsAvatarTitleAction.vue'
+// import ListsIcon2lineAction from '~/components/vuetifyComponents/lists/ListsIcon2lineAction.vue'
+// import ListsAvatar3Lines from '~/components/vuetifyComponents/lists/ListsAvatar3Lines.vue'
+// import ListsAvatarwithTitleAction from '~/components/vuetifyComponents/lists/ListsAvatarwithTitleAction.vue'
+// import ListsNested from '~/components/vuetifyComponents/lists/ListsNested.vue'
+// import ListsSubheadingsDividers from '~/components/vuetifyComponents/lists/ListsSubheadingsDividers.vue'
+// import ListsImagewithToolbar from '~/components/vuetifyComponents/lists/ListsImagewithToolbar.vue'
+// import ListsTitlewithSubtitleActiontext from '~/components/vuetifyComponents/lists/ListsTitlewithSubtitleActiontext.vue'
+// import ListsActionwithTitleSubtitle from '~/components/vuetifyComponents/lists/ListsActionwithTitleSubtitle.vue'
+// import ListsExpansion from '~/components/vuetifyComponents/lists/ListsExpansion.vue'
+// import ListsNavigation from '~/components/vuetifyComponents/lists/ListsNavigation.vue'
 
-  data: () => ({
-    page: {
-      title: 'Lists',
-    },
-    breadcrumbs: [
-      {
-        text: 'Widgets',
-        disabled: false,
-        href: '#',
-      },
-      {
-        text: 'Lists',
-        disabled: true,
-        href: '#',
-      },
-    ],
-  }),
-}
+const page = ref({ title: 'Lists', icon: 'mdi-format-list-bulleted' })
+const breadcrumbs = ref([
+  {
+    text: 'Widgets',
+    disabled: false,
+    href: '#',
+  },
+  {
+    text: 'Lists',
+    disabled: true,
+    href: '#',
+  },
+])
 </script>
 
 <template>
   <v-container fluid class="down-top-padding">
-    <BaseBreadcrumb :title="page.title" :icon="page.icon" :breadcrumbs="breadcrumbs" />
+    <BaseBreadcrumb :title="page.title" :breadcrumbs="breadcrumbs" />
     <v-row>
       <v-col cols="12" sm="12">
         <BaseCard heading="Lists - Disabled lists">
           <ListsDisabled />
         </BaseCard>
 
-        <BaseCard heading="Lists - Shaped lists">
-          <ListsShaped />
+        <BaseCard heading="Lists - Density">
+          <ListsDensity />
         </BaseCard>
 
-        <BaseCard heading="Lists - Dense">
-          <ListsDence />
+        <!-- <BaseCard heading="Lists - Shaped lists">
+          <ListsShaped />
         </BaseCard>
 
         <BaseCard heading="Lists - Flat">
@@ -125,7 +100,7 @@ export default {
 
         <BaseCard heading="Lists - Navigation lists">
           <ListsNavigation />
-        </BaseCard>
+        </BaseCard> -->
       </v-col>
     </v-row>
   </v-container>

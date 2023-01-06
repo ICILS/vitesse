@@ -1,0 +1,90 @@
+export default [
+  { header: 'Small tasks', translationKey: 'small_tasks' },
+  {
+    title: 'Introduction',
+    translationKey: 'introduction',
+    icon: 'file-text',
+    to: '/modules/floppy/intro',
+    isComplete: false,
+  },
+  {
+    title: 'Task 1',
+    translationKey: 'task_1',
+    icon: 'square',
+    to: '/modules/floppy/task-1',
+    isComplete: false,
+  },
+
+  {
+    title: 'Task 2',
+    translationKey: 'task_2',
+    icon: 'square',
+    to: '/modules/floppy/task-2',
+    isComplete: true,
+  },
+
+  {
+    title: 'Task 3',
+    translationKey: 'task_3',
+    contentTitle: 'Task 3',
+    icon: 'square',
+    to: '/modules/floppy/task-3',
+    isComplete: false,
+  },
+  {
+    title: 'Task 4',
+    translationKey: 'task_4',
+    icon: 'square',
+    to: '/modules/floppy/task-4',
+    isComplete: false,
+  },
+  {
+    title: 'Task 5',
+    translationKey: 'task_5',
+    icon: 'square',
+    to: '/modules/floppy/task-5',
+    isComplete: false,
+  },
+  {
+    header: 'Large task',
+    translationKey: 'large_task',
+    icon: 'clipboard',
+    to: '/modules/floppy/large-task/task-details',
+    children: [
+      {
+        title: 'Task details',
+        translationKey: 'task_details',
+        icon: 'clipboard',
+        to: '/modules/floppy/large-task/task-details',
+        isComplete: false,
+      },
+      {
+        title: 'Demo video',
+        translationKey: 'demo_video',
+        icon: 'youtube',
+        to: '/modules/floppy/large-task/demo-video',
+        isComplete: false,
+      },
+      {
+        title: 'Task',
+        translationKey: 'task',
+        icon: 'package',
+        to: '/modules/floppy/large-task/activity',
+        isComplete: false,
+      },
+    ],
+  },
+  { header: 'Test pages', translationKey: 'test_pages' },
+  {
+    title: 'Supabase nuxt demo',
+    translationKey: 'supabase_nuxt_demo',
+    icon: 'codesandbox',
+    to: '/supabase-nuxt-demo',
+  },
+  {
+    title: 'Test',
+    translationKey: 'test',
+    icon: 'codesandbox',
+    to: '/test',
+  },
+]

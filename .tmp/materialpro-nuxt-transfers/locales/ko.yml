@@ -1,0 +1,106 @@
+---
+banners:
+  welcome: 안녕하세요, %{app_name}에 오신 것을 환영합니다!
+button_labels:
+  continue: Continue
+  go_back: Go back
+  next: Next
+  sign_in:
+    sign_in: null
+components:
+  language_switcher:
+    change_language: 언어 변경
+  theme_switcher:
+    change_theme: 테마 변경
+    theme: 주제
+dialogs:
+  task_confirmation:
+    a_yes: 'Yes'
+    b_no: 'No'
+    click_go_back: Click go back
+    click_next: Click next
+    have_you_finished_the_task: Have you finished the task?
+modules:
+  floppy_disks_vs_hard_drives: Floppy disks vs hard drives
+others:
+  copy: 복사
+  disabled: 장애가 있는
+  enabled: 활성화
+  learn_more: 더 알아보기
+pages:
+  '404':
+    title: 페이지를 찾을 수 없습니다
+  blank:
+    description: 이것은 빈 페이지입니다
+    just_blank_page_with_title: 제목이 있는 빈 페이지
+    nav: 공백
+    title: 빈 페이지
+  dashboard:
+    index:
+      nav: 집
+      title: 집
+    nav: 계기반
+    title: 계기반
+  getting-started:
+    description: 이것은 시작 페이지입니다
+    nav: 시작하기
+    title: 시작하기
+  index:
+    title: nuxt 3[]멋진[]스타터
+  post:
+    description: 이것은 게시물 페이지입니다
+    nav: 게시하다
+    title: 게시하다
+  setting:
+    description: 이것은 설정 페이지입니다
+    nav: 환경
+    sections:
+      advanced_dir_listing:
+        description: 디렉토리 내에 인덱스 파일이 없으면 디렉토리 내용이 표시됩니다.
+        title: 디렉토리 목록
+      advanced_enable_advanced:
+        description: 고급 설정을 활성화하여 설정을 변경할 수 있습니다
+        title: 고급 설정 활성화
+      bot_id:
+        description: 이것은 봇 id입니다.
+        footer: 봇과 상호 작용할 때 사용됩니다.
+        title: 봇 아이디
+      protection_spam:
+        description: 활성화를 토글하여 빨간색 테두리를 제거합니다.
+        footer: 활성화하면 스팸으로부터 댓글을 보호합니다.
+        title: 스팸 방지
+      validate_username:
+        description: github 사용자 이름을 입력하고 버튼을 클릭하여 확인하십시오.
+        footer: 에 대해 자세히 알아보기
+        footer_button: 확인
+        footer_link: github 사용자 api
+        title: github 프로필 확인
+    title: 환경
+  test:
+    counter: 카운터
+    decrement: 감소
+    description: 이것은 테스트 페이지입니다
+    full_name: 전체 이름
+    identity: 신원
+    increment: 증가
+    nav: 테스트
+    reset: 초기화
+    title: 테스트
+sidenav:
+  headers:
+    large_task: Large task
+    small_tasks: Small tasks
+    test_pages: Test pages
+  titles:
+    demo_video: Demo video
+    introduction: Introduction
+    modal_test: Modal test
+    supabase_nuxt_demo: Supabase Nuxt demo
+    task: Task
+    task_1: Task 1
+    task_2: Task 2
+    task_3: Task 3
+    task_4: Task 4
+    task_5: Task 5
+    task_details: Task details
+    test: Test

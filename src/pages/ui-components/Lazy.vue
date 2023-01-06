@@ -1,33 +1,25 @@
-<script>
-export default {
-  name: 'Lazy',
-  components: {
-    Lazy: () => import('~/components/vuetifyComponents/lazy/Lazy'),
-  },
+<script setup lang="ts">
+import Lazy from '~/components/vuetifyComponents/lazy/ComponentLazy.vue'
 
-  data: () => ({
-    page: {
-      title: 'Lazy',
-    },
-    breadcrumbs: [
-      {
-        text: 'UI Components',
-        disabled: false,
-        href: '#',
-      },
-      {
-        text: 'Lazy',
-        disabled: true,
-        href: '#',
-      },
-    ],
-  }),
-}
+const page = ref({ title: 'Lazy', icon: 'mdi-image-filter-center-focus-weak' })
+
+const breadcrumbs = ref([
+  {
+    text: 'UI Components',
+    disabled: false,
+    href: '#',
+  },
+  {
+    text: 'Lazy',
+    disabled: true,
+    href: '#',
+  },
+])
 </script>
 
 <template>
   <v-container fluid class="down-top-padding">
-    <BaseBreadcrumb :title="page.title" :icon="page.icon" :breadcrumbs="breadcrumbs" />
+    <BaseBreadcrumb :title="page.title" :breadcrumbs="breadcrumbs" />
     <v-row>
       <v-col cols="12" sm="12">
         <BaseCard heading="Lazy">

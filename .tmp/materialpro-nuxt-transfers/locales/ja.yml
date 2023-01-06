@@ -1,0 +1,104 @@
+---
+banners:
+  welcome: こんにちは、%{app_name} へようこそ!
+button_labels:
+  continue: 継続する
+  go_back: 戻る
+  next: 次
+components:
+  language_switcher:
+    change_language: 言語を変更
+  theme_switcher:
+    change_theme: テーマを変更
+    theme: テーマ
+dialogs:
+  task_confirmation:
+    a_yes: はい
+    b_no: いいえ
+    click_go_back: 戻るをクリック
+    click_next: 次へをクリック
+    have_you_finished_the_task: タスクを完了しましたか?
+modules:
+  floppy_disks_vs_hard_drives: フロッピーディスクとハードドライブ
+others:
+  copy: コピー
+  disabled: 無効
+  enabled: 有効
+  learn_more: もっと詳しく知る
+pages:
+  '404':
+    title: ページが見つかりません
+  blank:
+    description: これは空白のページです
+    just_blank_page_with_title: タイトルのある空白のページ
+    nav: 空欄
+    title: 空白ページ
+  dashboard:
+    index:
+      nav: 家
+      title: 家
+    nav: ダッシュボード
+    title: ダッシュボード
+  getting-started:
+    description: これは入門ページです
+    nav: 入門
+    title: 入門
+  index:
+    title: nuxt 3[]素晴らしい[]スターター
+  post:
+    description: これは投稿ページです
+    nav: 役職
+    title: 役職
+  setting:
+    description: 設定ページです
+    nav: 設定
+    sections:
+      advanced_dir_listing:
+        description: ディレクトリ内にインデックス ファイルが存在しない場合は、ディレクトリの内容が表示されます。
+        title: ディレクトリ一覧
+      advanced_enable_advanced:
+        description: 詳細設定を有効にして設定を変更できます
+        title: 詳細設定を有効にする
+      bot_id:
+        description: これがボット id です。
+        footer: ボットと対話するときに使用されます。
+        title: ボットid
+      protection_spam:
+        description: 有効に切り替えて、赤い枠を削除します
+        footer: 有効にすると、コメントをスパムから保護します
+        title: スパム保護
+      validate_username:
+        description: github ユーザー名を入力し、ボタンをクリックして検証します。
+        footer: 詳しくはこちら
+        footer_button: 検証
+        footer_link: github ユーザー api
+        title: github プロファイルを検証する
+    title: 設定
+  test:
+    counter: カウンター
+    decrement: デクリメント
+    description: これはテストページです
+    full_name: フルネーム
+    identity: 身元
+    increment: インクリメント
+    nav: テスト
+    reset: リセット
+    title: テスト
+sidenav:
+  headers:
+    large_task: 大きなタスク
+    small_tasks: 小さなタスク
+    test_pages: テストページ
+  titles:
+    demo_video: デモビデオ
+    introduction: 序章
+    modal_test: モーダルテスト
+    supabase_nuxt_demo: Supabase Nuxt demo
+    task: 仕事
+    task_1: タスク 1
+    task_2: タスク 2
+    task_3: タスク 3
+    task_4: タスク 4
+    task_5: タスク 5
+    task_details: タスクの詳細
+    test: テスト

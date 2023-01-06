@@ -1,25 +1,20 @@
-<script>
-export default {
-  name: 'GrpListItemDeemphasizedSelections',
+<script setup lang="ts">
+const items = ref([
+  {
+    icon: 'mdi-wifi',
+    text: 'Wifi',
+  },
+  {
+    icon: 'mdi-bluetooth',
+    text: 'Bluetooth',
+  },
+  {
+    icon: 'mdi-chart-donut',
+    text: 'Data Usage',
+  },
+])
 
-  data: () => ({
-    items: [
-      {
-        icon: 'i-feather-mdi-wifi',
-        text: 'Wifi',
-      },
-      {
-        icon: 'i-feather-mdi-bluetooth',
-        text: 'Bluetooth',
-      },
-      {
-        icon: 'i-feather-mdi-chart-donut',
-        text: 'Data Usage',
-      },
-    ],
-    model: 1,
-  }),
-}
+const model = ref(1)
 </script>
 
 <template>
@@ -32,20 +27,20 @@ export default {
     </v-list-item-subtitle>
     <div class="mt-4">
       <v-list flat>
-        <v-list-item-group v-model="model" color="info">
+        <v-list-item v-model="model" color="info">
           <v-list-item
             v-for="(item, i) in items"
             :key="i"
           >
-            <v-list-item-icon>
-              <v-icon v-text="item.icon" />
-            </v-list-item-icon>
+            <v-list-item>
+              <v-icon :icon="item.icon" />
+            </v-list-item>
 
-            <v-list-item-content>
-              <v-list-item-title v-text="item.text" />
-            </v-list-item-content>
+            <v-list-item>
+              <v-list-item-title :icon="item.text" />
+            </v-list-item>
           </v-list-item>
-        </v-list-item-group>
+        </v-list-item>
       </v-list>
     </div>
   </div>

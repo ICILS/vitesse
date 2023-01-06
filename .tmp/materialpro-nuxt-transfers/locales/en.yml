@@ -1,0 +1,125 @@
+---
+# Vertical navigation menu.
+# Assessment UI
+module_title: "%{module_name}"
+heading_1:
+  introduction: Introduction
+  small_tasks: Small tasks
+  task_x: Task %{task_number}
+heading_2:
+  large_task: Large task 
+  task_details: Task details
+  demo_video: Demo video
+  task: Task
+# Design System
+banners:
+  welcome: hello, welcome to %{app_name}!
+button_labels:
+  continue: Continue
+  go_back: Go back
+  next: Next
+  sign_in:
+    sign_in: null
+components:
+  language_switcher:
+    change_language: change language
+  theme_switcher:
+    change_theme: change theme
+    theme: theme
+dialogs:
+  task_confirmation:
+    a_yes: 'Yes'
+    b_no: 'No'
+    click_go_back: Click go back
+    click_next: Click next
+    have_you_finished_the_task: Have you finished the task?
+modules:
+  floppy_disks_vs_hard_drives: Floppy disks vs hard drives
+others:
+  copy: copy
+  disabled: disabled
+  enabled: enabled
+  learn_more: learn more
+pages:
+  '404':
+    title: page not found
+  blank:
+    description: this is a blank page
+    just_blank_page_with_title: just blank page with title
+    nav: blank
+    title: blank page
+  dashboard:
+    index:
+      nav: home
+      title: home
+    nav: dashboard
+    title: dashboard
+  getting-started:
+    description: this is a getting started page
+    nav: getting started
+    title: getting started
+  index:
+    title: nuxt 3[]awesome[]starter
+  post:
+    description: this is a post page
+    nav: post
+    title: post
+  setting:
+    description: this is a setting page
+    nav: setting
+    # This is a comment. It can be accessed and displayed for all nested keys.
+    sections:
+      advanced_dir_listing:
+        description: if no index file is present within a directory, the directory contents will be displayed.
+        title: directory listing
+      advanced_enable_advanced:
+        description: you can enable advanced settings to change the settings
+        title: enable advanced settings
+      bot_id:
+        description: This is your bot ID.
+        footer: Used when interacting with the bot.
+        title: bot id
+      protection_spam:
+        description: toggle enable to remove the red border
+        footer: if enable we will secure your comments from spam
+        title: spam protection
+      validate_username:
+        description: type your github username and click the button to validate.
+        footer: Learn more about
+        footer_button: validate
+        footer_link: github users api
+        title: validate github profile
+    title: setting
+  tasks:
+    description: this is a todo supabase example page
+    nav: tasks
+    title: tasks
+    todo_list: ToDo List
+  test:
+    counter: counter
+    decrement: decrement
+    description: this is a test page
+    full_name: fullName
+    identity: identity
+    increment: increment
+    nav: test
+    reset: reset
+    title: testing
+sidenav:
+  headers:
+    large_task: Large task
+    small_tasks: Small tasks
+    test_pages: Test pages
+  titles:
+    demo_video: Demo video
+    introduction: Introduction
+    modal_test: Modal test
+    supabase_nuxt_demo: Supabase Nuxt demo
+    task: Task
+    task_1: Task 1
+    task_2: Task 2
+    task_3: Task 3
+    task_4: Task 4
+    task_5: Task 5
+    task_details: Task details
+    test: Test

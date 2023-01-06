@@ -1,0 +1,24 @@
+query uiLabels {
+  testUi {
+    data {
+      attributes {
+        Labels {
+          id
+          Label
+        }
+        locale
+        localizations {
+          data {
+            attributes {
+              locale
+              Labels {
+                id
+                Label
+              }
+            }
+          }
+        }   
+      }
+    }
+  }
+}

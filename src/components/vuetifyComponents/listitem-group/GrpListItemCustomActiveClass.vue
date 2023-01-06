@@ -32,20 +32,20 @@ export default {
     </v-list-item-subtitle>
     <div class="mt-4">
       <v-list>
-        <v-list-item-group v-model="model" active-class="border" color="info">
+        <v-list-item v-model="model" active-class="border" color="info">
           <v-list-item
             v-for="(item, i) in items"
             :key="i"
           >
-            <v-list-item-icon>
-              <v-icon v-text="item.icon" />
-            </v-list-item-icon>
+            <v-list-item>
+              <v-icon :icon="item.icon" />
+            </v-list-item>
 
-            <v-list-item-content>
-              <v-list-item-title v-text="item.text" />
-            </v-list-item-content>
+            <v-list-item>
+              <v-list-item-title :icon="item.text" />
+            </v-list-item>
           </v-list-item>
-        </v-list-item-group>
+        </v-list-item>
       </v-list>
     </div>
   </div>

@@ -25,7 +25,7 @@ export default {
     </v-list-item-subtitle>
     <div class="mt-4">
       <v-list shaped>
-        <v-list-item-group
+        <v-list-item
           v-model="model"
           multiple
         >
@@ -42,9 +42,9 @@ export default {
               active-class="info--text text--accent-4"
             >
               <template #default="{ active, toggle }">
-                <v-list-item-content>
-                  <v-list-item-title v-text="item" />
-                </v-list-item-content>
+                <v-list-item>
+                  <v-list-item-title :title="item" />
+                </v-list-item>
 
                 <v-list-item-action>
                   <v-checkbox
@@ -57,7 +57,7 @@ export default {
               </template>
             </v-list-item>
           </template>
-        </v-list-item-group>
+        </v-list-item>
       </v-list>
     </div>
   </div>

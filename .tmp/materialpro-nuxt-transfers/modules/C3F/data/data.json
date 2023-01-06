@@ -1,0 +1,89 @@
+{
+  "descriptor": "Tell the world about floppy disks and hard drives",
+  "moduleId": "MOD-FLO",
+  "moduleTitle": "Floppy disks vs hard drives",
+  "content": [
+    {
+      "order": 1,
+      "contentID": "MOD-FLO-INTRO",
+      "contentTitle": "Introduction",
+      "icon": "file-text",
+      "to": "/modules/floppy/intro",
+      "isComplete": false
+    },
+    {
+      "order": 2,
+      "contentID": "MOD-FLO-TASK-1",
+      "contentTitle": "Task 1",
+      "icon": "square",
+      "to": "/modules/floppy/task-1",
+      "isComplete": false
+    },
+    {
+      "order": 3,
+      "contentID": "MOD-FLO-TASK-2",
+      "contentTitle": "Task 2",
+      "icon": "square",
+      "to": "/modules/floppy/task-2",
+      "isComplete": true
+    },
+    {
+      "order": 4,
+      "contentID": "MOD-FLO-TASK-3",
+      "contentTitle": "Task 3",
+      "icon": "square",
+      "to": "/modules/floppy/task-3",
+      "isComplete": false
+    },
+    {
+      "order": 5,
+      "contentID": "MOD-FLO-TASK-4",
+      "contentTitle": "Task 4",
+      "icon": "square",
+      "to": "/modules/floppy/task-4",
+      "isComplete": false
+    },
+    {
+      "order": 6,
+      "contentID": "MOD-FLO-TASK-5",
+      "contentTitle": "Task 5",
+      "icon": "square",
+      "to": "/modules/floppy/task-5",
+      "isComplete": false
+    },
+    {
+      "order": 7,
+      "contentID": "MOD-FLO-LARGE-TASK",
+      "contentTitle": "Large task",
+      "icon": "clipboard",
+      "to": "/modules/floppy/large-task/task-details",
+      "children": [
+        {
+          "order": 8,
+          "contentID": "MOD-FLO-LARGE-TASK-DETAILS",
+          "contentTitle": "Task details",
+          "icon": "clipboard",
+          "to": "/modules/floppy/large-task/task-details",
+          "isComplete": false
+        },
+        {
+          "order": 9,
+          "contentID": "MOD-FLO-LARGE-TASK-DEMO-VIDEO",
+          "contentTitle": "Demo video",
+          "icon": "youtube",
+          "to": "/modules/floppy/large-task/demo-video",
+          "isComplete": false
+        },
+        {
+          "order": 10,
+          "contentID": "MOD-FLO-LARGE-TASK-ACTIVITY",
+          "contentTitle": "Activity",
+          "icon": "package",
+          "to": "/modules/floppy/large-task/activity",
+          "isComplete": false
+        }
+      ],
+      "isComplete": false
+    }
+  ]
+}
