@@ -9,6 +9,7 @@ export const install: UserModule = ({ isClient, app }) => {
     import('vue3-apexcharts').then(({ default: VueApexCharts }) => {
       app.use(VueApexCharts)
     },
+    // TODO: check if this is needed
     import('svgmap').then(({ default: VueSvgMap }) => {
       app.use(VueSvgMap)
     }
