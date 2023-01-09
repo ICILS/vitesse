@@ -108,8 +108,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
       manifest: {
-        name: 'Vitesse',
-        short_name: 'Vitesse',
+        name: 'ICILS 2077',
+        short_name: '2077',
         theme_color: '#ffffff',
         icons: [
           {
@@ -150,6 +150,7 @@ export default defineConfig({
     }),
     vuetify({
       autoImport: true,
+      // styles: { configFile: 'src/scss/settings.scss' } // Customizinng variables. See https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin#customising-variables
     }),
   ],
 
@@ -171,7 +172,10 @@ export default defineConfig({
 
   ssr: {
     // TODO: workaround until they support native ESM
-    noExternal: ['workbox-window', /vue-i18n/],
+    noExternal: ['workbox-window', /vue-i18n/, 'vuetify'],
+    optimizeDeps: {
+      include: ['vue', 'vue-router', 'vue-i18n', '@vueuse/head'],
+    }
   },
   // Added from materialpro
   css: {
