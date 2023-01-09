@@ -2,6 +2,12 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../../libraries/vuetify/packages/docs"
+		},
+		{
+			"path": "../../libraries/vuetify/packages/vuetify"
 		}
 	],
 	"settings": {
