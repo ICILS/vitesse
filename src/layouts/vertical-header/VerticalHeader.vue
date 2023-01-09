@@ -171,12 +171,12 @@ watch(priority, (newPriority) => {
           :subtitle="item.desc" rounded="lg" @click="href"
         >
           <template #prepend>
-            <v-list-item-avatar start>
+            <v-list-item start>
               <v-btn :color="item.color" variant="flat" icon elevation="0" size="small" class="mr-3">
                 <!-- <vue-feather :type="item.icon" size="18" /> -->
                 <div :class="item.icon" class="text-base" />
               </v-btn>
-            </v-list-item-avatar>
+            </v-list-item>
           </template>
         </v-list-item>
         <v-btn block color="secondary" to="/authentication/boxedlogin" variant="flat" class="mt-4 py-4">

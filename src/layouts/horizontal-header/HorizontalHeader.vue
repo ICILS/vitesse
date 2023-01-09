@@ -141,7 +141,7 @@ function searchbox() {
           @click="href"
         >
           <template #prepend>
-            <v-list-item-avatar start>
+            <v-list-item start>
               <v-btn
                 :color="item.color"
                 icon
@@ -152,7 +152,7 @@ function searchbox() {
                 <!-- <vue-feather :type="item.icon" size="18" /> -->
                 <div :class="item.icon" size="18" />
               </v-btn>
-            </v-list-item-avatar>
+            </v-list-item>
           </template>
         </v-list-item>
         <v-btn block variant="flat" color="secondary" class="mt-4 py-4">
@@ -217,7 +217,7 @@ function searchbox() {
           @click="href"
         >
           <template #prepend>
-            <v-list-item-avatar start>
+            <v-list-item start>
               <v-btn
                 :color="item.color"
                 variant="flat"
@@ -229,7 +229,7 @@ function searchbox() {
                 <!-- <vue-feather :type="item.icon" size="18" /> -->
                 <div :class="item.icon" size="18" />
               </v-btn>
-            </v-list-item-avatar>
+            </v-list-item>
           </template>
         </v-list-item>
         <v-btn

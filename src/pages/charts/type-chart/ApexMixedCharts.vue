@@ -5,11 +5,13 @@ import BaseCard from '~/components/BaseCard.vue'
 
 <template>
   <BaseCard heading="Mixed Chart">
+    <client-only>
     <apexchart
       type="line"
       height="350"
       :options="mixedChart.chartOptions"
       :series="mixedChart.series"
     />
+</client-only>
   </BaseCard>
 </template>

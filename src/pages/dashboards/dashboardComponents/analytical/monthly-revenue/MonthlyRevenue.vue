@@ -30,12 +30,14 @@ onMounted(() => {
       </div>
     </v-card-text>
     <div v-show="elementVisible">
+      <client-only>
       <apexchart
         type="area"
         height="75px"
         :options="MonthlyRevenueData.chartOptions"
         :series="MonthlyRevenueData.series"
       />
+</client-only>
     </div>
   </v-card>
 </template>

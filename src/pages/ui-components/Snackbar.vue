@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import SnackbarMultiline from '~/components/vuetifyComponents/snackbar/SnackbarMultiline.vue'
-import SnackbarTimeout from '~/components/vuetifyComponents/snackbar/SnackbarTimeout.vue'
-import SnackbarVertical from '~/components/vuetifyComponents/snackbar/SnackbarVertical.vue'
+// import SnackbarMultiline from '~/components/vuetifyComponents/snackbar/SnackbarMultiline.vue'
+// import SnackbarTimeout from '~/components/vuetifyComponents/snackbar/SnackbarTimeout.vue'
+// import SnackbarVertical from '~/components/vuetifyComponents/snackbar/SnackbarVertical.vue'
 
 const page = ref({ title: 'Snackbar' })
 const breadcrumbs = ref([

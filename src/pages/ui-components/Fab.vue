@@ -1,34 +1,22 @@
-<script>
-export default {
-  name: 'Fab',
-  components: {
-    FabSmall: () => import('~/components/vuetifyComponents/fab/FabSmall'),
-    FabDisplayAnimation: () =>
-      import('~/components/vuetifyComponents/fab/FabDisplayAnimation'),
-    FabSpeedDial: () =>
-      import('~/components/vuetifyComponents/fab/FabSpeedDial'),
-    FabLateralScreen: () =>
-      import('~/components/vuetifyComponents/fab/FabLateralScreen'),
-  },
-
-  data: () => ({
-    page: {
-      title: 'Fab',
-    },
-    breadcrumbs: [
-      {
-        text: 'UI Components',
-        disabled: false,
-        href: '#',
-      },
-      {
-        text: 'Fab',
-        disabled: true,
-        href: '#',
-      },
-    ],
-  }),
+<script setup lang="ts">
+const page = {
+  title: 'Fab',
+  icon: 'mdi-apps',
 }
+
+const breadcrumbs = [
+  {
+    text: 'UI Components',
+    disabled: false,
+    href: '#',
+  },
+  {
+    text: 'Fab',
+    disabled: true,
+    href: '#',
+  },
+]
+
 </script>
 
 <template>

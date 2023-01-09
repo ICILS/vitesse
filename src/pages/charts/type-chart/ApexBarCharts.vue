@@ -5,11 +5,8 @@ import BaseCard from '~/components/BaseCard.vue'
 
 <template>
   <BaseCard heading="Bar Chart">
-    <apexchart
-      type="bar"
-      height="350"
-      :options="barChart.chartOptions"
-      :series="barChart.series"
-    />
+    <client-only>
+      <apexchart type="bar" height="350" :options="barChart.chartOptions" :series="barChart.series" />
+    </client-only>
   </BaseCard>
 </template>

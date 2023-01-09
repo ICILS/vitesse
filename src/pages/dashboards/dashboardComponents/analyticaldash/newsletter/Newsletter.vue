@@ -2,8 +2,8 @@
 import { onMounted, ref } from 'vue'
 import { NewsletterChart } from './NewsletterData'
 
-const select = ref('March')
-const items = ref(['March', 'April', 'May', 'June'])
+// const select = ref('March')
+// const items = ref(['March', 'April', 'May', 'June'])
 
 const elementVisible = ref(false)
 
@@ -49,11 +49,13 @@ onMounted(() => {
         </div>
       </div>
       <div v-show="elementVisible" class="mt-6">
+        <client-only>
         <apexchart
           height="380px"
           :options="NewsletterChart.chartOptions"
           :series="NewsletterChart.series"
         />
+</client-only>
       </div>
       <div class="d-flex justify-center">
         <div class="d-flex align-center text-primary px-2">

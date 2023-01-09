@@ -5,11 +5,13 @@ import BaseCard from '~/components/BaseCard.vue'
 
 <template>
   <BaseCard heading="Line Area Chart">
+    <client-only>
     <apexchart
       type="area"
       height="350"
       :options="lineAreaChartSpline.chartOptions"
       :series="lineAreaChartSpline.series"
     />
+</client-only>
   </BaseCard>
 </template>

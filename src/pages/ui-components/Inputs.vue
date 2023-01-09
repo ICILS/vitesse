@@ -1,21 +1,15 @@
-<script>
-export default {
-  name: 'Inputs',
-  components: {
-    InputLoading: () => import('~/components/vuetifyComponents/inputs/InputLoading'),
-    InputHint: () => import('~/components/vuetifyComponents/inputs/InputHint'),
-    InputSuccess: () => import('~/components/vuetifyComponents/inputs/InputSuccess'),
-    InputError: () => import('~/components/vuetifyComponents/inputs/InputError'),
-    InputMultipleErrors: () => import('~/components/vuetifyComponents/inputs/InputMultipleErrors'),
-    InputRules: () => import('~/components/vuetifyComponents/inputs/InputRules'),
-    InputSlots: () => import('~/components/vuetifyComponents/inputs/InputSlots'),
-    InputSlotEvents: () => import('~/components/vuetifyComponents/inputs/InputSlotEvents'),
-  },
-
-  data: () => ({
-  }),
-}
+<script setup lang="ts">
+// Rely on auto-imports for components
+// import InputLoading from '~/components/vuetifyComponents/inputs/InputLoading.vue'
+// import InputHint from '~/components/vuetifyComponents/inputs/InputHint.vue'
+// import InputSuccess from '~/components/vuetifyComponents/inputs/InputSuccess.vue'
+// import InputError from '~/components/vuetifyComponents/inputs/InputError.vue'
+// import InputMultipleErrors from '~/components/vuetifyComponents/inputs/InputMultipleErrors.vue'
+// import InputRules from '~/components/vuetifyComponents/inputs/InputRules.vue'
+// import InputSlots from '~/components/vuetifyComponents/inputs/InputSlots.vue'
+// import InputSlotEvents from '~/components/vuetifyComponents/inputs/InputSlotEvents.vue'
 </script>
+
 
 <template>
   <v-container fluid class="down-top-padding">

@@ -1,0 +1,118 @@
+import { Directus } from '@directus/sdk'
+
+/**
+ * @link https://docs.directus.io/reference/sdk.html
+ */
+const config = {
+  /**
+   * Defines how authentication is handled by the SDK. By default, Directus creates an instance of auth which handles refresh tokens automatically.
+   * You can also provide a custom implementation by extending `IAuth`.
+   * @see https://docs.directus.io/reference/sdk.html#customize-auth
+   */
+  auth: {
+    /**
+     * Defines the mode you want to use for authentication. It can be 'cookie' for cookies or 'json' for JWT.
+     * Defaults to 'cookie' on browsers and 'json' otherwise.
+     *
+     * Note: We recommend using cookies when possible to prevent any kind of attacks, mostly XSS.
+     */
+    mode: 'cookie',
+    /**
+     * Determines whether SDK handles refresh tokens automatically.
+     *
+     * @default true
+     */
+    autoRefresh: true,
+    msRefreshBeforeExpires: 30000,
+    staticToken: '',
+  },
+  /**
+   * The storage is used to load and save token information. By default, Directus creates an instance of storage which handles store information automatically.
+   *
+   * Note: The axios instance can be used for custom requests by calling:
+   * ```ts
+   * await directus.transport.<method>('/path/to/endpoint', {
+   *  // body, params, ...
+   * })
+   * ```
+   * @see https://docs.directus.io/reference/sdk.html#customize-storage
+   */
+  storage: {
+    /**
+     * Defines the prefix tokens that are saved. This should be fulfilled with different values when using multiple instances of SDK.
+     */
+    prefix: '',
+    /**
+     * Defines the storage location to be used to save tokens. Allowed values are `LocalStorage` and `MemoryStorage`.
+     *
+     * The mode `LocalStorage` is not compatible with Node.js.
+     *
+     * `MemoryStorage` is not persistent, so once you leave the tab or quit the process, you will need to authenticate again.
+     *
+     * @Default `LocalStorage` on browsers and `MemoryStorage` on Node.js.
+     *
+     * It is possible to provide a custom implementation by extending BaseStorage
+     *
+     * @see https://docs.directus.io/reference/sdk.html#customize-storage
+     */
+    mode: 'LocalStorage', // 'MemoryStorage' in Node.js
+  },
+  /**
+   * Defines settings you want to customize regarding `Transport`.
+   *
+   * By default, Directus creates an instance of `Transport` which handles requests automatically.
+   * It uses `axios` so it is compatible in both browsers and Node.js. With axios, it is also possible to handle upload progress (a downside of `fetch`).
+   *
+   * The configurations within `init.transport` are passed to `axios`. For more details, see  Request Config in the axios documentation.
+   *
+   * @see https://docs.directus.io/reference/sdk.html#customize-transport @see https://axios-http.com/docs/req_config
+   */
+  transport: {
+    /**
+     * Defines an object with keys and values to be passed as additional query string.
+     */
+    params: {},
+    /**
+     * Defines an object with keys and values to be passed as additional headers.
+     */
+    headers: {},
+    /**
+     * Defines a callback function to indicate the upload progress.
+     *
+     * **ProgressEvent**: Please see the MDN documentation to learn more about the `ProgressEvent`.
+     * @link https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent
+     */
+    onUploadProgress: (ProgressEvent) => { },
+    /**
+     * The maximum body length in bytes. Set `Infinity` for no limit.
+     */
+    maxBodyLength: null,
+    maxContentLength: null,
+  },
+}
+
+// You can also extend the Directus system type information by providing type information for system collections as well.
+
+/**
+ * Custom fields added to Directus user collection.
+ */
+type UserType = {
+  level: number
+  experience: number
+}
+
+/**
+ * This type will be merged with Directus user type.
+ *
+ * It's important that the naming matches a directus collection name exactly. Typos won't get caught here since SDK will assume it's a custom user collection.
+ */
+type CustomTypes = {
+  directus_users: UserType
+}
+
+const directus = new Directus<CustomTypes>(import.meta.env.VITE_DIRECTUS_URL)
+
+await directus.auth.login({
+  email: 'admin@example.com',
+  password: 'password',
+})

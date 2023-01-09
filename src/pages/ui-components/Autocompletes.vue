@@ -1,20 +1,8 @@
-<script>
-export default {
-  name: 'Autocompletes',
-  components: {
-    AutocompletesSearchAPI: () => import('~/components/vuetifyComponents/autocompletes/AutocompletesSearchAPI'),
-    AutocompletesCustomFilter: () => import('~/components/vuetifyComponents/autocompletes/AutocompletesCustomFilter'),
-    AutocompletesDence: () => import('~/components/vuetifyComponents/autocompletes/AutocompletesDence'),
-    AutocompletesSlots: () => import('~/components/vuetifyComponents/autocompletes/AutocompletesSlots'),
-    AutocompletesAsynchronousItems: () => import('~/components/vuetifyComponents/autocompletes/AutocompletesAsynchronousItems'),
-    AutocompletesAdvancedSlots: () => import('~/components/vuetifyComponents/autocompletes/AutocompletesAdvancedSlots'),
-    AutocompletesStateSelector: () => import('~/components/vuetifyComponents/autocompletes/AutocompletesStateSelector'),
-  },
+<script setup lang="ts">
 
-  data: () => ({
-  }),
-}
 </script>
+
+
 
 <template>
   <v-container fluid class="down-top-padding">

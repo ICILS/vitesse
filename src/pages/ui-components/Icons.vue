@@ -1,38 +1,24 @@
-<script>
-export default {
-  name: 'Icons',
-  components: {
-    IconsMaterial: () =>
-      import('~/components/vuetifyComponents/icons/IconsMaterial'),
-    IconFontawesome: () =>
-      import('~/components/vuetifyComponents/icons/IconFontawesome'),
-    IconColors: () => import('~/components/vuetifyComponents/icons/IconColors'),
-    IconButtons: () =>
-      import('~/components/vuetifyComponents/icons/IconButtons'),
-    IconClickable: () =>
-      import('~/components/vuetifyComponents/icons/IconClickable'),
-    IconMdiSvg: () => import('~/components/vuetifyComponents/icons/IconMdiSvg'),
-  },
+<script setup lang="ts">
 
-  data: () => ({
-    page: {
-      title: 'Icons',
-    },
-    breadcrumbs: [
-      {
-        text: 'UI Components',
-        disabled: false,
-        href: '#',
-      },
-      {
-        text: 'Icons',
-        disabled: true,
-        href: '#',
-      },
-    ],
-  }),
+const page = {
+  title: 'Icons',
+  icon: 'mdi mdi-compass-outline',
 }
+
+const breadcrumbs = [
+  {
+    text: 'UI Components',
+    disabled: false,
+    href: '#',
+  },
+  {
+    text: 'Icons',
+    disabled: true,
+    href: '#',
+  },
+]
 </script>
+
 
 <template>
   <v-container fluid class="down-top-padding">

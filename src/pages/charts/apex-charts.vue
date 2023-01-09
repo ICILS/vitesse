@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+
 import ApexLineCharts from './type-chart/ApexLineCharts.vue'
 import ApexColumnCharts from './type-chart/ApexColumnCharts.vue'
 import ApexLineAreaCharts from './type-chart/ApexLineAreaCharts.vue'
@@ -33,6 +34,12 @@ const breadcrumbs = ref([
     disabled: true,
   },
 ])
+</script>
+
+<script lang="ts">
+// TODO: Remove this when the issue is fixed
+export const title = "SSG";
+export const doNotPrerender = false;
 </script>
 
 <template>

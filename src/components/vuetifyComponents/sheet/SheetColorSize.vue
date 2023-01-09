@@ -1,15 +1,11 @@
-<script setup lang="ts">
-
-</script>
-
-<script lang="ts">
+<script>
 import { h } from 'vue'
 
 export default {
   components: {
     // A simple helper component
     SheetFooter: {
-      setup(_, { slots }) {
+      setup (_, { slots }) {
         return () => h('v-sheet', {
           staticClass: 'mt-auto align-center justify-center d-flex px-2',
           props: {

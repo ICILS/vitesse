@@ -39,7 +39,7 @@ export default {
   <!-- ----------------------------------------------------------------------------- -->
   <div>
     <v-list-item-subtitle class="text-wrap">
-      Here we combine v-list-item-avatar and v-list-item-icon in a single-line
+      Here we combine v-list-item and v-list-item-icon in a single-line
       list.
     </v-list-item-subtitle>
     <div class="mt-4">
@@ -59,13 +59,13 @@ export default {
         <v-subheader>Recent chat</v-subheader>
 
         <v-list-item v-for="item in items" :key="item.title" @click.stop>
-          <v-list-item-avatar>
+          <v-list-item>
             <v-img :src="item.avatar" />
-          </v-list-item-avatar>
+          </v-list-item>
 
-          <v-list-item-content>
+          <v-list-item>
             <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
+          </v-list-item>
 
           <v-list-item-icon>
             <v-icon :color="item.active ? 'info' : 'grey'">
@@ -81,13 +81,13 @@ export default {
         <v-subheader>Previous chats</v-subheader>
 
         <v-list-item v-for="item in items2" :key="item.title" @click.stop>
-          <v-list-item-avatar>
+          <v-list-item>
             <v-img :src="item.avatar" />
-          </v-list-item-avatar>
+          </v-list-item>
 
-          <v-list-item-content>
+          <v-list-item>
             <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
+          </v-list-item>
         </v-list-item>
       </v-list>
     </div>

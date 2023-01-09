@@ -73,14 +73,14 @@ export default {
         </v-subheader>
 
         <v-list-item v-for="item in items" :key="item.title" @click.stop>
-          <v-list-item-avatar>
+          <v-list-item>
             <v-icon :class="[item.iconClass]" v-text="item.icon" />
-          </v-list-item-avatar>
+          </v-list-item>
 
-          <v-list-item-content>
+          <v-list-item>
             <v-list-item-title v-text="item.title" />
             <v-list-item-subtitle v-text="item.subtitle" />
-          </v-list-item-content>
+          </v-list-item>
 
           <v-list-item-action>
             <v-btn icon>
@@ -98,14 +98,14 @@ export default {
         </v-subheader>
 
         <v-list-item v-for="item in items2" :key="item.title" @click.stop>
-          <v-list-item-avatar>
+          <v-list-item>
             <v-icon :class="[item.iconClass]" v-text="item.icon" />
-          </v-list-item-avatar>
+          </v-list-item>
 
-          <v-list-item-content>
+          <v-list-item>
             <v-list-item-title v-text="item.title" />
             <v-list-item-subtitle v-text="item.subtitle" />
-          </v-list-item-content>
+          </v-list-item>
 
           <v-list-item-action>
             <v-btn icon>

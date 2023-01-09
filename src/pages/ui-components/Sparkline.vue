@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import SparklineFill from '~/components/vuetifyComponents/sparkline/SparklineFill.vue'
-import SparklineTakeBreak from '~/components/vuetifyComponents/sparkline/SparklineTakeBreak.vue'
-import SparklineDashboardCard from '~/components/vuetifyComponents/sparkline/SparklineDashboardCard.vue'
-import SparklineCustomLabels from '~/components/vuetifyComponents/sparkline/SparklineCustomLabels.vue'
+// import SparklineFill from '~/components/vuetifyComponents/sparkline/SparklineFill.vue'
+// import SparklineTakeBreak from '~/components/vuetifyComponents/sparkline/SparklineTakeBreak.vue'
+// import SparklineDashboardCard from '~/components/vuetifyComponents/sparkline/SparklineDashboardCard.vue'
+// import SparklineCustomLabels from '~/components/vuetifyComponents/sparkline/SparklineCustomLabels.vue'
 
 const page = ref({ title: 'Sparkline' })
 const breadcrumbs = ref([

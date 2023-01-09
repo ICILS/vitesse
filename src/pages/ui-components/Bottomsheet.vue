@@ -1,44 +1,25 @@
-<script>
-export default {
-  name: 'Bottomsheet',
-  components: {
-    BottomsheetPersistent: () =>
-      import(
-        '~/components/vuetifyComponents/bottomsheet/BottomsheetPersistent'
-      ),
-    BottomsheetVmodelControl: () =>
-      import(
-        '~/components/vuetifyComponents/bottomsheet/BottomsheetVmodelControl'
-      ),
-    BottomsheetMusicplayer: () =>
-      import(
-        '~/components/vuetifyComponents/bottomsheet/BottomsheetMusicplayer'
-      ),
-    BottomsheetOpenList: () =>
-      import('~/components/vuetifyComponents/bottomsheet/BottomsheetOpenList'),
-    BottomsheetInset: () =>
-      import('~/components/vuetifyComponents/bottomsheet/BottomsheetInset'),
-  },
-
-  data: () => ({
-    page: {
-      title: 'Bottomsheet',
-    },
-    breadcrumbs: [
-      {
-        text: 'UI Components',
-        disabled: false,
-        href: '#',
-      },
-      {
-        text: 'Bottomsheet',
-        disabled: true,
-        href: '#',
-      },
-    ],
-  }),
+<script setup lang="ts">
+const page = {
+  title: 'Bottomsheet',
+  icon: 'mdi-format-list-bulleted',
 }
+
+const breadcrumbs = [
+  {
+    text: 'UI Components',
+    disabled: false,
+    href: '#',
+  },
+  {
+    text: 'Bottomsheet',
+    disabled: true,
+    href: '#',
+  },
+]
+
 </script>
+
+
 
 <template>
   <v-container fluid class="down-top-padding">

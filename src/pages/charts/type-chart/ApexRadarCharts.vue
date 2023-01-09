@@ -5,11 +5,13 @@ import BaseCard from '~/components/BaseCard.vue'
 
 <template>
   <BaseCard heading="Radar Chart">
+    <client-only>
     <apexchart
       type="radar"
       height="300"
       :options="radarChart.chartOptions"
       :series="radarChart.series"
     />
+</client-only>
   </BaseCard>
 </template>

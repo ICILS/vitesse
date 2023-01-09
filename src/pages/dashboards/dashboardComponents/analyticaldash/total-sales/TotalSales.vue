@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+// import { ref } from 'vue'
 import { TotalSales } from './TotalSalesData'
 
-const select = ref('March')
-const items = ref(['March', 'April', 'May', 'June'])
+// const select = ref('March')
+// const items = ref(['March', 'April', 'May', 'June'])
 </script>
 
 <template>
@@ -22,12 +22,14 @@ const items = ref(['March', 'April', 'May', 'June'])
       </div>
 
       <div class="mt-5 pt-5 position-relative">
+        <client-only>
         <apexchart
           type="donut"
           height="265px"
           :options="TotalSales.chartOptions"
           :series="TotalSales.series"
         />
+</client-only>
       </div>
       <div class="d-flex align-center justify-space-between mt-9">
         <div class="d-flex align-center px-2">

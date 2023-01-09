@@ -1,5 +1,5 @@
-<script>
-export default {
+<script setup lang="ts">
+/* export default {
   name: 'FileInputs',
   components: {
     FileInputsMultiple: () => import('~/components/vuetifyComponents/file-inputs/FileInputsMultiple'),
@@ -16,7 +16,7 @@ export default {
 
   data: () => ({
   }),
-}
+} */
 </script>
 
 <template>

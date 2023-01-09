@@ -5,11 +5,13 @@ import BaseCard from '~/components/BaseCard.vue'
 
 <template>
   <BaseCard heading="Radial Chart">
+    <client-only>
     <apexchart
       type="radialBar"
       height="350"
       :options="radialBarChart.chartOptions"
       :series="radialBarChart.series"
     />
+</client-only>
   </BaseCard>
 </template>

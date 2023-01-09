@@ -1,0 +1,8 @@
+async function publicData() {
+  // GET DATA
+
+  // We don't need to authenticate if the public role has access to some_public_collection.
+  const publicData = await directus.items('SurveyResults').readByQuery({ sort: ['id'] })
+
+  console.log(publicData.data)
+}

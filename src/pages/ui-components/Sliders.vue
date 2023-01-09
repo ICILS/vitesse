@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BaseCard from '~/components/base/BaseCard.vue'
+import BaseCard from '~/components/BaseCard.vue'
 import SlidersMinMax from '~/components/vuetifyComponents/sliders/SlidersMinMax.vue'
 import SlidersDisabled from '~/components/vuetifyComponents/sliders/SlidersDisabled.vue'
 import SlidersReadonly from '~/components/vuetifyComponents/sliders/SlidersReadonly.vue'

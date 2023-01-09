@@ -82,16 +82,16 @@ export default {
           />
 
           <v-list-item v-else :key="item.title" @click.stop>
-            <v-list-item-avatar>
+            <v-list-item>
               <v-img :src="item.avatar" />
-            </v-list-item-avatar>
+            </v-list-item>
 
-            <v-list-item-content>
+            <v-list-item>
               <v-list-item-title v-html="item.title" />
               <v-list-item-subtitle
                 v-html="item.subtitle"
               />
-            </v-list-item-content>
+            </v-list-item>
           </v-list-item>
         </template>
       </v-list>

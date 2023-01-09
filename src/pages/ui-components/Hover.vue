@@ -1,35 +1,24 @@
-<script>
-export default {
-  name: 'Hover',
-  components: {
-    HoverDisabled: () =>
-      import('~/components/vuetifyComponents/hover/HoverDisabled'),
-    HoverOpenClose: () =>
-      import('~/components/vuetifyComponents/hover/HoverOpenClose'),
-    HoverList: () => import('~/components/vuetifyComponents/hover/HoverList'),
-    HoverTransitions: () =>
-      import('~/components/vuetifyComponents/hover/HoverTransitions'),
-  },
-
-  data: () => ({
-    page: {
-      title: 'Hover',
-    },
-    breadcrumbs: [
-      {
-        text: 'UI Components',
-        disabled: false,
-        href: '#',
-      },
-      {
-        text: 'Hover',
-        disabled: true,
-        href: '#',
-      },
-    ],
-  }),
+<script setup lang="ts">
+const page = {
+  title: 'Hover',
+  icon: 'mdi mdi-compass-outline',
 }
+
+const breadcrumbs = [
+  {
+    text: 'UI Components',
+    disabled: false,
+    href: '#',
+  },
+  {
+    text: 'Hover',
+    disabled: true,
+    href: '#',
+  },
+]
+
 </script>
+
 
 <template>
   <v-container fluid class="down-top-padding">

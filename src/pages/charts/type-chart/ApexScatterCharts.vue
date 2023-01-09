@@ -5,11 +5,13 @@ import BaseCard from '~/components/BaseCard.vue'
 
 <template>
   <BaseCard heading="Column Chart">
+    <client-only>
     <apexchart
       type="scatter"
       height="350"
       :options="scatterChart.chartOptions"
       :series="scatterChart.series"
     />
+</client-only>
   </BaseCard>
 </template>

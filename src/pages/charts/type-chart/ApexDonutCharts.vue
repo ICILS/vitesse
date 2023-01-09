@@ -5,11 +5,13 @@ import BaseCard from '~/components/BaseCard.vue'
 
 <template>
   <BaseCard heading="Dount Chart">
+<client-only>
     <apexchart
       type="donut"
       height="350"
       :options="donutChart.chartOptions"
       :series="donutChart.series"
     />
+    </client-only>
   </BaseCard>
 </template>

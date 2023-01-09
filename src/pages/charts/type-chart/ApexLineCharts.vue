@@ -5,11 +5,15 @@ import BaseCard from '~/components/BaseCard.vue'
 
 <template>
   <BaseCard heading="Line Chart">
+    <client-only>
+<client-only>
     <apexchart
       type="line"
       height="350"
       :options="lineChartSimple.chartOptions"
       :series="lineChartSimple.series"
     />
+    </client-only>
+  </client-only>
   </BaseCard>
 </template>

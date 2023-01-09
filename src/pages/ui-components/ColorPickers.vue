@@ -1,58 +1,63 @@
-<script>
-export default {
-  name: 'ColorPickers',
-  components: {
-    ColorPickersModel: () =>
-      import('~/components/vuetifyComponents/color-pickers/ColorPickersModel'),
-    ColorPickersSwatches: () =>
-      import(
-        '~/components/vuetifyComponents/color-pickers/ColorPickersSwatches'
-      ),
-    ColorPickersInputs: () =>
-      import('~/components/vuetifyComponents/color-pickers/ColorPickersInputs'),
-    ColorPickersCanvas: () =>
-      import('~/components/vuetifyComponents/color-pickers/ColorPickersCanvas'),
-  },
-
-  data: () => ({
-    page: {
-      title: 'Color Pickers',
-    },
-    breadcrumbs: [
-      {
-        text: 'UI Components',
-        disabled: false,
-        href: '#',
-      },
-      {
-        text: 'Color Pickers',
-        disabled: true,
-        href: '#',
-      },
-    ],
-  }),
+<script setup lang="ts">
+const page = {
+  title: 'Color Pickers',
+  icon: 'mdi-palette',
 }
+
+const breadcrumbs = [
+  {
+    text: 'UI Components',
+    disabled: false,
+    href: '#',
+  },
+  {
+    text: 'Color Pickers',
+    disabled: true,
+    href: '#',
+  },
+]
 </script>
+
+
 
 <template>
   <v-container fluid class="down-top-padding">
     <BaseBreadcrumb :title="page.title" :icon="page.icon" :breadcrumbs="breadcrumbs" />
+
     <v-row>
-      <v-col cols="12" sm="12">
-        <BaseCard heading="Color Pickers - Model">
-          <ColorPickersModel />
+      <v-col cols="12" sm="12" lg="12" class="d-flex align-items-stretch">
+        <BaseCard heading="Color Pickers - Usage">
+          <ColorPickerUsage />
         </BaseCard>
+      </v-col>
 
-        <BaseCard heading="Color Pickers - Swatches">
-          <ColorPickersSwatches />
-        </BaseCard>
-
-        <BaseCard heading="Color Pickers - Inputs">
-          <ColorPickersInputs />
-        </BaseCard>
-
+      <v-col cols="12" sm="12" lg="12" class="d-flex align-items-stretch">
         <BaseCard heading="Color Pickers - Canvas">
-          <ColorPickersCanvas />
+          <ColorPickerCanvas />
+        </BaseCard>
+      </v-col>
+
+      <v-col cols="12" sm="12" lg="12" class="d-flex align-items-stretch">
+        <BaseCard heading="Color Pickers - Elevation">
+          <ColorPickerElevation />
+        </BaseCard>
+      </v-col>
+
+      <v-col cols="12" sm="12" lg="12" class="d-flex align-items-stretch">
+        <BaseCard heading="Color Pickers - Mode">
+          <ColorPickerMode />
+        </BaseCard>
+      </v-col>
+
+      <v-col cols="12" sm="12" lg="12" class="d-flex align-items-stretch">
+        <BaseCard heading="Color Pickers - Model">
+          <ColorPickerModel />
+        </BaseCard>
+      </v-col>
+
+      <v-col cols="12" sm="12" lg="12" class="d-flex align-items-stretch">
+        <BaseCard heading="Color Pickers - Swatches">
+          <ColorPickerSwatches />
         </BaseCard>
       </v-col>
     </v-row>

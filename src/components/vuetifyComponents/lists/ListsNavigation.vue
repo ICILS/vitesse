@@ -35,18 +35,18 @@ export default {
           <v-system-bar />
           <v-list>
             <v-list-item>
-              <v-list-item-avatar>
+              <v-list-item>
                 <v-img src="https://cdn.vuetifyjs.com/images/john.png" />
-              </v-list-item-avatar>
+              </v-list-item>
             </v-list-item>
 
             <v-list-item link>
-              <v-list-item-content>
+              <v-list-item>
                 <v-list-item-title class="title">
                   John Leider
                 </v-list-item-title>
                 <v-list-item-subtitle>john@vuetifyjs.com</v-list-item-subtitle>
-              </v-list-item-content>
+              </v-list-item>
 
               <v-list-item-action>
                 <v-icon>i-mdi-menu-down</v-icon>
@@ -67,9 +67,9 @@ export default {
                   <v-icon v-text="item.icon" />
                 </v-list-item-icon>
 
-                <v-list-item-content>
+                <v-list-item>
                   <v-list-item-title v-text="item.text" />
-                </v-list-item-content>
+                </v-list-item>
               </v-list-item>
             </v-list-item-group>
           </v-list>

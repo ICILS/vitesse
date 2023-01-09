@@ -1,4 +1,6 @@
 <script setup lang="ts">
+
+// Normal import method
 import SvgMap from 'svgmap'
 import 'svgmap/dist/svgMap.min.css'
 import { onMounted, ref } from 'vue'
@@ -38,7 +40,20 @@ onMounted(() => {
     },
   })
 })
+
+// FIx for ReferenceError: window is not defined for svgmap
+
+if (typeof window !== 'undefined') {
+  window.addEventListener('load', () => {
+    map.value = document.getElementById('svgMap')
+  })
+}
+
+
+
 </script>
+
+
 
 <template>
   <v-card>
@@ -51,7 +66,9 @@ onMounted(() => {
           Visit from the countries
         </h5>
       </div>
+
       <div id="svgMap" ref="map" class="mt-8" />
+
 
       <div class="d-flex align-center justify-space-between mt-8 pt-5">
         <div class="d-flex align-center px-2">

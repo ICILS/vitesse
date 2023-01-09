@@ -1,3 +1,4 @@
+import 'vuetify/styles' // Added. See https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
 import { createVuetify } from 'vuetify'
 import type { ThemeDefinition } from 'vuetify'
 // import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
@@ -54,13 +55,13 @@ export const install: UserModule = ({ app }) => {
     defaults: {
       VBtn: {
         color: 'primary',
-        rounded: 'md',
+        rounded: 'rounded',
         flat: true,
         fontWeight: '400',
         letterSpacing: '0',
       },
       VCard: {
-        elevation: 2,
+        elevation: 0,
       },
       VCheckbox: {
         color: 'primary',

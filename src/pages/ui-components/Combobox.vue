@@ -1,20 +1,9 @@
-<script>
-export default {
-  name: 'Combobox',
-  components: {
-    ComboboxMultiple: () =>
-      import('~/components/vuetifyComponents/combobox/ComboboxMultiple'),
-    ComboboxDense: () =>
-      import('~/components/vuetifyComponents/combobox/ComboboxDense'),
-    ComboboxNodatachips: () =>
-      import('~/components/vuetifyComponents/combobox/ComboboxNodatachips'),
-    ComboboxAdvancedOptions: () =>
-      import('~/components/vuetifyComponents/combobox/ComboboxAdvancedOptions'),
-  },
+<script setup lang="ts">
 
-  data: () => ({}),
-}
+
 </script>
+
+
 
 <template>
   <v-container fluid class="down-top-padding">

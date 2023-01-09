@@ -80,9 +80,9 @@ export default {
           no-action
         >
           <template #activator>
-            <v-list-item-content>
+            <v-list-item>
               <v-list-item-title v-text="item.title" />
-            </v-list-item-content>
+            </v-list-item>
           </template>
 
           <v-list-item
@@ -90,9 +90,9 @@ export default {
             :key="subItem.title"
             @click.stop
           >
-            <v-list-item-content>
+            <v-list-item>
               <v-list-item-title v-text="subItem.title" />
-            </v-list-item-content>
+            </v-list-item>
           </v-list-item>
         </v-list-group>
       </v-list>

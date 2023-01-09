@@ -12,9 +12,9 @@ defineProps({
       <v-toolbar flat class="pa-1">
         <div>
           <h2 class="text-base pa-1">
-            {{ title }}
+              {{ title }}
           </h2>
-          <v-breadcrumbs :items="breadcrumbs" class="pa-1">
+          <v-breadcrumbs :icon="icon" :items="breadcrumbs" class="pa-1">
             <template v-if="breadcrumbs" #divider>
               <v-icon icon="i-mdi-chevron-right" />
             </template>

@@ -30,21 +30,21 @@ export default {
         <v-subheader>General</v-subheader>
 
         <v-list-item>
-          <v-list-item-content>
+          <v-list-item>
             <v-list-item-title>Profile photo</v-list-item-title>
             <v-list-item-subtitle>
               Change your Google+ profile photo
             </v-list-item-subtitle>
-          </v-list-item-content>
+          </v-list-item>
         </v-list-item>
 
         <v-list-item>
-          <v-list-item-content>
+          <v-list-item>
             <v-list-item-title>Show your status</v-list-item-title>
             <v-list-item-subtitle>
               Your status is visible to everyone
             </v-list-item-subtitle>
-          </v-list-item-content>
+          </v-list-item>
         </v-list-item>
       </v-list>
 
@@ -64,10 +64,10 @@ export default {
                 />
               </v-list-item-action>
 
-              <v-list-item-content @click="notifications = !notifications">
+              <v-list-item @click="notifications = !notifications">
                 <v-list-item-title>Notifications</v-list-item-title>
                 <v-list-item-subtitle>Allow notifications</v-list-item-subtitle>
-              </v-list-item-content>
+              </v-list-item>
             </template>
           </v-list-item>
 
@@ -81,10 +81,10 @@ export default {
                 />
               </v-list-item-action>
 
-              <v-list-item-content @click="sound = !sound">
+              <v-list-item @click="sound = !sound">
                 <v-list-item-title>Sound</v-list-item-title>
                 <v-list-item-subtitle>Hangouts message</v-list-item-subtitle>
-              </v-list-item-content>
+              </v-list-item>
             </template>
           </v-list-item>
 
@@ -98,10 +98,10 @@ export default {
                 />
               </v-list-item-action>
 
-              <v-list-item-content @click="video = !video">
+              <v-list-item @click="video = !video">
                 <v-list-item-title>Video sounds</v-list-item-title>
                 <v-list-item-subtitle>Hangouts video call</v-list-item-subtitle>
-              </v-list-item-content>
+              </v-list-item>
             </template>
           </v-list-item>
 
@@ -115,12 +115,12 @@ export default {
                 />
               </v-list-item-action>
 
-              <v-list-item-content @click="invites = !invites">
+              <v-list-item @click="invites = !invites">
                 <v-list-item-title>Invites</v-list-item-title>
                 <v-list-item-subtitle>
                   Notify when receiving invites
                 </v-list-item-subtitle>
-              </v-list-item-content>
+              </v-list-item>
             </template>
           </v-list-item>
         </v-list-item-group>

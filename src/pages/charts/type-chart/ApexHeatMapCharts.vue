@@ -5,11 +5,13 @@ import BaseCard from '~/components/BaseCard.vue'
 
 <template>
   <BaseCard heading="Heat Map Chart">
+<client-only>
     <apexchart
       type="heatmap"
       height="350"
       :options="heatMapChart.chartOptions"
       :series="heatMapChart.series"
     />
+    </client-only>
   </BaseCard>
 </template>

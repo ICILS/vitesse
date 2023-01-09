@@ -7,6 +7,7 @@ defineProps({
 <template>
   <v-card
     elevation="0"
+
   >
     <v-toolbar color="transparent">
       <v-toolbar-title class="font-weight-medium">
@@ -16,7 +17,7 @@ defineProps({
       <v-spacer />
     </v-toolbar>
     <v-divider />
-    <div class="pa-5">
+    <div class="pa-5 center">
       <slot />
     </div>
   </v-card>

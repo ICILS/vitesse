@@ -1,11 +1,5 @@
-<script>
-export default {
-  name: 'TimePickerColors',
-
-  data: () => ({
-    e4: null,
-  }),
-}
+<script setup lang="ts">
+const e4 = ref(null)
 </script>
 
 <template>

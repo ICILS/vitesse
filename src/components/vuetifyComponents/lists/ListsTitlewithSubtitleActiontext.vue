@@ -90,7 +90,7 @@ export default {
             <template v-for="(item, index) in items" :key="item.title">
               <v-list-item>
                 <template #default="{ active }">
-                  <v-list-item-content>
+                  <v-list-item>
                     <v-list-item-title>
                       {{ item.title }}
                     </v-list-item-title>
@@ -101,7 +101,7 @@ export default {
                     <v-list-item-subtitle
                       v-text="item.subtitle"
                     />
-                  </v-list-item-content>
+                  </v-list-item>
 
                   <v-list-item-action>
                     <v-list-item-action-text

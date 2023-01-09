@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 const items = ref(['foo', 'bar', 'fizz', 'buzz'])
 const values = ref('foo')
-const value = ref(undefined)
+// const value = ref(undefined)
 </script>
 
 <template>

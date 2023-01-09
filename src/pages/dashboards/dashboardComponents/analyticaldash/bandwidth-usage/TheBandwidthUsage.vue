@@ -33,6 +33,7 @@ onMounted(() => {
         </v-col>
         <v-col cols="7">
           <div v-show="elementVisible" class="float-right">
+            <client-only>
             <apexchart
               type="line"
               height="70px"
@@ -40,6 +41,7 @@ onMounted(() => {
               :options="BandwidthChart.chartOptions"
               :series="BandwidthChart.series"
             />
+</client-only>
           </div>
         </v-col>
       </v-row>

@@ -33,12 +33,10 @@ onMounted(() => {
         </v-col>
         <v-col cols="8">
           <div v-show="elementVisible" class="ml-auto">
-            <apexchart
-              type="bar"
-              height="70px"
-              :options="DownloadChart.chartOptions"
-              :series="DownloadChart.series"
-            />
+            <client-only>
+              <apexchart type="bar" height="70px" :options="DownloadChart.chartOptions"
+                :series="DownloadChart.series" />
+            </client-only>
           </div>
         </v-col>
       </v-row>

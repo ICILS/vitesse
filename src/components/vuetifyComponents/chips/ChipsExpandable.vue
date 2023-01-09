@@ -34,13 +34,13 @@ const menu = ref(false)
         <v-card width="300">
           <v-list dark>
             <v-list-item>
-              <v-list-item-avatar>
+              <v-list-item>
                 <v-img src="https://cdn.vuetifyjs.com/images/john.png" />
-              </v-list-item-avatar>
-              <v-list-item-content>
+              </v-list-item>
+              <v-list-item>
                 <v-list-item-title>John Leider</v-list-item-title>
                 <v-list-item-subtitle>john@vuetifyjs.com</v-list-item-subtitle>
-              </v-list-item-content>
+              </v-list-item>
               <v-list-item-action>
                 <v-btn
                   icon
