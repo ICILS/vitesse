@@ -17,7 +17,7 @@ import LinkAttributes from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
 import Shiki from 'markdown-it-shiki'
 import VueMacros from 'unplugin-vue-macros/vite'
-import vuetify from 'vite-plugin-vuetify'
+import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 export default defineConfig({
   resolve: {
@@ -28,6 +28,8 @@ export default defineConfig({
     },
   },
 
+  publicDir: 'public, src/assets',
+
   plugins: [
     Preview(),
 
@@ -36,6 +38,7 @@ export default defineConfig({
         vue: Vue({
           include: [/\.vue$/, /\.md$/],
           reactivityTransform: true,
+          template: { transformAssetUrls },
         }),
       },
     }),
@@ -150,7 +153,9 @@ export default defineConfig({
     }),
     vuetify({
       autoImport: true,
-      // styles: { configFile: 'src/scss/settings.scss' } // Customizinng variables. See https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin#customising-variables
+      // styles: { configFile: 'src/scss/settings.scss' }, // Customizinng variables. See https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin#customising-variables
+      // styles: 'sass',
+      // styles: 'none',
     }),
   ],
 
@@ -175,7 +180,7 @@ export default defineConfig({
     noExternal: ['workbox-window', /vue-i18n/, 'vuetify'],
     optimizeDeps: {
       include: ['vue', 'vue-router', 'vue-i18n', '@vueuse/head'],
-    }
+    },
   },
   // Added from materialpro
   css: {
