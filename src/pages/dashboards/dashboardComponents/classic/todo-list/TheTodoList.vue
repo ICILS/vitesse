@@ -178,7 +178,7 @@ export default {
                 <div v-for="tagbtn in task.tagbtns" :key="tagbtn.tagbtntitle" class="mr-2" :tagbtn="tagbtn">
                   <v-chip color="primary">
                     <v-avatar>
-                      <v-img :src="`/assets/images/users/${tagbtn.userimg}`" class="mr-2" />
+                      <v-img :src="`/src/assets/images/users/${tagbtn.userimg}`" class="mr-2" />
                     </v-avatar>
                     {{ tagbtn.username }}
                   </v-chip>

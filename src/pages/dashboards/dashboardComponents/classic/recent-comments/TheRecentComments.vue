@@ -70,7 +70,7 @@ const comments = ref([
               <div class="pa-2">
                 <v-avatar size="50">
                   <img
-                    :src="`/assets/images/users/${comment.img}`"
+                    :src="`/src/assets/images/users/${comment.img}`"
                     alt="user"
                     width="50"
                   >

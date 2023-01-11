@@ -39,6 +39,11 @@ const breadcrumbs = ref([
     :breadcrumbs="breadcrumbs"
   />
   <v-row>
+    <v-col cols="12" sm="12" lg="12">
+      <!-- <BaseCard heading="Mio Hero"> -->
+      <MioHero />
+      <!-- </BaseCard> -->
+    </v-col>
     <v-col cols="12" sm="12" lg="6">
       <BaseCard heading="With Props">
         <CardsProps />

@@ -232,7 +232,7 @@ const breadcrumbs = ref([
                   <div class="d-flex align-center py-4">
                     <div>
                       <v-img
-                        :src="`/assets/images/users/${item.avatar}`"
+                        :src="`/src/assets/images/users/${item.avatar}`"
                         width="45px"
                         class="rounded-circle img-fluid"
                       />

@@ -322,7 +322,7 @@ const contactgrids = computed(() => {
           <div class="d-flex justify-center">
             <v-avatar size="90">
               <v-img
-                :src="`/assets/images/users${contactgrid.img}`"
+                :src="`/src/assets/images/users${contactgrid.img}`"
                 alt="user"
                 class="rounded-circle"
               />

@@ -98,7 +98,7 @@ function searchbox() {
           <template #prepend>
             <v-avatar size="50">
               <v-img
-                :src="`/assets/images/users/${item.image}`"
+                :src="`/src/assets/images/users/${item.image}`"
                 :alt="item.image"
                 width="50"
               />

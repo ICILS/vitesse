@@ -71,7 +71,7 @@ const filteredList = computed(() => {
                 <template #prepend>
                   <v-avatar size="45">
                     <v-img
-                      :src="`@/assets/images/users/${conversation.image}`"
+                      :src="`/src/assets/images/users/${conversation.image}`"
                       :alt="conversation.image"
                       width="45"
                     />
@@ -99,7 +99,7 @@ const filteredList = computed(() => {
               <div class="d-flex pa-4 align-center">
                 <v-avatar size="45" class="mr-3">
                   <img
-                    :src="`/assets/images/users/${conversation.image}`"
+                    :src="`/src/assets/images/users/${conversation.image}`"
                     width="45"
                   >
                 </v-avatar>
@@ -121,14 +121,14 @@ const filteredList = computed(() => {
                     <div class="thumb">
                       <v-avatar v-if="message.fromMe" size="35" class="mx-2">
                         <img
-                          src="/assets/images/users/6.jpg"
+                          src="@/assets/images/users/6.jpg"
                           width="35"
                           alt="..."
                         >
                       </v-avatar>
                       <v-avatar v-else size="35" class="mx-2">
                         <img
-                          :src="`/assets/images/users/${conversation.image}`"
+                          :src="`/src/assets/images/users/${conversation.image}`"
                           alt="..."
                           width="35"
                         >

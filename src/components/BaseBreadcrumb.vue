@@ -3,16 +3,20 @@ defineProps({
   title: String,
   breadcrumbs: Array as any,
   icon: String,
+  hidden: {
+    type: Boolean,
+    default: true,
+  },
 })
 </script>
 
 <template>
-  <v-row class="page-breadcrumb mb-0">
+  <v-row v-if="!$props.hidden" class="page-breadcrumb mb-0">
     <v-col cols="12" sm="12">
       <v-toolbar flat class="pa-1">
         <div>
           <h2 class="text-base pa-1">
-              {{ title }}
+            {{ title }}
           </h2>
           <v-breadcrumbs :icon="icon" :items="breadcrumbs" class="pa-1">
             <template v-if="breadcrumbs" #divider>

@@ -36,12 +36,14 @@ watchEffect(() => {
     </template>
 
     <div>
-      <button
-        btn m="3 t6" text-sm
-        @click="router.back()"
-      >
+      <button btn m="3 t6" text-sm @click="router.back()">
         {{ t('button.back') }}
       </button>
     </div>
   </div>
 </template>
+
+<route lang="yaml">
+meta:
+  layout: discord
+</route>

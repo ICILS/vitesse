@@ -59,7 +59,7 @@ function href() {
                   >
                     <v-avatar size="40">
                       <img
-                        :src="`/assets/images/users/${item.avatar}`"
+                        :src="`/src/assets/images/users/${item.avatar}`"
                         :alt="item.title"
                         width="40"
                       >

@@ -102,7 +102,7 @@ const monthtable = ref([
                 <div class="d-flex align-center">
                   <v-avatar size="40">
                     <img
-                      :src="`/assets/images/users/${item.img}`"
+                      :src="`/src/assets/images/users/${item.img}`"
                       alt="user"
                       width="45"
                     >

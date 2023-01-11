@@ -88,7 +88,7 @@ watch(priority, (newPriority) => {
         >
           <template #prepend>
             <v-avatar size="50">
-              <v-img :src="`/assets/images/users/${item.image}`" :alt="item.image" width="50" />
+              <v-img :src="`/src/assets/images/users/${item.image}`" :alt="item.image" width="50" />
             </v-avatar>
           </template>
         </v-list-item>

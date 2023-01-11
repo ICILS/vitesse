@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import VerticalSidebarVue from './vertical-sidebar/VerticalSidebar.vue'
-import VerticalHeaderVue from './vertical-header/VerticalHeader.vue'
+// import VerticalHeaderVue from './vertical-header/VerticalHeader.vue'
 import Customizer from './customizer/Customizer.vue'
 import HorizontalHeader from './horizontal-header/HorizontalHeader.vue'
 import HorizontalSidebar from './horizontal-sidebar/HorizontalSidebar.vue'
@@ -18,7 +18,7 @@ const customizer = useCustomizerStore()
     ]"
   >
     <Customizer />
-    <VerticalHeaderVue v-if="!customizer.setHorizontalLayout" />
+    <!-- <VerticalHeaderVue v-if="!customizer.setHorizontalLayout" /> -->
     <VerticalSidebarVue v-if="!customizer.setHorizontalLayout" />
 
     <v-main>
