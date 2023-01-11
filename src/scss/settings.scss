@@ -1,6 +1,7 @@
 // settings.scss Added. See https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
-// settings.scss can be used in your own components to access vuetify's variables
-@use 'vuetify/settings' with (
-  $color-pack: false,
-  $utilities: false,
-);
+// settings.scss can be used in your own components to access vuetify's variables. See https://next.vuetifyjs.com/en/features/sass-variables/#usage-in-templates
+// @use 'vuetify/settings' with (
+//   $utilities: true,
+//   $color-pack: false,
+// );
+
