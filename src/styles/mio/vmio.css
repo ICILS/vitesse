@@ -1,0 +1,1122 @@
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+:root {
+  --v-theme-display-font-family: "Google Sans", sans-serif;
+  --v-theme-text-font-family: "Google Sans Text", sans-serif;
+  --v-theme-mono-font-family: "Google Sans Mono", sans-serif;
+  --v-theme-hero-font-family: var(--v-theme-display-font-family);
+  --v-theme-hero-font-size: 112px;
+  --v-theme-hero-line-height: 1;
+  --v-theme-hero-font-weight: 475;
+  --v-theme-hero-font-variation-GRAD: 0;
+  --v-theme-hero-font-variation-opsz: 18;
+  --v-theme-hero-letter-spacing: 0;
+  --v-theme-display-xl-font-family: var(--v-theme-display-font-family);
+  --v-theme-display-xl-font-size: 88px;
+  --v-theme-display-xl-line-height: 96px;
+  --v-theme-display-xl-font-weight: 475;
+  --v-theme-display-xl-font-variation-GRAD: 0;
+  --v-theme-display-xl-font-variation-opsz: 18;
+  --v-theme-display-xl-letter-spacing: 0;
+  --v-theme-display-l-font-family: var(--v-theme-display-font-family);
+  --v-theme-display-l-font-size: 57px;
+  --v-theme-display-l-line-height: 64px;
+  --v-theme-display-l-font-weight: 475;
+  --v-theme-display-l-font-variation-GRAD: 0;
+  --v-theme-display-l-font-variation-opsz: 18;
+  --v-theme-display-l-letter-spacing: 0;
+  --v-theme-display-m-font-family: var(--v-theme-display-font-family);
+  --v-theme-display-m-font-size: 45px;
+  --v-theme-display-m-line-height: 52px;
+  --v-theme-display-m-font-weight: 475;
+  --v-theme-display-m-font-variation-GRAD: 0;
+  --v-theme-display-m-font-variation-opsz: 18;
+  --v-theme-display-m-letter-spacing: 0;
+  --v-theme-display-s-font-family: var(--v-theme-display-font-family);
+  --v-theme-display-s-font-size: 36px;
+  --v-theme-display-s-line-height: 44px;
+  --v-theme-display-s-font-weight: 475;
+  --v-theme-display-s-font-variation-GRAD: 0;
+  --v-theme-display-s-font-variation-opsz: 18;
+  --v-theme-display-s-letter-spacing: 0;
+  --v-theme-headline-l-font-family: var(--v-theme-display-font-family);
+  --v-theme-headline-l-font-size: 32px;
+  --v-theme-headline-l-line-height: 40px;
+  --v-theme-headline-l-font-weight: 475;
+  --v-theme-headline-l-font-variation-GRAD: 0;
+  --v-theme-headline-l-font-variation-opsz: 18;
+  --v-theme-headline-l-letter-spacing: 0;
+  --v-theme-headline-m-font-family: var(--v-theme-display-font-family);
+  --v-theme-headline-m-font-size: 28px;
+  --v-theme-headline-m-line-height: 36px;
+  --v-theme-headline-m-font-weight: 475;
+  --v-theme-headline-m-font-variation-GRAD: 0;
+  --v-theme-headline-m-font-variation-opsz: 18;
+  --v-theme-headline-m-letter-spacing: 0;
+  --v-theme-headline-s-font-family: var(--v-theme-display-font-family);
+  --v-theme-headline-s-font-size: 24px;
+  --v-theme-headline-s-line-height: 32px;
+  --v-theme-headline-s-font-weight: 475;
+  --v-theme-headline-s-font-variation-GRAD: 0;
+  --v-theme-headline-s-font-variation-opsz: 18;
+  --v-theme-headline-s-letter-spacing: 0;
+  --v-theme-title-l-font-family: var(--v-theme-text-font-family);
+  --v-theme-title-l-font-size: 22px;
+  --v-theme-title-l-line-height: 30px;
+  --v-theme-title-l-font-weight: 400;
+  --v-theme-title-l-font-variation-GRAD: 0;
+  --v-theme-title-l-font-variation-opsz: 17;
+  --v-theme-title-l-letter-spacing: 0;
+  --v-theme-title-m-font-family: var(--v-theme-text-font-family);
+  --v-theme-title-m-font-size: 16px;
+  --v-theme-title-m-line-height: 24px;
+  --v-theme-title-m-font-weight: 500;
+  --v-theme-title-m-font-variation-GRAD: 0;
+  --v-theme-title-m-font-variation-opsz: 17;
+  --v-theme-title-m-letter-spacing: 0;
+  --v-theme-title-s-font-family: var(--v-theme-text-font-family);
+  --v-theme-title-s-font-size: 14px;
+  --v-theme-title-s-line-height: 20px;
+  --v-theme-title-s-font-weight: 500;
+  --v-theme-title-s-font-variation-GRAD: 0;
+  --v-theme-title-s-font-variation-opsz: 17;
+  --v-theme-title-s-letter-spacing: 0;
+  --v-theme-label-l-font-family: var(--v-theme-text-font-family);
+  --v-theme-label-l-font-size: 14px;
+  --v-theme-label-l-line-height: 20px;
+  --v-theme-label-l-font-weight: 500;
+  --v-theme-label-l-font-variation-GRAD: 0;
+  --v-theme-label-l-font-variation-opsz: 17;
+  --v-theme-label-l-letter-spacing: 0;
+  --v-theme-label-m-font-family: var(--v-theme-text-font-family);
+  --v-theme-label-m-font-size: 12px;
+  --v-theme-label-m-line-height: 16px;
+  --v-theme-label-m-font-weight: 500;
+  --v-theme-label-m-font-variation-GRAD: 0;
+  --v-theme-label-m-font-variation-opsz: 17;
+  --v-theme-label-m-letter-spacing: 0.1px;
+  --v-theme-label-s-font-family: var(--v-theme-text-font-family);
+  --v-theme-label-s-font-size: 11px;
+  --v-theme-label-s-line-height: 16px;
+  --v-theme-label-s-font-weight: 500;
+  --v-theme-label-s-font-variation-GRAD: 0;
+  --v-theme-label-s-font-variation-opsz: 17;
+  --v-theme-label-s-letter-spacing: 0.1px;
+  --v-theme-body-l-font-family: var(--v-theme-text-font-family);
+  --v-theme-body-l-font-size: 16px;
+  --v-theme-body-l-line-height: 24px;
+  --v-theme-body-l-font-weight: 400;
+  --v-theme-body-l-font-variation-GRAD: 0;
+  --v-theme-body-l-font-variation-opsz: 17;
+  --v-theme-body-l-letter-spacing: 0;
+  --v-theme-body-m-font-family: var(--v-theme-text-font-family);
+  --v-theme-body-m-font-size: 14px;
+  --v-theme-body-m-line-height: 20px;
+  --v-theme-body-m-font-weight: 400;
+  --v-theme-body-m-font-variation-GRAD: 0;
+  --v-theme-body-m-font-variation-opsz: 17;
+  --v-theme-body-m-letter-spacing: 0;
+  --v-theme-body-s-font-family: var(--v-theme-text-font-family);
+  --v-theme-body-s-font-size: 12px;
+  --v-theme-body-s-line-height: 16px;
+  --v-theme-body-s-font-weight: 400;
+  --v-theme-body-s-font-variation-GRAD: 0;
+  --v-theme-body-s-font-variation-opsz: 17;
+  --v-theme-body-s-letter-spacing: 0.1px;
+  --v-theme-code-l-font-family: var(--v-theme-mono-font-family);
+  --v-theme-code-l-font-size: 16px;
+  --v-theme-code-l-line-height: 24px;
+  --v-theme-code-l-font-weight: 400;
+  --v-theme-code-l-letter-spacing: 0;
+  --v-theme-code-m-font-family: var(--v-theme-mono-font-family);
+  --v-theme-code-m-font-size: 14px;
+  --v-theme-code-m-line-height: 20px;
+  --v-theme-code-m-font-weight: 400;
+  --v-theme-code-m-letter-spacing: 0;
+  --v-theme-code-snippet-font-family: var(--v-theme-mono-font-family);
+  --v-theme-code-snippet-font-size: 15px;
+  --v-theme-code-snippet-line-height: 32px;
+  --v-theme-code-snippet-font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+v-root {
+  --v-theme-on-surface-variant-2: linear-gradient(
+    0deg,
+    rgba(68, 71, 70, 0.08),
+    rgba(68, 71, 70, 0.08)
+  );
+  --v-theme-on-surface-variant-4: linear-gradient(
+    0deg,
+    rgba(68, 71, 70, 0.12),
+    rgba(68, 71, 70, 0.12)
+  );
+  --v-theme-on-surface-2: linear-gradient(
+      0deg,
+      rgba(31, 31, 31, 0.08),
+      rgba(31, 31, 31, 0.08)
+    ),
+    var(--v-theme-secondary-container);
+  --v-theme-on-surface-4: linear-gradient(
+      0deg,
+      rgba(31, 31, 31, 0.12),
+      rgba(31, 31, 31, 0.12)
+    ),
+    var(--v-theme-secondary-container);
+  --v-theme-white: #fff;
+  --v-theme-on-background: #1f1f1f;
+  --v-theme-background: #fff;
+  --v-theme-on-surface: #1f1f1f;
+  --v-theme-on-surface-variant: #444746;
+  --v-theme-surface-0: #fff;
+  --v-theme-surface-variant: #e1e3e1;
+  --v-theme-inverse-surface: #303030;
+  --v-theme-inverse-on-surface: #f2f2f2;
+  --v-theme-primary: #0b57d0;
+  --v-theme-primary-80: #a8c7fa;
+  --v-theme-primary-30: #0842a0;
+  --v-theme-primary-20: #062e6f;
+  --v-theme-on-primary: #fff;
+  --v-theme-neutral-10: #1f1f1f;
+  --v-theme-neutral-90: #e3e3e3;
+  --v-theme-primary-container: #d3e3fd;
+  --v-theme-on-primary-container: #041e49;
+  --v-theme-secondary: #00639b;
+  --v-theme-on-secondary: #fff;
+  --v-theme-secondary-container: #c2e7ff;
+  --v-theme-on-secondary-container: #001d35;
+  --v-theme-tertiary-container: #c4eed0;
+  --v-theme-on-tertiary-container: #072711;
+  --v-theme-utility-error: #b3261e;
+  --v-theme-utility-on-error: #fff;
+  --v-theme-utility-outline: #747775;
+  --v-theme-surface-1: #f8fafd;
+  --v-theme-surface-2: #f3f6fc;
+  --v-theme-surface-3: #eff3fa;
+  --v-theme-surface-4: #edf2fa;
+  --v-theme-surface-5: #eaf0f9;
+  --v-theme-extensions-do-container: #085786;
+  --v-theme-extensions-on-do-container: #fff;
+  --v-theme-extensions-dont-container: #b3261e;
+  --v-theme-extensions-on-dont-container: #fff;
+  --v-theme-extensions-caution-container: #e8e971;
+  --v-theme-extensions-on-caution-container: #1f1f1f;
+  --v-theme-ref-secondary-200: #7fcfff;
+  --v-theme-ref-secondary-300: #5ab3f0;
+  --v-theme-ref-neutral-100: #e3e3e3;
+  --v-theme-ref-neutral-200: #c7c7c7;
+  --v-theme-scrim-video-container: rgba(31, 31, 31, 0.64);
+  --v-theme-scrim-video-control: hsla(0, 0%, 100%, 0.12);
+  --v-theme-scrim-video-control-pressed: hsla(0, 0%, 100%, 0.24);
+  --v-theme-copy-link-tooltip: #f2f2f2;
+  --v-theme-elevation-1: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+    0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --v-theme-elevation-2: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+    0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+  --v-theme-elevation-3: 0px 1px 3px 0px rgba(0, 0, 0, 0.3),
+    0px 4px 8px 3px rgba(0, 0, 0, 0.15);
+}
+v-root.dark-mode {
+  --v-theme-on-surface-variant-2: linear-gradient(
+    0deg,
+    hsla(140, 3%, 77%, 0.08),
+    hsla(140, 3%, 77%, 0.08)
+  );
+  --v-theme-on-surface-variant-4: linear-gradient(
+    0deg,
+    hsla(140, 3%, 77%, 0.12),
+    hsla(140, 3%, 77%, 0.12)
+  );
+  --v-theme-on-surface-2: linear-gradient(
+      0deg,
+      hsla(0, 0%, 89%, 0.08),
+      hsla(0, 0%, 89%, 0.08)
+    ),
+    var(--v-theme-secondary-container);
+  --v-theme-on-surface-4: linear-gradient(
+      0deg,
+      hsla(0, 0%, 89%, 0.12),
+      hsla(0, 0%, 89%, 0.12)
+    ),
+    var(--v-theme-secondary-container);
+  --v-theme-white: #fff;
+  --v-theme-on-background: #e3e3e3;
+  --v-theme-background: #1f1f1f;
+  --v-theme-on-surface: #e3e3e3;
+  --v-theme-on-surface-variant: #c4c7c5;
+  --v-theme-surface-0: #1f1f1f;
+  --v-theme-surface-variant: #444746;
+  --v-theme-inverse-surface: #e3e3e3;
+  --v-theme-inverse-on-surface: #303030;
+  --v-theme-surface-1: #28292a;
+  --v-theme-surface-2: #2d2f31;
+  --v-theme-surface-3: #333438;
+  --v-theme-surface-4: #34363a;
+  --v-theme-surface-5: #383a3e;
+  --v-theme-primary: #a8c7fa;
+  --v-theme-primary-80: #a8c7fa;
+  --v-theme-primary-30: #0842a0;
+  --v-theme-primary-20: #062e6f;
+  --v-theme-neutral-10: #1f1f1f;
+  --v-theme-neutral-90: #e3e3e3;
+  --v-theme-on-primary: #062e6f;
+  --v-theme-primary-container: #0842a0;
+  --v-theme-on-primary-container: #d3e3fd;
+  --v-theme-secondary: #7fcfff;
+  --v-theme-on-secondary: #035;
+  --v-theme-secondary-container: #004a77;
+  --v-theme-on-secondary-container: #c2e7ff;
+  --v-theme-tertiary-container: #0f5223;
+  --v-theme-on-tertiary-container: #c4eed0;
+  --v-theme-utility-error: #f2b8b5;
+  --v-theme-utility-on-error: #601410;
+  --v-theme-utility-outline: #8e918f;
+  --v-theme-extensions-do-container: #b4e5f2;
+  --v-theme-extensions-on-do-container: #073550;
+  --v-theme-extensions-dont-container: #f2b8b5;
+  --v-theme-extensions-on-dont-container: #601410;
+  --v-theme-extensions-caution-container: #e2e290;
+  --v-theme-extensions-on-caution-container: #473e00;
+  --v-theme-copy-link-tooltip: #f2f2f2;
+  --v-theme-elevation-1: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+    0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --v-theme-elevation-2: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+    0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+  --v-theme-elevation-3: 0px 1px 3px 0px rgba(0, 0, 0, 0.3),
+    0px 4px 8px 3px rgba(0, 0, 0, 0.15);
+}
+v-root.green {
+  --v-theme-on-surface-variant-2: linear-gradient(
+    0deg,
+    rgba(67, 73, 62, 0.08),
+    rgba(67, 73, 62, 0.08)
+  );
+  --v-theme-on-surface-variant-4: linear-gradient(
+    0deg,
+    rgba(67, 73, 62, 0.12),
+    rgba(67, 73, 62, 0.12)
+  );
+  --v-theme-on-surface-2: linear-gradient(
+      0deg,
+      rgba(26, 28, 24, 0.08),
+      rgba(26, 28, 24, 0.08)
+    ),
+    var(--v-theme-secondary-container);
+  --v-theme-on-surface-4: linear-gradient(
+      0deg,
+      rgba(26, 28, 24, 0.12),
+      rgba(26, 28, 24, 0.12)
+    ),
+    var(--v-theme-secondary-container);
+  --v-theme-white: #fff;
+  --v-theme-on-background: #1a1c18;
+  --v-theme-background: #fdfdf6;
+  --v-theme-on-surface: #1a1c18;
+  --v-theme-on-surface-variant: #43493e;
+  --v-theme-surface-0: #fdfdf6;
+  --v-theme-surface-variant: #dfe4d6;
+  --v-theme-inverse-surface: #2f312c;
+  --v-theme-inverse-on-surface: #f1f1ea;
+  --v-theme-primary: #386a20;
+  --v-theme-primary-80: #9cd67d;
+  --v-theme-primary-30: #205107;
+  --v-theme-primary-20: #0c3900;
+  --v-theme-on-primary: #fff;
+  --v-theme-primary-container: #b8f397;
+  --v-theme-on-primary-container: #042100;
+  --v-theme-secondary: #55624c;
+  --v-theme-on-secondary: #fff;
+  --v-theme-secondary-container: #d9e7cb;
+  --v-theme-on-secondary-container: #131f0d;
+  --v-theme-tertiary-container: #bbebeb;
+  --v-theme-on-tertiary-container: #002021;
+  --v-theme-utility-error: #ba1b1b;
+  --v-theme-utility-on-error: #fff;
+  --v-theme-utility-outline: #74796e;
+  --v-theme-surface-1: #f0f3e8;
+  --v-theme-surface-2: #ebefe2;
+  --v-theme-surface-3: #e5eadc;
+  --v-theme-surface-4: #e3e9da;
+  --v-theme-surface-5: #dfe6d5;
+  --v-theme-ref-secondary-200: #bdcbb0;
+  --v-theme-ref-secondary-300: #a1b095;
+  --v-theme-ref-neutral-100: #e3e3e3;
+  --v-theme-ref-neutral-200: #c7c7c7;
+}
+v-root.green.dark-mode {
+  --v-theme-on-surface-variant-2: linear-gradient(
+    0deg,
+    hsla(78, 11%, 76%, 0.08),
+    hsla(78, 11%, 76%, 0.08)
+  );
+  --v-theme-on-surface-variant-4: linear-gradient(
+    0deg,
+    hsla(78, 11%, 76%, 0.12),
+    hsla(78, 11%, 76%, 0.12)
+  );
+  --v-theme-on-surface-2: linear-gradient(
+      0deg,
+      hsla(60, 11%, 88%, 0.08),
+      hsla(60, 11%, 88%, 0.08)
+    ),
+    var(--v-theme-secondary-container);
+  --v-theme-on-surface-4: linear-gradient(
+      0deg,
+      hsla(60, 11%, 88%, 0.12),
+      hsla(60, 11%, 88%, 0.12)
+    ),
+    var(--v-theme-secondary-container);
+  --v-theme-white: #fff;
+  --v-theme-on-background: #e3e3dc;
+  --v-theme-background: #1a1c18;
+  --v-theme-on-surface: #e3e3dc;
+  --v-theme-on-surface-variant: #c4c8bb;
+  --v-theme-surface-0: #1a1c18;
+  --v-theme-surface-variant: #43493e;
+  --v-theme-surface-1: #232820;
+  --v-theme-surface-2: #272e23;
+  --v-theme-surface-3: #2b3326;
+  --v-theme-surface-4: #2c3527;
+  --v-theme-surface-5: #2f3929;
+  --v-theme-inverse-surface: #2f312c;
+  --v-theme-inverse-on-surface: #f1f1ea;
+  --v-theme-primary: #9cd67d;
+  --v-theme-primary-80: #9cd67d;
+  --v-theme-primary-30: #205107;
+  --v-theme-primary-20: #0c3900;
+  --v-theme-neutral-10: #1a1c18;
+  --v-theme-neutral-90: #e3e3dc;
+  --v-theme-on-primary: #0c3900;
+  --v-theme-primary-container: #205107;
+  --v-theme-on-primary-container: #b8f397;
+  --v-theme-secondary: #bdcbb0;
+  --v-theme-on-secondary: #273420;
+  --v-theme-secondary-container: #3e4a36;
+  --v-theme-on-secondary-container: #d9e7cb;
+  --v-theme-tertiary-container: #1e4e4e;
+  --v-theme-on-tertiary-container: #bbebeb;
+  --v-theme-utility-error: #ffb4a9;
+  --v-theme-utility-on-error: #680003;
+  --v-theme-utility-outline: #8d9286;
+}
+v-root.red {
+  --v-theme-on-surface-variant-2: linear-gradient(
+    0deg,
+    rgba(83, 67, 67, 0.08),
+    rgba(83, 67, 67, 0.08)
+  );
+  --v-theme-on-surface-variant-4: linear-gradient(
+    0deg,
+    rgba(83, 67, 67, 0.12),
+    rgba(83, 67, 67, 0.12)
+  );
+  --v-theme-on-surface-2: linear-gradient(
+      0deg,
+      rgba(33, 26, 26, 0.08),
+      rgba(33, 26, 26, 0.08)
+    ),
+    var(--v-theme-secondary-container);
+  --v-theme-on-surface-4: linear-gradient(
+      0deg,
+      rgba(33, 26, 26, 0.12),
+      rgba(33, 26, 26, 0.12)
+    ),
+    var(--v-theme-secondary-container);
+  --v-theme-white: #fff;
+  --v-theme-on-background: #211a1a;
+  --v-theme-background: #fcfcfc;
+  --v-theme-on-surface: #211a1a;
+  --v-theme-on-surface-variant: #534343;
+  --v-theme-surface-0: #fcfcfc;
+  --v-theme-surface-variant: #f4dedd;
+  --v-theme-inverse-surface: #362f2f;
+  --v-theme-inverse-on-surface: #fbeeed;
+  --v-theme-primary: #9c4146;
+  --v-theme-primary-80: #ffb3b5;
+  --v-theme-primary-30: #7d2a30;
+  --v-theme-primary-20: #5f121b;
+  --v-theme-on-primary: #fff;
+  --v-theme-primary-container: #ffdadb;
+  --v-theme-on-primary-container: #400008;
+  --v-theme-secondary: #765656;
+  --v-theme-on-secondary: #fff;
+  --v-theme-secondary-container: #ffdad9;
+  --v-theme-on-secondary-container: #2d1516;
+  --v-theme-tertiary-container: #fda;
+  --v-theme-on-tertiary-container: #281800;
+  --v-theme-utility-error: #ba1b1b;
+  --v-theme-utility-on-error: #fff;
+  --v-theme-utility-outline: #857373;
+  --v-theme-surface-1: #f5f0f0;
+  --v-theme-surface-2: #f3eaeb;
+  --v-theme-surface-3: #f0e5e5;
+  --v-theme-surface-4: #efe3e4;
+  --v-theme-surface-5: #eddfe0;
+  --v-theme-ref-secondary-200: #e6bcbc;
+  --v-theme-ref-secondary-300: #c9a1a1;
+  --v-theme-ref-neutral-100: #e3e3e3;
+  --v-theme-ref-neutral-200: #c7c7c7;
+}
+v-root.red.dark-mode {
+  --v-theme-on-surface-variant-2: linear-gradient(
+    0deg,
+    hsla(3, 22%, 80%, 0.08),
+    hsla(3, 22%, 80%, 0.08)
+  );
+  --v-theme-on-surface-variant-4: linear-gradient(
+    0deg,
+    hsla(3, 22%, 80%, 0.12),
+    hsla(3, 22%, 80%, 0.12)
+  );
+  --v-theme-on-surface-2: linear-gradient(
+      0deg,
+      hsla(4, 28%, 90%, 0.08),
+      hsla(4, 28%, 90%, 0.08)
+    ),
+    var(--v-theme-secondary-container);
+  --v-theme-on-surface-4: linear-gradient(
+      0deg,
+      hsla(4, 28%, 90%, 0.12),
+      hsla(4, 28%, 90%, 0.12)
+    ),
+    var(--v-theme-secondary-container);
+  --v-theme-white: #fff;
+  --v-theme-on-background: #ede0df;
+  --v-theme-background: #211a1a;
+  --v-theme-on-surface: #ede0df;
+  --v-theme-on-surface-variant: #d7c2c1;
+  --v-theme-surface-0: #211a1a;
+  --v-theme-surface-variant: #534343;
+  --v-theme-surface-1: #2f2525;
+  --v-theme-surface-2: #362929;
+  --v-theme-surface-3: #3c2e2e;
+  --v-theme-surface-4: #3e2f2f;
+  --v-theme-surface-5: #433232;
+  --v-theme-inverse-surface: #362f2f;
+  --v-theme-inverse-on-surface: #fbeeed;
+  --v-theme-primary: #ffb3b5;
+  --v-theme-primary-80: #ffb3b5;
+  --v-theme-primary-30: #7d2a30;
+  --v-theme-primary-20: #5f121b;
+  --v-theme-neutral-10: #211a1a;
+  --v-theme-neutral-90: #ede0df;
+  --v-theme-on-primary: #5f121b;
+  --v-theme-primary-container: #7d2a30;
+  --v-theme-on-primary-container: #ffdadb;
+  --v-theme-secondary: #e6bcbc;
+  --v-theme-on-secondary: #442929;
+  --v-theme-secondary-container: #5c3f3f;
+  --v-theme-on-secondary-container: #ffdad9;
+  --v-theme-tertiary-container: #5b4219;
+  --v-theme-on-tertiary-container: #fda;
+  --v-theme-utility-error: #ffb4a9;
+  --v-theme-utility-on-error: #680003;
+  --v-theme-utility-outline: #a08c8c;
+}
+v-root.yellow {
+  --v-theme-on-surface-variant-2: linear-gradient(
+    0deg,
+    rgba(72, 71, 58, 0.08),
+    rgba(72, 71, 58, 0.08)
+  );
+  --v-theme-on-surface-variant-4: linear-gradient(
+    0deg,
+    rgba(72, 71, 58, 0.12),
+    rgba(72, 71, 58, 0.12)
+  );
+  --v-theme-on-surface-2: linear-gradient(
+      0deg,
+      rgba(28, 28, 22, 0.08),
+      rgba(28, 28, 22, 0.08)
+    ),
+    var(--v-theme-secondary-container);
+  --v-theme-on-surface-4: linear-gradient(
+      0deg,
+      rgba(28, 28, 22, 0.12),
+      rgba(28, 28, 22, 0.12)
+    ),
+    var(--v-theme-secondary-container);
+  --v-theme-white: #fff;
+  --v-theme-on-background: #1c1c16;
+  --v-theme-background: #fffcf3;
+  --v-theme-on-surface: #1c1c16;
+  --v-theme-on-surface-variant: #48473a;
+  --v-theme-surface-0: #fffcf3;
+  --v-theme-surface-variant: #e6e3d1;
+  --v-theme-inverse-surface: #31302b;
+  --v-theme-inverse-on-surface: #f4f0e8;
+  --v-theme-primary: #616200;
+  --v-theme-primary-80: #cbcc58;
+  --v-theme-primary-30: #494a00;
+  --v-theme-primary-20: #323200;
+  --v-theme-on-primary: #fff;
+  --v-theme-primary-container: #e8e971;
+  --v-theme-on-primary-container: #1d1d00;
+  --v-theme-secondary: #606042;
+  --v-theme-on-secondary: #fff;
+  --v-theme-secondary-container: #e6e4bf;
+  --v-theme-on-secondary-container: #1c1d06;
+  --v-theme-tertiary-container: #bfedd9;
+  --v-theme-on-tertiary-container: #002117;
+  --v-theme-utility-error: #ba1b1b;
+  --v-theme-utility-on-error: #fff;
+  --v-theme-utility-outline: #797869;
+  --v-theme-surface-1: #f4f1e4;
+  --v-theme-surface-2: #f0eddd;
+  --v-theme-surface-3: #ebe8d6;
+  --v-theme-surface-4: #e9e7d3;
+  --v-theme-surface-5: #e6e4ce;
+  --v-theme-ref-secondary-200: #cac8a5;
+  --v-theme-ref-secondary-300: #aead8a;
+  --v-theme-ref-neutral-100: #e3e3e3;
+  --v-theme-ref-neutral-200: #c7c7c7;
+}
+v-root.yellow.dark-mode {
+  --v-theme-on-surface-variant-2: linear-gradient(
+    0deg,
+    hsla(54, 15%, 75%, 0.08),
+    hsla(54, 15%, 75%, 0.08)
+  );
+  --v-theme-on-surface-variant-4: linear-gradient(
+    0deg,
+    hsla(54, 15%, 75%, 0.12),
+    hsla(54, 15%, 75%, 0.12)
+  );
+  --v-theme-on-surface-2: linear-gradient(
+      0deg,
+      hsla(45, 19%, 87%, 0.08),
+      hsla(45, 19%, 87%, 0.08)
+    ),
+    var(--v-theme-secondary-container);
+  --v-theme-on-surface-4: linear-gradient(
+      0deg,
+      hsla(45, 19%, 87%, 0.12),
+      hsla(45, 19%, 87%, 0.12)
+    ),
+    var(--v-theme-secondary-container);
+  --v-theme-white: #fff;
+  --v-theme-on-background: #e5e2d9;
+  --v-theme-background: #1c1c16;
+  --v-theme-on-surface: #e5e2d9;
+  --v-theme-on-surface-variant: #c9c7b6;
+  --v-theme-surface-0: #1c1c16;
+  --v-theme-surface-variant: #48473a;
+  --v-theme-surface-1: #28281c;
+  --v-theme-surface-2: #2d2d1e;
+  --v-theme-surface-3: #323220;
+  --v-theme-surface-4: #343421;
+  --v-theme-surface-5: #373722;
+  --v-theme-inverse-surface: #31302b;
+  --v-theme-inverse-on-surface: #f4f0e8;
+  --v-theme-primary: #cbcc58;
+  --v-theme-primary-80: #cbcc58;
+  --v-theme-primary-30: #494a00;
+  --v-theme-primary-20: #323200;
+  --v-theme-neutral-10: #1c1c16;
+  --v-theme-neutral-90: #e5e2d9;
+  --v-theme-on-primary: #323200;
+  --v-theme-primary-container: #494a00;
+  --v-theme-on-primary-container: #e8e971;
+  --v-theme-secondary: #cac8a5;
+  --v-theme-on-secondary: #323219;
+  --v-theme-secondary-container: #48482d;
+  --v-theme-on-secondary-container: #e6e4bf;
+  --v-theme-tertiary-container: #254e40;
+  --v-theme-on-tertiary-container: #bfedd9;
+  --v-theme-utility-error: #ffb4a9;
+  --v-theme-utility-on-error: #680003;
+  --v-theme-utility-outline: #939182;
+}
+v-root.nav-transition * {
+  transition: background-color 0.5s cubic-bezier(0.2, 0, 0, 1),
+    background-image 0.5s cubic-bezier(0.2, 0, 0, 1);
+}
+mwc-button {
+  --mdc-typography-button-font-family: var(--v-theme-label-l-font-family);
+  --mdc-typography-button-font-size: var(--v-theme-label-l-font-size);
+  --mdc-typography-button-line-height: var(--v-theme-label-l-line-height);
+  --mdc-typography-button-font-weight: var(--v-theme-label-l-font-weight);
+  --mdc-typography-button-letter-spacing: var(
+    --v-theme-label-l-letter-spacing
+  );
+  --mdc-typography-button-text-transform: none;
+}
+:root {
+  --v-theme-white: #fff;
+  --v-theme-on-surface: #1f1f1f;
+  --v-theme-scrim-video-container: rgba(31, 31, 31, 0.64);
+  --v-theme-scrim-video-control: hsla(0, 0%, 100%, 0.12);
+  --v-theme-scrim-video-control-pressed: hsla(0, 0%, 100%, 0.24);
+}
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-family: var(--v-theme-body-l-font-family);
+  font-size: var(--v-theme-body-l-font-size);
+  font-weight: var(--v-theme-body-l-font-weight);
+  letter-spacing: var(--v-theme-body-l-letter-spacing);
+  line-height: var(--v-theme-body-l-line-height);
+  font-variation-settings: "GRAD" var(--v-theme-body-l-font-variation-GRAD),
+    "opsz" var(--v-theme-body-l-font-variation-opsz);
+  color: var(--v-theme-on-surface);
+}
+@media screen and (max-width: 600px) {
+  body {
+    font-family: var(--v-theme-body-m-font-family);
+    font-size: var(--v-theme-body-m-font-size);
+    font-weight: var(--v-theme-body-m-font-weight);
+    letter-spacing: var(--v-theme-body-m-letter-spacing);
+    line-height: var(--v-theme-body-m-line-height);
+    font-variation-settings: "GRAD"
+        var(--v-theme-body-m-font-variation-GRAD),
+      "opsz" var(--v-theme-body-m-font-variation-opsz);
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1294px) {
+  body {
+    font-family: var(--v-theme-body-l-font-family);
+    font-size: var(--v-theme-body-l-font-size);
+    font-weight: var(--v-theme-body-l-font-weight);
+    letter-spacing: var(--v-theme-body-l-letter-spacing);
+    line-height: var(--v-theme-body-l-line-height);
+    font-variation-settings: "GRAD"
+        var(--v-theme-body-l-font-variation-GRAD),
+      "opsz" var(--v-theme-body-l-font-variation-opsz);
+  }
+}
+h2,
+h4,
+h5,
+h6 {
+  margin: 32px 0;
+}
+h1 {
+  font-family: var(--v-theme-display-l-font-family);
+  font-size: var(--v-theme-display-l-font-size);
+  font-weight: var(--v-theme-display-l-font-weight);
+  letter-spacing: var(--v-theme-display-l-letter-spacing);
+  line-height: var(--v-theme-display-l-line-height);
+  font-variation-settings: "GRAD"
+      var(--v-theme-display-l-font-variation-GRAD),
+    "opsz" var(--v-theme-display-l-font-variation-opsz);
+  margin: 0;
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-family: var(--v-theme-display-s-font-family);
+    font-size: var(--v-theme-display-s-font-size);
+    font-weight: var(--v-theme-display-s-font-weight);
+    letter-spacing: var(--v-theme-display-s-letter-spacing);
+    line-height: var(--v-theme-display-s-line-height);
+    font-variation-settings: "GRAD"
+        var(--v-theme-display-s-font-variation-GRAD),
+      "opsz" var(--v-theme-display-s-font-variation-opsz);
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1294px) {
+  h1 {
+    font-family: var(--v-theme-display-m-font-family);
+    font-size: var(--v-theme-display-m-font-size);
+    font-weight: var(--v-theme-display-m-font-weight);
+    letter-spacing: var(--v-theme-display-m-letter-spacing);
+    line-height: var(--v-theme-display-m-line-height);
+    font-variation-settings: "GRAD"
+        var(--v-theme-display-m-font-variation-GRAD),
+      "opsz" var(--v-theme-display-m-font-variation-opsz);
+  }
+}
+h2 {
+  font-family: var(--v-theme-display-m-font-family);
+  font-size: var(--v-theme-display-m-font-size);
+  font-weight: var(--v-theme-display-m-font-weight);
+  letter-spacing: var(--v-theme-display-m-letter-spacing);
+  line-height: var(--v-theme-display-m-line-height);
+  font-variation-settings: "GRAD"
+      var(--v-theme-display-m-font-variation-GRAD),
+    "opsz" var(--v-theme-display-m-font-variation-opsz);
+}
+@media screen and (max-width: 600px) {
+  h2 {
+    font-family: var(--v-theme-headline-l-font-family);
+    font-size: var(--v-theme-headline-l-font-size);
+    font-weight: var(--v-theme-headline-l-font-weight);
+    letter-spacing: var(--v-theme-headline-l-letter-spacing);
+    line-height: var(--v-theme-headline-l-line-height);
+    font-variation-settings: "GRAD"
+        var(--v-theme-headline-l-font-variation-GRAD),
+      "opsz" var(--v-theme-headline-l-font-variation-opsz);
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1294px) {
+  h2 {
+    font-family: var(--v-theme-display-s-font-family);
+    font-size: var(--v-theme-display-s-font-size);
+    font-weight: var(--v-theme-display-s-font-weight);
+    letter-spacing: var(--v-theme-display-s-letter-spacing);
+    line-height: var(--v-theme-display-s-line-height);
+    font-variation-settings: "GRAD"
+        var(--v-theme-display-s-font-variation-GRAD),
+      "opsz" var(--v-theme-display-s-font-variation-opsz);
+  }
+}
+h3 {
+  font-family: var(--v-theme-display-s-font-family);
+  font-size: var(--v-theme-display-s-font-size);
+  font-weight: var(--v-theme-display-s-font-weight);
+  letter-spacing: var(--v-theme-display-s-letter-spacing);
+  line-height: var(--v-theme-display-s-line-height);
+  font-variation-settings: "GRAD"
+      var(--v-theme-display-s-font-variation-GRAD),
+    "opsz" var(--v-theme-display-s-font-variation-opsz);
+  margin: 16px 0;
+}
+@media screen and (max-width: 600px) {
+  h3 {
+    font-family: var(--v-theme-headline-m-font-family);
+    font-size: var(--v-theme-headline-m-font-size);
+    font-weight: var(--v-theme-headline-m-font-weight);
+    letter-spacing: var(--v-theme-headline-m-letter-spacing);
+    line-height: var(--v-theme-headline-m-line-height);
+    font-variation-settings: "GRAD"
+        var(--v-theme-headline-m-font-variation-GRAD),
+      "opsz" var(--v-theme-headline-m-font-variation-opsz);
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1294px) {
+  h3 {
+    font-family: var(--v-theme-headline-l-font-family);
+    font-size: var(--v-theme-headline-l-font-size);
+    font-weight: var(--v-theme-headline-l-font-weight);
+    letter-spacing: var(--v-theme-headline-l-letter-spacing);
+    line-height: var(--v-theme-headline-l-line-height);
+    font-variation-settings: "GRAD"
+        var(--v-theme-headline-l-font-variation-GRAD),
+      "opsz" var(--v-theme-headline-l-font-variation-opsz);
+  }
+}
+h4 {
+  font-family: var(--v-theme-headline-s-font-family);
+  font-size: var(--v-theme-headline-s-font-size);
+  font-weight: var(--v-theme-headline-s-font-weight);
+  letter-spacing: var(--v-theme-headline-s-letter-spacing);
+  line-height: var(--v-theme-headline-s-line-height);
+  font-variation-settings: "GRAD"
+      var(--v-theme-headline-s-font-variation-GRAD),
+    "opsz" var(--v-theme-headline-s-font-variation-opsz);
+}
+@media screen and (max-width: 600px) {
+  h4 {
+    font-family: var(--v-theme-headline-s-font-family);
+    font-size: var(--v-theme-headline-s-font-size);
+    font-weight: var(--v-theme-headline-s-font-weight);
+    letter-spacing: var(--v-theme-headline-s-letter-spacing);
+    line-height: var(--v-theme-headline-s-line-height);
+    font-variation-settings: "GRAD"
+        var(--v-theme-headline-s-font-variation-GRAD),
+      "opsz" var(--v-theme-headline-s-font-variation-opsz);
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1294px) {
+  h4 {
+    font-family: var(--v-theme-headline-s-font-family);
+    font-size: var(--v-theme-headline-s-font-size);
+    font-weight: var(--v-theme-headline-s-font-weight);
+    letter-spacing: var(--v-theme-headline-s-letter-spacing);
+    line-height: var(--v-theme-headline-s-line-height);
+    font-variation-settings: "GRAD"
+        var(--v-theme-headline-s-font-variation-GRAD),
+      "opsz" var(--v-theme-headline-s-font-variation-opsz);
+  }
+}
+h5 {
+  font-family: var(--v-theme-title-m-font-family);
+  font-size: var(--v-theme-title-m-font-size);
+  font-weight: var(--v-theme-title-m-font-weight);
+  letter-spacing: var(--v-theme-title-m-letter-spacing);
+  line-height: var(--v-theme-title-m-line-height);
+  font-variation-settings: "GRAD"
+      var(--v-theme-title-m-font-variation-GRAD),
+    "opsz" var(--v-theme-title-m-font-variation-opsz);
+}
+@media screen and (max-width: 600px) {
+  h5 {
+    font-family: var(--v-theme-title-m-font-family);
+    font-size: var(--v-theme-title-m-font-size);
+    font-weight: var(--v-theme-title-m-font-weight);
+    letter-spacing: var(--v-theme-title-m-letter-spacing);
+    line-height: var(--v-theme-title-m-line-height);
+    font-variation-settings: "GRAD"
+        var(--v-theme-title-m-font-variation-GRAD),
+      "opsz" var(--v-theme-title-m-font-variation-opsz);
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1294px) {
+  h5 {
+    font-family: var(--v-theme-title-m-font-family);
+    font-size: var(--v-theme-title-m-font-size);
+    font-weight: var(--v-theme-title-m-font-weight);
+    letter-spacing: var(--v-theme-title-m-letter-spacing);
+    line-height: var(--v-theme-title-m-line-height);
+    font-variation-settings: "GRAD"
+        var(--v-theme-title-m-font-variation-GRAD),
+      "opsz" var(--v-theme-title-m-font-variation-opsz);
+  }
+}
+h6 {
+  font-family: var(--v-theme-title-m-font-family);
+  font-size: var(--v-theme-title-m-font-size);
+  font-weight: var(--v-theme-title-m-font-weight);
+  letter-spacing: var(--v-theme-title-m-letter-spacing);
+  line-height: var(--v-theme-title-m-line-height);
+  font-variation-settings: "GRAD"
+      var(--v-theme-title-m-font-variation-GRAD),
+    "opsz" var(--v-theme-title-m-font-variation-opsz);
+}
+@media screen and (max-width: 600px) {
+  h6 {
+    font-family: var(--v-theme-title-m-font-family);
+    font-size: var(--v-theme-title-m-font-size);
+    font-weight: var(--v-theme-title-m-font-weight);
+    letter-spacing: var(--v-theme-title-m-letter-spacing);
+    line-height: var(--v-theme-title-m-line-height);
+    font-variation-settings: "GRAD"
+        var(--v-theme-title-m-font-variation-GRAD),
+      "opsz" var(--v-theme-title-m-font-variation-opsz);
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1294px) {
+  h6 {
+    font-family: var(--v-theme-title-m-font-family);
+    font-size: var(--v-theme-title-m-font-size);
+    font-weight: var(--v-theme-title-m-font-weight);
+    letter-spacing: var(--v-theme-title-m-letter-spacing);
+    line-height: var(--v-theme-title-m-line-height);
+    font-variation-settings: "GRAD"
+        var(--v-theme-title-m-font-variation-GRAD),
+      "opsz" var(--v-theme-title-m-font-variation-opsz);
+  }
+}
+b,
+strong {
+  font-weight: 500;
+}
+em {
+  font-style: italic;
+}
+a {
+  font-family: var(--v-theme-title-m-font-family);
+  font-size: var(--v-theme-title-m-font-size);
+  font-weight: var(--v-theme-title-m-font-weight);
+  letter-spacing: var(--v-theme-title-m-letter-spacing);
+  line-height: var(--v-theme-title-m-line-height);
+  font-variation-settings: "GRAD"
+      var(--v-theme-title-m-font-variation-GRAD),
+    "opsz" var(--v-theme-title-m-font-variation-opsz);
+  padding: 1px;
+  border-radius: 4px;
+  color: var(--v-theme-primary);
+  text-decoration: underline;
+}
+@media screen and (max-width: 600px) {
+  a {
+    font-family: var(--v-theme-title-m-font-family);
+    font-size: var(--v-theme-title-m-font-size);
+    font-weight: var(--v-theme-title-m-font-weight);
+    letter-spacing: var(--v-theme-title-m-letter-spacing);
+    line-height: var(--v-theme-title-m-line-height);
+    font-variation-settings: "GRAD"
+        var(--v-theme-title-m-font-variation-GRAD),
+      "opsz" var(--v-theme-title-m-font-variation-opsz);
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1294px) {
+  a {
+    font-family: var(--v-theme-title-m-font-family);
+    font-size: var(--v-theme-title-m-font-size);
+    font-weight: var(--v-theme-title-m-font-weight);
+    letter-spacing: var(--v-theme-title-m-letter-spacing);
+    line-height: var(--v-theme-title-m-line-height);
+    font-variation-settings: "GRAD"
+        var(--v-theme-title-m-font-variation-GRAD),
+      "opsz" var(--v-theme-title-m-font-variation-opsz);
+  }
+}
+a:hover {
+  color: var(--v-theme-on-primary-container);
+}
+a:focus {
+  margin: -1px;
+  border: 1px solid var(--v-theme-primary);
+  outline: 0;
+  box-shadow: inset 0 0 0 1px var(--v-theme-surface-0);
+}
+a:hover:focus {
+  border: 1px solid var(--v-theme-on-primary-container);
+  outline: 0;
+  color: var(--v-theme-on-primary-container);
+}
+p {
+  -webkit-margin-before: 1em;
+  margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+  margin-block-end: 1em;
+}
+code {
+  font-family: var(--v-theme-code-l-font-family);
+  font-size: var(--v-theme-code-l-font-size);
+  font-weight: var(--v-theme-code-l-font-weight);
+  letter-spacing: var(--v-theme-code-l-letter-spacing);
+  line-height: var(--v-theme-code-l-line-height);
+  font-variation-settings: "GRAD" var(--v-theme-code-l-font-variation-GRAD),
+    "opsz" var(--v-theme-code-l-font-variation-opsz);
+  padding: 0 2px;
+  border-radius: 2px;
+  background: var(--v-theme-surface-2);
+}
+ul {
+  list-style: initial;
+}
+.material-icons {
+  font-family: Google Material Icons, Arial, sans-serif;
+}
+.ripple {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center center;
+  border-radius: 50%;
+  filter: blur(4px);
+}
+.animation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
