@@ -2,7 +2,7 @@ import 'vuetify/styles' // Added. See https://github.com/vuetifyjs/vuetify-loade
 import { createVuetify } from 'vuetify'
 // import type { ThemeDefinition } from 'vuetify'
 import { md3 } from '../blueprints/md3'
-import { UserModule } from '../types'
+import type { UserModule } from '../types'
 
 // const Lighttheme: ThemeDefinition = {
 //   dark: false,

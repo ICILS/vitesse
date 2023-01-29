@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
 import sidebarItems from './sidebarItem'
 import { useCustomizerStore } from '~/stores/customizer'
-import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
 const customizer = useCustomizerStore()
 const sidebarMenu = ref(sidebarItems)
 </script>
@@ -24,7 +24,7 @@ const sidebarMenu = ref(sidebarItems)
     <!-- ---------------------------------------------- -->
     <!--- Navigation 2 -->
     <!-- ---------------------------------------------- -->
-    <perfect-scrollbar class="scrollnavbar">
+    <PerfectScrollbar class="scrollnavbar">
       <v-list class="pa-4">
         <!-- ---------------------------------------------- -->
         <!--- Menu Loop -->
@@ -79,7 +79,7 @@ const sidebarMenu = ref(sidebarItems)
           </v-list-item>
         </template>
       </v-list>
-    </perfect-scrollbar>
+    </PerfectScrollbar>
   </v-navigation-drawer>
 </template>
 

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
 import sidebarItems from './sidebarItem'
 import { useCustomizerStore } from '~/stores/customizer'
-import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
 
 const customizer = useCustomizerStore()
 const sidebarMenu = ref(sidebarItems)
@@ -10,9 +10,7 @@ const sidebarMenu = ref(sidebarItems)
 
 <template>
   <v-navigation-drawer
-    v-model="customizer.Sidebar_drawer"
-    class="border-r"
-    location="left"
+    v-model="customizer.Sidebar_drawer" class="border-r" location="left"
     :class="customizer.SidebarColor === 'white' ? 'on-surface-light' : 'on-surface-dark'"
     :color="customizer.darktheme ? 'on-surface-dark' : customizer.SidebarColor" :rail="customizer.mini_sidebar"
     :expand-on-hover="false" rail-width="88" mobile-breakpoint="960" permanent order="0"
@@ -20,7 +18,7 @@ const sidebarMenu = ref(sidebarItems)
     <!-- ---------------------------------------------- -->
     <!--- Navigation Rail with icon and header as title -->
     <!-- ---------------------------------------------- -->
-    <perfect-scrollbar class="scrollnavbar">
+    <PerfectScrollbar class="scrollnavbar">
       <v-list class="pa-4">
         <!-- ---------------------------------------------- -->
         <!--- Menu Loop -->
@@ -50,7 +48,7 @@ const sidebarMenu = ref(sidebarItems)
           </v-list-group>
         </template>
       </v-list>
-    </perfect-scrollbar>
+    </PerfectScrollbar>
   </v-navigation-drawer>
 </template>
 
@@ -75,39 +73,48 @@ const sidebarMenu = ref(sidebarItems)
   background: rgb(var(--v-theme-surface));
   color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity));
 }
+
 .v-navigation-drawer--border {
   border-width: thin;
   box-shadow: none;
 }
+
 .v-navigation-drawer--rounded {
   border-radius: 16px !important;
 }
+
 .v-navigation-drawer--bottom {
   left: 0;
   border-top-width: thin;
 }
+
 .v-navigation-drawer--left {
   top: 0;
   left: 0;
   right: auto;
   border-right-width: thin;
 }
+
 .v-navigation-drawer--right {
   top: 0;
   left: auto;
   right: 0;
   border-left-width: thin;
 }
+
 .v-navigation-drawer--floating {
   border: none;
 }
+
 .v-navigation-drawer--temporary {
   box-shadow: 0px 8px 10px -5px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 16px 24px 2px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 6px 30px 5px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
 }
+
 .v-navigation-drawer--sticky {
   height: auto;
   transition: box-shadow, transform, visibility, width, height, left, right;
 }
+
 .v-navigation-drawer .v-list {
   overflow: hidden;
 }
@@ -128,6 +135,7 @@ const sidebarMenu = ref(sidebarItems)
   width: 100%;
   z-index: -1;
 }
+
 .v-navigation-drawer__img img {
   height: inherit;
   object-fit: cover;
