@@ -2,7 +2,7 @@
 
 // Normal import method
 import SvgMap from 'svgmap'
-import 'svgmap/dist/svgMap.min.css'
+// import 'svgmap/dist/svgMap.min.css'
 import { onMounted, ref } from 'vue'
 
 const map = ref(null)

@@ -2,7 +2,7 @@
 import algoliasearch from 'algoliasearch/lite'
 import { ref } from 'vue'
 import BaseLeftRightPartVue from '~/components/BaseLeftRightPart.vue'
-
+import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
 const searchClient = ref(
   algoliasearch('B1G2GM9NG0', 'aadef574be1f9252bb48d4ea09b5cfe5'),
 )

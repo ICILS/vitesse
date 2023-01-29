@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import sidebarItems from './sidebarItem'
 import { useCustomizerStore } from '~/stores/customizer'
-
+import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
 const customizer = useCustomizerStore()
 const sidebarMenu = ref(sidebarItems)
 </script>

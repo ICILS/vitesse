@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import apexchart from 'vue3-apexcharts'
 import { donutChart } from '../ApexChartsData'
 import BaseCard from '~/components/BaseCard.vue'
 </script>

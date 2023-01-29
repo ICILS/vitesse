@@ -5,6 +5,7 @@ interface State {
   Customizer_drawer: boolean
   SidebarColor: string
   mini_sidebar: boolean
+  Sidebar_drawer_mini: boolean
   navbarColor: string
   setHorizontalLayout: boolean
   darktheme: boolean
@@ -14,10 +15,11 @@ interface State {
 export const useCustomizerStore = defineStore({
   id: 'customizer',
   state: (): State => ({
-    Sidebar_drawer: null,
+    Sidebar_drawer: true,
     Customizer_drawer: false,
     SidebarColor: '#f3f6fc', // Change Sidebar Color || 'white', | "#2b2b2b" | "rgb(44, 59, 164)" | "rgb(96, 44, 164)" | "rgb(151, 210, 219)" | "rgb(77, 86, 100)"
     mini_sidebar: true,
+    Sidebar_drawer_mini: false,
     navbarColor: '#1e88e5',
     setHorizontalLayout: false, // Horizontal layout
     darktheme: isDark.value,

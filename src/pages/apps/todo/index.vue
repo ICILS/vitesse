@@ -2,7 +2,10 @@
 import { computed, ref } from 'vue'
 import todosData from './todosData'
 import BaseLeftRightPartVue from '~/components/BaseLeftRightPart.vue'
-import 'v-calendar/dist/style.css'
+import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
+// import { VCalendar } from 'v-calendar'
+// import 'v-calendar/dist/style.css'
+// Ensure this is install as v-calendar@next
 
 const todos = ref(todosData)
 const title = ref('')

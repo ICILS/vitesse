@@ -20,11 +20,14 @@ import VueMacros from 'unplugin-vue-macros/vite'
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 export default defineConfig({
+  define: { 'process.env': {} },
+
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
       // Resolve `@` to `src` directory from materialpro project
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      // '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
 
@@ -38,7 +41,12 @@ export default defineConfig({
         vue: Vue({
           include: [/\.vue$/, /\.md$/],
           reactivityTransform: true,
-          template: { transformAssetUrls },
+          template: {
+            transformAssetUrls,
+            /* compilerOptions: {
+              isCustomElement: (tag: string) => tag.includes("*-*") || tag.includes("v-list-item-content"),
+            }, */
+          },
         }),
       },
     }),
@@ -65,7 +73,7 @@ export default defineConfig({
       dirs: [
         'src/composables',
         'src/stores',
-        'src/assets', // Added
+        // 'src/assets', // Added
       ],
       vueTemplate: true,
     }),
@@ -158,30 +166,6 @@ export default defineConfig({
       // styles: 'none',
     }),
   ],
-
-  // https://github.com/vitest-dev/vitest
-  test: {
-    include: ['test/**/*.test.ts'],
-    environment: 'jsdom',
-    deps: {
-      inline: ['@vue', '@vueuse', 'vue-demi'],
-    },
-  },
-
-  // https://github.com/antfu/vite-ssg
-  ssgOptions: {
-    script: 'async',
-    formatting: 'minify',
-    onFinished() { generateSitemap() },
-  },
-
-  ssr: {
-    // TODO: workaround until they support native ESM
-    noExternal: ['workbox-window', /vue-i18n/, 'vuetify'],
-    optimizeDeps: {
-      include: ['vue', 'vue-router', 'vue-i18n', '@vueuse/head'],
-    },
-  },
   // Added from materialpro
   css: {
     preprocessorOptions: {
@@ -197,4 +181,31 @@ export default defineConfig({
       './src/pages/**/*.vue',
     ],
   },
+
+  // https://github.com/vitest-dev/vitest
+  // test: {
+  //   setupFiles: "vuetify.config.js",
+  //   include: ['test/**/*.test.ts'],
+  //   environment: 'jsdom',
+  //   deps: {
+  //     inline: ['@vue', '@vueuse', 'vue-demi', 'vuetify'],
+  //   },
+  //   globals: true,
+  // },
+
+  // https://github.com/antfu/vite-ssg
+  ssgOptions: {
+    script: 'async',
+    formatting: 'minify',
+    onFinished() { generateSitemap() },
+  },
+
+  ssr: {
+    // TODO: workaround until they support native ESM
+    noExternal: ['workbox-window', /vue-i18n/, 'vuetify'], // 'vuetify'
+    optimizeDeps: {
+      include: ['vue', 'vue-router', 'vue-i18n', '@vueuse/head'],
+    },
+  },
+
 })

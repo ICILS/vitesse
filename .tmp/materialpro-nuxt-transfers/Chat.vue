@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue'
 import userslist from './userslist'
 import BaseLeftRightPartVue from '@/components/baseComponents/BaseLeftRightPart.vue'
-
+import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
 const handleSearchInput = ref('')
 const allUsers = ref(userslist)
 const isActive = ref(false)

@@ -22,7 +22,8 @@ function toggleLpart() {
       <div class="toggleLeft hidden-md-and-up">
         <v-btn icon size="small" @click="toggleLpart">
           <!-- <vue-feather type="menu" class="feather-sm"></vue-feather> -->
-          <div i-feather-menu class="feather-sm" />
+          <!-- <div i-feather-menu class="feather-sm" /> -->
+          <v-icon>mdi-menu</v-icon>
         </v-btn>
       </div>
 

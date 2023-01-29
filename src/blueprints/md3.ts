@@ -14,7 +14,7 @@ import type { Blueprint } from 'vuetify/framework'
 import * as colorValues from './color.tokens'
 // Types
 export const md3: Blueprint = {
-  ssr: true,
+  // ssr: true,
   display: {
     mobileBreakpoint: 'sm',
     thresholds: {

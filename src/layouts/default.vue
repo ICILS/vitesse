@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import VerticalSidebarVue from './vertical-sidebar/VerticalSidebar.vue'
+// import VerticalSidebarVue from './vertical-sidebar/VerticalSidebar.vue'
 // import VerticalHeaderVue from './vertical-header/VerticalHeader.vue'
 import Customizer from './customizer/Customizer.vue'
 import HorizontalHeader from './horizontal-header/HorizontalHeader.vue'
 import HorizontalSidebar from './horizontal-sidebar/HorizontalSidebar.vue'
+import NavigationDrawer from './vertical-sidebar/NavigationDrawer.vue'
+import NavigationRail from './vertical-sidebar/NavigationRail.vue'
 import { useCustomizerStore } from '~/stores/customizer'
 const customizer = useCustomizerStore()
 </script>
@@ -19,7 +21,9 @@ const customizer = useCustomizerStore()
   >
     <Customizer />
     <!-- <VerticalHeaderVue v-if="!customizer.setHorizontalLayout" /> -->
-    <VerticalSidebarVue v-if="!customizer.setHorizontalLayout" />
+    <!-- <VerticalSidebarVue v-if="!customizer.setHorizontalLayout" /> -->
+    <NavigationRail v-if="!customizer.setHorizontalLayout" />
+    <NavigationDrawer v-if="!customizer.setHorizontalLayout" />
 
     <v-main>
       <HorizontalHeader v-if="customizer.setHorizontalLayout" />

@@ -52,5 +52,5 @@ const { t } = useI18n()
 
 <route lang="yaml">
 meta:
-  layout: discord
+  layout: default
 </route>

@@ -4,6 +4,7 @@ export default [
     status: 'success',
     lastMessage: 'Hey! What\'s up? So many times since we',
     image: '1.jpg',
+    path: '/src/assets/images/users/',
     messages: [
       {
         id: 0,
@@ -29,6 +30,7 @@ export default [
     status: 'gray-light',
     lastMessage: 'Good news coming tonight. Seems they agreed to proceed',
     image: '2.jpg',
+    path: '/src/assets/images/users/',
     messages: [
       {
         id: 0,
@@ -54,17 +56,20 @@ export default [
     status: 'danger',
     lastMessage: 'Check out my latest email plz!',
     image: '3.jpg',
+    path: '/src/assets/images/users/',
   },
   {
     name: 'Jaron Fitzroy',
     status: 'gray-light',
     lastMessage: 'What about summer break?',
     image: '4.jpg',
+    path: '/src/assets/images/users/',
   },
   {
     name: 'Mike Lewis',
     status: 'success',
     lastMessage: 'Just ain\'t sure about the weekend now. 90% I\'ll make it.',
     image: '5.jpg',
+    path: '/src/assets/images/users/',
   },
 ]

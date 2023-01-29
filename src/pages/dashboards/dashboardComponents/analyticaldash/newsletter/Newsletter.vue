@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { NewsletterChart } from './NewsletterData'
+import apexchart from 'vue3-apexcharts'
 
 // const select = ref('March')
 // const items = ref(['March', 'April', 'May', 'June'])

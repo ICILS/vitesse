@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import apexchart from 'vue3-apexcharts'
 import { onMounted, ref } from 'vue'
 import { MonthlyRevenueData } from './MonthlyRevenueData'
 const elementVisible = ref(false)

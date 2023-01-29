@@ -1,6 +1,7 @@
 <script setup lang="ts">
 // import { ref } from 'vue'
 import { TotalSales } from './TotalSalesData'
+import apexchart from 'vue3-apexcharts'
 
 // const select = ref('March')
 // const items = ref(['March', 'April', 'May', 'June'])

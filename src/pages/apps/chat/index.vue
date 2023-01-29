@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
 import userslist from './userslist'
 import BaseLeftRightPartVue from '~/components/BaseLeftRightPart.vue'
-
 const handleSearchInput = ref('')
 const allUsers = ref(userslist)
 const isActive = ref(false)
@@ -36,6 +36,17 @@ const filteredList = computed(() => {
       .toLowerCase()
       .includes(handleSearchInput.value.toLowerCase())
   })
+})
+
+const avatarPath = computed(() => {
+  return '/src/assets/images/users/'
+})
+
+const me = computed(() => {
+  return {
+    name: 'John Doe',
+    image: '6.jpg',
+  }
 })
 </script>
 
@@ -71,24 +82,23 @@ const filteredList = computed(() => {
                 <template #prepend>
                   <v-avatar size="45">
                     <v-img
-                      :src="`/src/assets/images/users/${conversation.image}`"
+                      :src="avatarPath + conversation.image"
                       :alt="conversation.image"
                       width="45"
                     />
                   </v-avatar>
                 </template>
                 <!--- /Icon -->
-                <v-list-item-header>
-                  <!--- /Title -->
-                  <v-list-item-title class="font-weight-medium">
-                    {{ conversation.name }}
-                  </v-list-item-title>
-                  <!--- /Subtitle -->
-                  <v-list-item-subtitle class="text-truncate d-block">
-                    {{ conversation.lastMessage }}
-                  </v-list-item-subtitle>
-                  <!--- /Title -->
-                </v-list-item-header>
+
+                <!--- /Title -->
+                <v-list-item-title class="font-weight-medium">
+                  {{ conversation.name }}
+                </v-list-item-title>
+                <!--- /Subtitle -->
+                <v-list-item-subtitle class="text-truncate d-block">
+                  {{ conversation.lastMessage }}
+                </v-list-item-subtitle>
+                <!--- /Title -->
               </v-list-item>
             </v-list>
           </template>
@@ -98,10 +108,10 @@ const filteredList = computed(() => {
               <!--- conversation header -->
               <div class="d-flex pa-4 align-center">
                 <v-avatar size="45" class="mr-3">
-                  <img
-                    :src="`/src/assets/images/users/${conversation.image}`"
+                  <v-img
+                    :src="avatarPath + conversation.image"
                     width="45"
-                  >
+                  />
                 </v-avatar>
                 <div class="user-about">
                   <h4>{{ conversation.name }}</h4>
@@ -110,7 +120,7 @@ const filteredList = computed(() => {
               <v-divider />
               <!--- conversation Room -->
               <div class="chat-room pa-4">
-                <perfect-scrollbar class="chat-room-box-height">
+                <PerfectScrollbar class="chat-room-box-height">
                   <div
                     v-for="message in conversation.messages"
                     :key="message.id"
@@ -121,14 +131,14 @@ const filteredList = computed(() => {
                     <div class="thumb">
                       <v-avatar v-if="message.fromMe" size="35" class="mx-2">
                         <img
-                          src="@/assets/images/users/6.jpg"
+                          :src="avatarPath + me.image"
                           width="35"
                           alt="..."
                         >
                       </v-avatar>
                       <v-avatar v-else size="35" class="mx-2">
                         <img
-                          :src="`/src/assets/images/users/${conversation.image}`"
+                          :src="avatarPath + conversation.image"
                           alt="..."
                           width="35"
                         >
@@ -138,7 +148,7 @@ const filteredList = computed(() => {
                       {{ message.text }}
                     </v-chip>
                   </div>
-                </perfect-scrollbar>
+                </PerfectScrollbar>
               </div>
 
               <!--- Send Message Footer -->

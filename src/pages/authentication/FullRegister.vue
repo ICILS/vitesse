@@ -3,7 +3,7 @@ import { ref } from 'vue'
 
 const checkbox = ref(false)
 const valid = ref(true)
-const show1 = ref(false)
+// const show1 = ref(false)
 const password = ref('')
 const email = ref('')
 const passwordRules = ref([

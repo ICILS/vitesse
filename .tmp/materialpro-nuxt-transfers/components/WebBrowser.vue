@@ -10,7 +10,8 @@ import InputText from './InputText.vue'
 import ScreenShotLandingPageVue from './microsites/screenshotLandingPage/ScreenShotLandingPage.vue'
 import MinimalBlog from './microsites/minimalBlog/MinimalBlog.vue'
 import VidHub from './microsites/vidHub/VidHub.vue'
-import Chat from './apps/chat/Chat.vue'
+import Chat from './'
+import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
 
 const props = withDefaults(defineProps<Props>(), {
   itemName: 'item01',

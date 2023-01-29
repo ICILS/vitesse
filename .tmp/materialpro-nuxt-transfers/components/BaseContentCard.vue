@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
 const props = withDefaults(defineProps<Props>(), {
   header: true,
   headerTile: 'Default heading',
