@@ -12,18 +12,18 @@ const sidebarMenu = ref(sidebarItems)
   <v-navigation-drawer
     v-model="customizer.Sidebar_drawer" class="border-r" location="left"
     :class="customizer.SidebarColor === 'white' ? 'on-surface-light' : 'on-surface-dark'"
-    :color="customizer.darktheme ? 'on-surface-dark' : customizer.SidebarColor" :rail="customizer.mini_sidebar"
-    :expand-on-hover="false" rail-width="88" mobile-breakpoint="960" permanent order="0"
+    :color="customizer.darktheme ? 'on-surface-dark' : customizer.SidebarColor" :rail="true"
+    :expand-on-hover="false" rail-width="90" permanent order="0"
   >
     <!-- ---------------------------------------------- -->
     <!--- Navigation Rail with icon and header as title -->
     <!-- ---------------------------------------------- -->
     <PerfectScrollbar class="scrollnavbar">
-      <v-list class="pa-4">
+      <v-list class="py-4 pl-1 pr-1 ">
         <!-- ---------------------------------------------- -->
         <!--- Menu Loop -->
         <!-- ---------------------------------------------- -->
-        <template v-for="(item) in sidebarMenu" :key="item.header">
+        <template v-for="(item) in sidebarMenu" :key="item">
           <!-- ---------------------------------------------- -->
           <!--- If Has Child -->
           <!-- ---------------------------------------------- -->
@@ -32,18 +32,25 @@ const sidebarMenu = ref(sidebarItems)
             <!--- Dropdown  -->
             <!-- ---------------------------------------------- -->
             <template #activator="{ props }">
-              <v-list-item
-                v-bind="props" :title="item.header" :subtitle="item.header" :prepend-icon="item.icon"
-                :value="item.header" rounded="xl" class="mb-1 ml-2"
-              >
-                <!--- Icon  -->
-                <!-- <template #prepend>
-                  <v-icon :icon="item.icon" class="feather-sm v-icon" />
-                </template> -->
-                <!--- Title  -->
-                <!--  <v-list-item-title class="mr-auto text-no-wrap " />
-                {{ item.header }} -->
-              </v-list-item>
+              <!--- Icon with Subtitle below the icon -->
+              <!-- Navigates to the first child item `to` property -->
+              <VListItem
+                v-bind="props"
+                :active="item.children[0].to ? $route.path === item.children[0].to : false"
+                :value="item.children[0].to"
+                :to="item.children[0].to"
+                :prepend-icon="item.icon"
+                prepend-icon-class="v-list-item--active"
+                class="mb-0 pb-1 mx-4 px-0 justify-items-center rounded-xl"
+                active-class="v-list-item--active"
+                active-color="primary"
+
+                :style="{ 'background-color': $route.path === item.children[0].to ? 'rgb(var(--v-theme-primary-container))' : 'inherit' }"
+              />
+
+              <v-list-item-subtitle class="text-center text-xs mx-0 px-0 mt-0 pt-0 mb-2">
+                {{ item.header }}
+              </v-list-item-subtitle>
             </template>
           </v-list-group>
         </template>
@@ -53,102 +60,39 @@ const sidebarMenu = ref(sidebarItems)
 </template>
 
 <style lang="scss" scoped>
-.v-navigation-drawer {
-  -webkit-overflow-scrolling: touch;
-  background: rgb(var(--v-theme-surface));
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  max-width: 100%;
-  pointer-events: auto;
-  transition-duration: 0.2s;
-  transition-property: box-shadow, transform, visibility, width, height, left, right, top, bottom;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
-  position: absolute;
-  border-color: rgba(var(--v-border-color), var(--v-border-opacity));
-  border-style: solid;
-  border-width: 0;
-  box-shadow: 0px 0px 0px 0px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 0px 0px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 0px 0px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
-  background: rgb(var(--v-theme-surface));
-  color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity));
+/* .v-list-item-subtitle-under-icon {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    opacity: var(--v-medium-emphasis-opacity);
+    overflow: visible;
+    padding: 0;
+    text-overflow: clip;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.0178571429em;
+    line-height: 1rem;
+    text-transform: none;
+} */
+.v-list-group__header.v-list-item--active:not(:focus-visible) .v-list-item__content {
+  background-color: transparent;
+}
+.v-list-group__header.v-list-item--active:not(:focus-visible) .v-list-item__content .v-list-item__title {
+  color: #5c6ac4;
 }
 
-.v-navigation-drawer--border {
-  border-width: thin;
-  box-shadow: none;
+.v-list-group__header.v-list-item--active:not(:focus-visible) .v-list-item__content .v-list-item__subtitle {
+  color: #5c6ac4;
 }
 
-.v-navigation-drawer--rounded {
-  border-radius: 16px !important;
+.v-list-group__header.v-list-item--active:not(:focus-visible) .v-list-item__content .v-list-item__icon {
+  color: #5c6ac4;
 }
 
-.v-navigation-drawer--bottom {
-  left: 0;
-  border-top-width: thin;
+.v-list-group__header.v-list-item--active:not(:focus-visible) .v-list-item__content .v-list-item__action {
+  color: #5c6ac4;
 }
 
-.v-navigation-drawer--left {
-  top: 0;
-  left: 0;
-  right: auto;
-  border-right-width: thin;
-}
-
-.v-navigation-drawer--right {
-  top: 0;
-  left: auto;
-  right: 0;
-  border-left-width: thin;
-}
-
-.v-navigation-drawer--floating {
-  border: none;
-}
-
-.v-navigation-drawer--temporary {
-  box-shadow: 0px 8px 10px -5px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 16px 24px 2px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 6px 30px 5px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
-}
-
-.v-navigation-drawer--sticky {
-  height: auto;
-  transition: box-shadow, transform, visibility, width, height, left, right;
-}
-
-.v-navigation-drawer .v-list {
-  overflow: hidden;
-}
-
-.v-navigation-drawer__content {
-  flex: 0 1 auto;
-  height: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-.v-navigation-drawer__img {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-}
-
-.v-navigation-drawer__img img {
-  height: inherit;
-  object-fit: cover;
-  width: inherit;
-}
-
-.v-navigation-drawer__scrim {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: black;
-  opacity: 0.2;
-  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1;
+.v-list-group__header.v-list-item--active:not(:focus-visible) .v-list-item__content .v-list-item__action .v-icon {
+  color: #5c6ac4;
 }
 </style>

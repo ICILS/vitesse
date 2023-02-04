@@ -39,7 +39,7 @@ const sidebarMenu = ref(sidebarItems)
             <!-- ---------------------------------------------- -->
             <template #activator="{ props }">
               <v-list-item
-                v-bind="props" :title="item.header" :subtitle="item.header"
+                v-bind="props" :title="item.header"
                 :prepend-icon="item.icon" :value="item.header" rounded="xl" class="mb-1 ml-2"
               >
                 <!--- Icon  -->
@@ -58,24 +58,25 @@ const sidebarMenu = ref(sidebarItems)
               v-for="(subitem, i) in item.children" :key="i" :value="subitem.to" :to="subitem.to"
               rounded="xl" class="first-level-item mb-1 ml-2"
             >
-              <template #prepend>
+              <!-- <template #prepend>
                 <v-icon icon="i-feather-disc" class="feather-sm v-icon" />
-              </template>
+              </template> -->
               <v-list-item-title />
               {{ subitem.title }}
             </v-list-item>
           </v-list-group>
+
           <!-- ---------------------------------------------- -->
-          <!--- If No Child -->
+          <!--- If Has No Child -->
           <!-- ---------------------------------------------- -->
-          <v-list-item v-else :value="item.to" :to="item.to" rounded="xl" class="mb-1 ml-2">
+          <v-list-item v-else :value="item.children" :to="item.children" rounded="xl" class="mb-1 ml-2">
             <!--- Icon  -->
             <template #prepend>
               <v-icon :icon="item.icon" class="feather-sm v-icon" />
             </template>
             <!--- Title  -->
             <v-list-item-title class="mr-auto text-no-wrap " />
-            {{ item.title }}
+            {{ item.header }}
           </v-list-item>
         </template>
       </v-list>

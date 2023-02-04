@@ -49,12 +49,12 @@ html {
     padding: 0.625rem 30px 30px;
   }
 
-  .v-card {
-    // border-radius: $border-radius;
-    // width: 100%;
-    // background-color: rgba($color: var(--v-theme-surface-1), $alpha: 0.1);
-    // background-color: var(--v-theme-color-on-surface-2);
-  }
+  // .v-card {
+  //   // border-radius: $border-radius;
+  //   // width: 100%;
+  //   // background-color: rgba($color: var(--v-theme-surface-1), $alpha: 0.1);
+  //   // background-color: var(--v-theme-color-on-surface-2);
+  // }
   .v-btn {
     text-transform: capitalize;
     letter-spacing: $btn-letter-spacing;
@@ -102,6 +102,14 @@ html {
   //   rgba(31, 31, 31, 0.12),
   //   rgba(31, 31, 31, 0.12)),
 
-
+  .ps .ps__rail-x:hover,
+  .ps .ps__rail-y:hover,
+  .ps .ps__rail-x:focus,
+  .ps .ps__rail-y:focus,
+  .ps .ps__rail-x.ps--clicking,
+  .ps .ps__rail-y.ps--clicking {
+    background-color: transparent;
+    opacity: 0.9;
+  }
 }
 

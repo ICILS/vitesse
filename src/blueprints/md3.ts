@@ -57,7 +57,7 @@ export const md3: Blueprint = {
     VCard: {
       rounded: 'xl',
       elevation: 0,
-      color: 'surface-2',
+      color: 'surface-1',
       width: '100%',
     },
     VCheckbox: {
@@ -69,15 +69,15 @@ export const md3: Blueprint = {
     VCombobox: {
       variant: 'filled',
     },
-    // VNavigationDrawer: {
-    //   color: 'surface-1',
-    //   VList: {
-    //     nav: true,
-    //     VListItem: {
-    //       rounded: 'xl',
-    //     },
-    //   },
-    // },
+    VNavigationDrawer: {
+      color: 'primary',
+      VList: {
+        nav: true,
+        VListItem: {
+          rounded: 'xl',
+        },
+      },
+    },
     VSelect: {
       variant: 'filled',
     },
@@ -175,9 +175,14 @@ export const md3: Blueprint = {
           'error-container': colorValues.ErrorContainerDark,
           'on-error': colorValues.OnErrorDark,
           'on-error-container': colorValues.OnErrorContainerDark,
-          // 'background': colorValues.BackgroundDark,
-          // 'on-background': colorValues.OnBackgroundDark,
-          // 'surface': colorValues.SurfaceDark,
+          'background': colorValues.BackgroundDark,
+          'on-background': colorValues.OnBackgroundDark,
+          'surface': colorValues.SurfaceDark,
+          'surface-1': colorValues.Surface1Dark,
+          'surface-2': colorValues.Surface2Dark,
+          'surface-3': colorValues.Surface3Dark,
+          'surface-4': colorValues.Surface4Dark,
+          'surface-5': colorValues.Surface5Dark,
           // 'on-surface': colorValues.OnSurfaceDark,
           // 'surface-variant': colorValues.SurfaceVariantDark,
           // 'on-surface-variant': colorValues.OnSurfaceVariantDark,
