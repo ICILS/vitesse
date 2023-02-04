@@ -1,6 +1,6 @@
 // import VCalendar from 'v-calendar'
 import { type UserModule } from '~/types'
-import 'v-calendar/dist/style.css';
+import 'v-calendar/dist/style.css'
 
 export const install: UserModule = ({ isClient, app }) => {
   // app.use(VCalendar)
