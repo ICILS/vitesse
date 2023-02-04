@@ -9,7 +9,7 @@ import TheMonthTable from '~/pages/dashboards/dashboardComponents/classic/month-
 import TheProfileCard from '~/pages/dashboards/dashboardComponents/analyticaldash/profile-card/TheProfileCard.vue'
 import TheRecentComments from '~/pages/dashboards/dashboardComponents/classic/recent-comments/TheRecentComments.vue'
 import TheTodoList from '~/pages/dashboards/dashboardComponents/classic/todo-list/TheTodoList.vue'
-import MapCustom from '~/pages/dashboards/dashboardComponents/classic/map/MapCustom.vue'
+// import MapCustom from '~/pages/dashboards/dashboardComponents/classic/map/MapCustom.vue.ignore'
 import TheRevenueCards from '~/pages/dashboards/dashboardComponents/classic/revenue-cards/TheRevenueCards.vue'
 import TotalVisitors from '~/pages/dashboards/dashboardComponents/classic/visitors/TotalVisitors.vue'
 import BaseBreadcrumb from '~/components/BaseBreadcrumb.vue'

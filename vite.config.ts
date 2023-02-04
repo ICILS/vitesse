@@ -1,5 +1,6 @@
 import path from 'path'
 import { URL, fileURLToPath } from 'url'
+import wasm from 'vite-plugin-wasm-esm'
 import { defineConfig } from 'vite'
 import Preview from 'vite-plugin-vue-component-preview'
 import Vue from '@vitejs/plugin-vue'
@@ -20,6 +21,14 @@ import VueMacros from 'unplugin-vue-macros/vite'
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 export default defineConfig({
+  // Adding build targets to try fix the issue
+  build: {
+    target: ['esnext', 'chrome89', 'safari15', 'firefox89'],
+  },
+  esbuild: {
+    target: ['chrome89', 'safari15', 'firefox89'],
+  },
+
   define: { 'process.env': {} },
 
   resolve: {
@@ -116,6 +125,59 @@ export default defineConfig({
 
     // https://github.com/antfu/vite-plugin-pwa
     VitePWA({
+      // Added
+      // mode: 'development',
+      // devOptions: {
+      //   type: 'module',
+      // },
+      // base: '/',
+      // strategies: 'injectManifest',
+      // srcDir: 'src',
+      // filename: 'sw.ts',
+      // selfDestroying: true,
+      // useCredentials: false,
+      // workbox: {
+      //   globPatterns: ['**/*.{js,css,html,woff2,woff,svg,png,jpg,jpeg,gif,ico,webp}'],
+      //   globDirectory: 'dist',
+      //   globIgnores: ['**/node_modules/**/*'],
+      //   swDest: 'dist/sw.js',
+      //   mode: 'development',
+      //   sourcemap: true,
+      //   skipWaiting: true,
+      //   modifyURLPrefix: {
+      //     '': '/',
+      //   },
+      //   navigationPreload: true,
+      //   runtimeCaching: [
+      //     {
+      //       urlPattern: /^https:\/\/fonts\.googleapis\.com/,
+      //       handler: 'CacheFirst',
+      //       options: {
+      //         cacheName: 'google-fonts-stylesheets',
+      //       },
+      //     },
+      //     {
+      //       urlPattern: /^https:\/\/fonts\.gstatic\.com/,
+      //       handler: 'CacheFirst',
+      //       options: {
+      //         cacheName: 'google-fonts-webfonts',
+      //         cacheableResponse: {
+      //           statuses: [0, 200],
+      //         },
+
+      //         expiration: {
+      //           maxEntries: 30,
+      //           maxAgeSeconds: 60 * 60 * 24 * 365,
+      //         },
+      //       },
+      //     },
+      //     { urlPattern: /\.(?:png|jpg|jpeg|svg|gif|ico|webp)$/, handler: 'CacheFirst' },
+      //     { urlPattern: /\.(?:js|css)$/, handler: 'CacheFirst' },
+      //     { urlPattern: /\.(?:html)$/, handler: 'NetworkFirst' },
+      //   ],
+      // },
+      // disable: false,
+      // Original
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
       manifest: {
@@ -200,11 +262,20 @@ export default defineConfig({
     onFinished() { generateSitemap() },
   },
 
-  ssr: {
+  /* ssr: {
     // TODO: workaround until they support native ESM
     noExternal: ['workbox-window', /vue-i18n/, 'vuetify'], // 'vuetify'
     optimizeDeps: {
-      include: ['vue', 'vue-router', 'vue-i18n', '@vueuse/head'],
+      include: ['vue', 'vue-router', 'vue-i18n', '@vueuse/head', 'vuetify', 'apexcharts', 'vue3-apexcharts', 'svgmap'],
+    },
+  }, */
+
+  ssr: {
+    format: 'cjs',
+    external: ['vue', 'vue-router', 'vue-i18n', '@vueuse/head', 'vuetify', 'apexcharts', 'vue3-apexcharts'],
+    noExternal: ['workbox-window', /vue-i18n/, 'vuetify'], // 'vuetify'
+    optimizeDeps: {
+      include: ['vue', 'vue-router', 'vue-i18n', '@vueuse/head', 'vuetify', 'apexcharts', 'vue3-apexcharts'],
     },
   },
 

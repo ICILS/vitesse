@@ -29,6 +29,10 @@ const messages = ref([
 function href() {
   return undefined
 }
+
+const avatarPath = computed(() => {
+  return '/src/assets/images/users/'
+})
 </script>
 
 <template>
@@ -59,7 +63,7 @@ function href() {
                   >
                     <v-avatar size="40">
                       <img
-                        :src="`/src/assets/images/users/${item.avatar}`"
+                        :src="avatarPath + item.avatar"
                         :alt="item.title"
                         width="40"
                       >

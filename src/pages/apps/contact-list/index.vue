@@ -73,6 +73,10 @@ function save() {
 const formTitle = computed(() => {
   return editedIndex.value === -1 ? 'New Contact' : 'Edit Contact'
 })
+
+const avatarPath = computed(() => {
+  return '/src/assets/images/users/'
+})
 </script>
 
 <template>
@@ -209,7 +213,7 @@ const formTitle = computed(() => {
               <div class="d-flex align-center py-4">
                 <div>
                   <v-img
-                    :src="`/src/assets/images/users/${item.avatar}`"
+                    :src="avatarPath + item.avatar"
                     width="45px"
                     class="rounded-circle img-fluid"
                   />

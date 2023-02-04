@@ -102,6 +102,10 @@ export default {
     },
   },
 }
+
+const avatarPath = computed(() => {
+  return '/src/assets/images/users/'
+})
 </script>
 
 <template>
@@ -153,7 +157,7 @@ export default {
     </div>
 
     <v-card-text class="pa-0">
-      <perfect-scrollbar style="height: 425px">
+      <PerfectScrollbar style="height: 425px">
         <div v-for="(task, i) in tasks" :key="`${i}-${task.text}`">
           <v-list-item class="d-block">
             <div class="d-flex align-center w-100">
@@ -179,7 +183,9 @@ export default {
                 <div v-for="tagbtn in task.tagbtns" :key="tagbtn.tagbtntitle" class="mr-2" :tagbtn="tagbtn">
                   <v-chip color="primary">
                     <v-avatar>
-                      <v-img :src="`/src/assets/images/users/${tagbtn.userimg}`" class="mr-2" />
+                      <v-img
+                        :src="avatarPath + tagbtn.userimg" class="mr-2"
+                      />
                     </v-avatar>
                     {{ tagbtn.username }}
                   </v-chip>
@@ -189,7 +195,7 @@ export default {
           </v-list-item>
           <v-divider />
         </div>
-      </perfect-scrollbar>
+      </PerfectScrollbar>
     </v-card-text>
   </v-card>
 </template>

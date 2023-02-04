@@ -18,5 +18,13 @@
 <body class="font-sans">
   <div id="app"></div>
   <script type="module" src="/src/main.ts"></script>
+  <!-- Adding this to try fix window reference error -->
+  <script lang="ts">
+    // eslint-disable-next-line @typescript-eslint/no-use-before-define
+    const global = global || window
+  </script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/gh/StephanWagner/svgMap@v2.10.1/dist/svgMap.min.js"></script> -->
+  <!-- <link href="https://cdn.jsdelivr.net/gh/StephanWagner/svgMap@v2.10.1/dist/svgMap.min.css" rel="stylesheet"> -->
 </body>
 </html>

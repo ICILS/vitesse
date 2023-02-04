@@ -9,7 +9,7 @@ const sidebarMenu = ref(HorizontalItems)
 function subIsActive(input: any) {
   const paths = Array.isArray(input) ? input : [input]
   return paths.some((path) => {
-    // $route.path.indexOf(path) === 0; // current path starts with this path string
+    // NOTE: Error when using sourcemap for reporting an error: Can't resolve original location of error. "$" is not exported by "node_modules/.pnpm/vue@3.2.45/node_modules/vue/macros.d.ts", imported by "src/layouts/horizontal-sidebar/HorizontalSidebar.vue?vue&type=script&setup=true&lang.ts".     $route.path.indexOf(path) === 0 // current path starts with this path string
   })
 }
 </script>

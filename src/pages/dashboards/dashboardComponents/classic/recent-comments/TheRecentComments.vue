@@ -4,9 +4,14 @@ import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
 defineProps({
   comment: Object,
 })
+
+const avatarPath = computed(() => {
+  return '/src/assets/images/users/'
+})
+
 const comments = ref([
   {
-    img: '/1.jpg',
+    img: '1.jpg',
     activeClass: '',
     username: 'James Anderson',
     desc: 'Lorem Ipsum is simply dummy text of the printing and type setting industry.',
@@ -15,7 +20,7 @@ const comments = ref([
     status: 'Pending',
   },
   {
-    img: '/2.jpg',
+    img: '2.jpg',
     activeClass: 'active',
     username: 'Michael Jorden',
     desc: 'Lorem Ipsum has beenorem Ipsum is simply dummy text of the printing and type setting industry.',
@@ -24,7 +29,7 @@ const comments = ref([
     status: 'Approved',
   },
   {
-    img: '/3.jpg',
+    img: '3.jpg',
     activeClass: '',
     username: 'Johnathan Doeting',
     desc: 'Lorem Ipsum is simply dummy text of the printing and type setting industry.',
@@ -33,7 +38,7 @@ const comments = ref([
     status: 'Rejected',
   },
   {
-    img: '/4.jpg',
+    img: '4.jpg',
     activeClass: '',
     username: 'James Anderson',
     desc: 'Lorem Ipsum is simply dummy text of the printing and type setting industry.',
@@ -56,7 +61,7 @@ const comments = ref([
     </v-card-text>
     <v-card-text class="pa-0">
       <div class="d-md-flex align-items-center">
-        <perfect-scrollbar style="height: 550px">
+        <PerfectScrollbar style="height: 550px">
           <div
             v-for="comment in comments"
             :key="comment.username"
@@ -70,7 +75,7 @@ const comments = ref([
               <div class="pa-2">
                 <v-avatar size="50">
                   <img
-                    :src="`/src/assets/images/users/${comment.img}`"
+                    :src="avatarPath + comment.img"
                     alt="user"
                     width="50"
                   >
@@ -101,7 +106,7 @@ const comments = ref([
               </div>
             </div>
           </div>
-        </perfect-scrollbar>
+        </PerfectScrollbar>
       </div>
     </v-card-text>
   </v-card>

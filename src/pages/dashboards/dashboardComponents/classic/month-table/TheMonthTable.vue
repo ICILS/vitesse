@@ -60,6 +60,10 @@ const monthtable = ref([
     money: '$12.9K',
   },
 ])
+
+const avatarPath = computed(() => {
+  return '/src/assets/images/users/'
+})
 </script>
 
 <template>
@@ -102,7 +106,7 @@ const monthtable = ref([
                 <div class="d-flex align-center">
                   <v-avatar size="40">
                     <img
-                      :src="`/src/assets/images/users/${item.img}`"
+                      :src="avatarPath + item.img"
                       alt="user"
                       width="45"
                     >

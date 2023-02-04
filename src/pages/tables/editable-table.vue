@@ -90,6 +90,10 @@ const breadcrumbs = ref([
     href: '#',
   },
 ])
+
+const avatarPath = computed(() => {
+  return '/src/assets/images/users/'
+})
 </script>
 
 <template>
@@ -232,7 +236,7 @@ const breadcrumbs = ref([
                   <div class="d-flex align-center py-4">
                     <div>
                       <v-img
-                        :src="`/src/assets/images/users/${item.avatar}`"
+                        :src="avatarPath + item.avatar"
                         width="45px"
                         class="rounded-circle img-fluid"
                       />
