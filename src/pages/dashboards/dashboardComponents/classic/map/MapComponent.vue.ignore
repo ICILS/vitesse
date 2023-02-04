@@ -1,0 +1,22 @@
+<script>
+import { SvgMap } from 'vue-svg-map'
+import Taiwan from '@svg-maps/taiwan'
+
+export default {
+  name: 'MyMap',
+  components: {
+    SvgMap,
+  },
+  data() {
+    return {
+      Taiwan,
+    }
+  },
+}
+</script>
+
+<template>
+  <SvgMap :map="Taiwan" />
+</template>
+
+<style src="vue-svg-map/dist/index.css"></style>
