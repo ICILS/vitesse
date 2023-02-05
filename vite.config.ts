@@ -1,6 +1,5 @@
 import path from 'path'
-import { URL, fileURLToPath } from 'url'
-import wasm from 'vite-plugin-wasm-esm'
+// import { URL, fileURLToPath } from 'url'
 import { defineConfig } from 'vite'
 import Preview from 'vite-plugin-vue-component-preview'
 import Vue from '@vitejs/plugin-vue'
@@ -245,15 +244,15 @@ export default defineConfig({
   },
 
   // https://github.com/vitest-dev/vitest
-  // test: {
-  //   setupFiles: "vuetify.config.js",
-  //   include: ['test/**/*.test.ts'],
-  //   environment: 'jsdom',
-  //   deps: {
-  //     inline: ['@vue', '@vueuse', 'vue-demi', 'vuetify'],
-  //   },
-  //   globals: true,
-  // },
+  test: {
+    setupFiles: 'vuetify.config.js',
+    include: ['test/**/*.test.ts'],
+    environment: 'jsdom',
+    deps: {
+      inline: ['@vue', '@vueuse', 'vue-demi', 'vuetify'],
+    },
+    globals: true,
+  },
 
   // https://github.com/antfu/vite-ssg
   ssgOptions: {
