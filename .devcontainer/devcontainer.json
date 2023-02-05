@@ -1,0 +1,168 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
+{
+	"name": "Existing Dockerfile",
+	"build": {
+		// Sets the run context to one level up instead of the .devcontainer folder.
+		"context": "..",
+		// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
+		"dockerfile": "../Dockerfile"
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": true,
+			"configureZshAsDefaultShell": true,
+			"installOhMyZsh": true,
+			"upgradePackages": true,
+			"username": "codespace",
+			"userUid": "1000",
+			"userGid": "1000"
+		},
+		"ghcr.io/devcontainers/features/desktop-lite:1": {
+			"version": "latest",
+			"noVncVersion": "1.2.0",
+			"password": "vscode",
+			"webPort": "6080",
+			"vncPort": "5901"
+		},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"moby": true,
+			"azureDnsAutoDetection": true,
+			"version": "latest",
+			"dockerDashComposeVersion": "v2"
+		},
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+			"moby": true,
+			"version": "latest",
+			"dockerDashComposeVersion": "v2"
+		},
+		"ghcr.io/devcontainers/features/github-cli:1": {
+			"installDirectlyFromGitHubRelease": true,
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+			"version": "latest",
+			"helm": "latest",
+			"minikube": "latest"
+		},
+		"ghcr.io/devcontainers/features/node:1": {
+			"nodeGypDependencies": true,
+			"version": "lts"
+		},
+		"ghcr.io/devcontainers/features/nvidia-cuda:1": {
+			"installCudnn": true,
+			"cudaVersion": "11.8",
+			"cudnnVersion": "8.6.0.163"
+		},
+		"ghcr.io/devcontainers/features/powershell:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/sshd:1": {
+			"version": "latest"
+		},
+		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+			"upgradePackages": true
+		},
+		"ghcr.io/rocker-org/devcontainer-features/pandoc:1": {
+			"version": "latest"
+		},
+		"ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {
+			"shallowClone": true
+		},
+		"ghcr.io/devcontainers-contrib/features/bash-command:1": {
+			"command": "echo hi!"
+		},
+		"ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {},
+		"ghcr.io/devcontainers-contrib/features/digitalocean-cli:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/ffmpeg-homebrew:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/fkill:2": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/heroku-cli:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/mocha:2": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/mosh-homebrew:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/netdata:1": {},
+		"ghcr.io/devcontainers-contrib/features/nmap-homebrew:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/pnpm:2": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/podman-homebrew:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/prisma:2": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/starship-homebrew:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/tailscale:1": {},
+		"ghcr.io/devcontainers-contrib/features/tldr:2": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/turborepo-npm:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/vue-cli:2": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/wget-apt-get:1": {},
+		"ghcr.io/devcontainers-contrib/features/wireguard-apt-get:1": {},
+		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+			"plugins": "ssh-agent npm",
+			"omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
+			"username": "root"
+		},
+		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {},
+		"ghcr.io/enricosecondulfo/devcontainer-features/volta:1": {
+			"version": "latest"
+		},
+		"ghcr.io/rjfmachado/devcontainer-features/cloud-native:1": {
+			"kubectl": "latest",
+			"helm": "latest",
+			"kubelogin": "latest",
+			"azwi": "latest",
+			"flux": "latest",
+			"cilium": "latest"
+		},
+		"ghcr.io/rio/features/chezmoi:1": {},
+		"ghcr.io/rio/features/k3d:1": {},
+		"ghcr.io/mikaello/devcontainer-features/modern-shell-utils:1": {},
+		"ghcr.io/eliises/devcontainer-features/bash-profile:1": {
+			"command": "alias k=kubectl",
+			"file": "/etc/bash.bashrc"
+		},
+		"ghcr.io/christophermacgown/devcontainer-features/mcfly:1": {
+			"autoEnable": true,
+			"architecture": "x86_64",
+			"libc": "musl",
+			"version": "latest"
+		}
+	}
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Uncomment the next line to run commands after the container is created.
+	// "postCreateCommand": "cat /etc/os-release",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "devcontainer"
+}
